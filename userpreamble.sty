@@ -1,0 +1,80 @@
+\ProvidesPackage{userpreamble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                     OPTIONAL PACKAGES                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANT:                                                %
+% AVOID declaring packages directly in the main.tex file.   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Load lipsum package for dummy text
+% Feel free to comment or remove this package after removing all dummy texts
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{acronym}
+\usepackage{pdfpages}
+\usepackage[english]{babel}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       CUSTOM AREA                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANT:                                                %
+% AVOID including settings in other files.                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Thesis title - brazilian
+\renewcommand{\doctitlebrazilian}{Avaliação do potencial das ferramentas assistidas por IA para a tomada de decisão de design em projetos de software.}
+
+% Thesis title - english
+\renewcommand{\doctitle}{Evaluation of the potential of AI-assisted tools for design decision-making in software projects.}
+
+% Thesis author
+\renewcommand{\authorname}{João José Maranhão Junior}
+
+% Main supervisor
+\renewcommand{\supervisor}{Prof. Dr. Eduardo Martins Guerra}
+\renewcommand{\supervisortitle}{Doutor}
+
+% Co-supervisor
+\renewcommand{\cosupervisor}{}
+\renewcommand{\cosupervisortitle}{}
+
+% Knowledge area
+% \renewcommand{\knowledgeasrea}{Artificial Intelligence}
+
+% Keywords for abstract in English
+\renewcommand{\keywords}{Prompt Engineering.Design Patterns.Software Architecture.Artificial Intelligence.}
+% Keywords for abstract in Portuguese
+% \renewcommand{\palavraschave}{ChatGPT, Padrões de Projeto, Inteligência Artificial, AI-assisted tools}
+
+% Month of the publication (Three letters - defaults to current month).
+% You can hard code the value by replacing the parameter with a text
+\renewcommand{\thesismonth}{\StrLeft{\DTMportugesmonthname{\the\month}}{3}.}
+
+% Year of the publication (Four Digits - defaults to current year).
+\renewcommand{\thesisyear}{\the\year}
+
+\addto\captionsenglish{
+  \renewcommand{\contentsname}
+    {\centering Summary}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTE: Choose the best for you.                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% * If you use a list of illustrations                      %
+%   ('Lista de Ilustrações'), be aware that you will only   %
+%   use one list for all your 'quadros' and figures.        %
+%                                                           %
+% * If you choose figures list ('Lista de Figuras'),        %
+%   you could separate your 'quadros' e figures.            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\lofname}{Lista de Ilustrações}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CUSTOM COMMANDS, ENVs, ETC                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
