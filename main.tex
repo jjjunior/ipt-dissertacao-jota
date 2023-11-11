@@ -12,13 +12,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % NOTE:                                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% * First pages are located in the "pretextual" folder,     %
+% * The First pages are located in the "pretextual" folder,     %
 %   please see the "pretextual_main.tex" file.              %
 %                                                           %
 % * Chapter pages are located in the "textual" folder,      %
 %   please see the "textual_main.tex" file.                 %
 %                                                           %
-% * Last pages are located in the "post textual" folder,    %
+% * The Last pages are located in the "post textual" folder,    %
 %   please see the "posttextual_main.tex" file.             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -60,11 +60,13 @@
 %        Packages that are not provided by the template.    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IMPORTANT:                                                %
-% Prefer to include your packages in the 'userpreamble.sty' %
+% Prefer to include your packages in the 'user preamble.sty' %
 % file                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{userpreamble}
+
+\newcommand{\MyPara}[1]{\vspace{.2em}\noindent\textit{\textbf{#1}}\hspace{.3em}}
 
 \begin{document}
 % Pages like title, author's declaration, etc.

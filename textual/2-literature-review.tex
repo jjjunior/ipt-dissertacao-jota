@@ -79,7 +79,7 @@ It's important to note that there is no one-size-fits-all solution when it comes
      \item \textbf{Dividing Labor}: It's important to recognize that different models and prompts may be better suited for different tasks. Chaining together multiple models with well-structured prompts can accomplish more sophisticated tasks. 
 \end{enumerate}
 
-\cite{Olivier2024} propose design prompt effective to create a successful prompt\cite{white2023prompt} is usually divided into three parts: context, task, and role, as shown in Figure \ref{fig-design-prompt-effective}. While not all elements are necessary, a well-constructed prompt with clearly defined parts can significantly improve the result.
+\textcite{Olivier2024} propose design prompt effective to create a successful prompt\cite{white2023prompt} is usually divided into three parts: context, task, and role, as shown in Figure \ref{fig-design-prompt-effective}. While not all elements are necessary, a well-constructed prompt with clearly defined parts can significantly improve the result.
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
@@ -285,7 +285,7 @@ Figure~\ref{fig-anti-pattern-approach} illustrates the pattern suggestion proces
 \end{figure}
 % Fim Figura ---------------------------
 
-These three levels of analysis are performed to ensure the accurate capture of anti-pattern information. In the second phase, each design pattern obtains a score based on the match or mismatch of the structure, behavior, and semantics. If a design pattern gets the highest score, it perfectly fits that software design and is recommended ~\textcite{Nahar2016, Nahar2015, Nahar2016improved}, and~\textcite{Bouhours2015} have used this approach to suggest suitable design patterns.
+These three levels of analysis are performed to ensure the accurate capture of anti-pattern information. In the second phase, each design pattern obtains a score based on the match or mismatch of the structure, behavior, and semantics. If a design pattern gets the highest score, it perfectly fits that software design and is recommended ~\textcite{Bouhours2015, Nahar2015, Nahar2016, Nahar2016improved} have used this approach to suggest suitable design patterns.
 
 ~\textcite{Nahar2016} identified Anti-patterns corresponding to the design patterns in the software design phase and performed three structural, behavioral, and semantic analysis levels. Design patterns were then suggested based on their scores and the matching threshold value. However, a logical description of these anti-patterns has yet to be created.~\textcite{Smith2012} presented the same method for the Singleton pattern in the coding phase, which was not the right time since the software had already been developed.
 
@@ -304,7 +304,7 @@ In Design Pattern Selection, two categories of text classification approaches, s
 
 The prevalent types of machine learning are supervised, unsupervised, and semi-supervised learning. Supervised learning aims to create a learning model that can predict the true labels of unseen data while all data in the training set is labeled. Unsupervised learning aims to derive regular patterns by arranging unseen (unlabeled) data. Although the performance of the supervised learning method is excellent, the samples only sometimes contain the label information due to the high cost of labeling samples in the real world. 
 
-On the other hand, unsupervised models almost underperform supervised models due to the need to find regular patterns ~\cite{Li2017}. Thus, in practical applications, the semi-supervised method, a composite of supervised and unsupervised learning, alleviates the need for supervision to a minimum. As this method explores a small number of labeled and many unlabeled samples, researchers in various fields have been using semi-supervised algorithms as an alternative to traditional machine learning methods that indicate significant performance compared to labeled data ~\cite{Gorriz2017, Li2017, Seliya2007, Sigdel2014}.
+On the other hand, unsupervised models almost underperform supervised models due to the need to find regular patterns ~\cite{Li2017}. Thus, in practical applications, the semi-supervised method, a composite of supervised and unsupervised learning, alleviates the need for supervision to a minimum. As this method explores a small number of labeled and many unlabeled samples, researchers in various fields have been using semi-supervised algorithms as an alternative to traditional machine learning methods that indicate significant performance compared to labeled data ~\cite{Seliya2007, Sigdel2014, Gorriz2017, Li2017}.
 
 However, they can only be employed on small amounts of unlabeled data. This class of algorithms assumes that data points in a high-density region are likely to have the same classes, and the decision threshold is in low-density regions~\cite{Van2020}. More specifically, semi-supervised learning methods use a small amount of labeled data to accomplish their task.
 
@@ -387,12 +387,12 @@ It is worth mentioning that certain articles have employed a blend of various me
     \label{board:combined-approach}
     \begin{tabular}{|l|p{.60\linewidth}|r|p{.01\linewidth}|} \hline
         \rowcolor{gray!19} \textbf{Approaches Category} & \textbf{References} \\ \hline
-        Ontology and IR & \cite{Bou2018, Laosen2020} \\
-        \rowcolor{gray!19} Ontology and CBR & \cite{Blomqvist2008} \\ 
-        Ontology and QA & \cite{Pavlivc2014} \\
-        \rowcolor{gray!19} CBR and IR & \cite{Muangon2009adaptation,Muangon2009analysis} \\ 
-        CBR and QA & \cite{Qureshi2017} \\
-        \rowcolor{gray!19} CBR, QA and IR & \cite{Sanyawong2014,Bouassida2015, Celikkan2019} \\ \hline 
+        Ontology and IR & \textcite{Bou2018, Laosen2020} \\
+        \rowcolor{gray!19} Ontology and CBR & \textcite{Blomqvist2008} \\ 
+        Ontology and QA & \textcite{Pavlivc2014} \\
+        \rowcolor{gray!19} CBR and IR & \textcite{Muangon2009adaptation,Muangon2009analysis} \\ 
+        CBR and QA & \textcite{Qureshi2017} \\
+        \rowcolor{gray!19} CBR, QA and IR & \textcite{Sanyawong2014,Bouassida2015, Celikkan2019} \\ \hline 
     \end{tabular}
     \objectsource{\objectsourceauthor}
 \end{table}
