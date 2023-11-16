@@ -1,35 +1,95 @@
-Prompt Patterns are specific command or instruction formulation strategies or approaches used to interact with the \ac{LLM}. They play a crucial role in eliciting desired and relevant responses from \ac{LLM}, allowing users to communicate their intentions effectively.
-
-Integrating Prompt Patterns with \ac{LLM} involves creating instructions or queries adapted to the context of the task or question you want to address. This is done by taking into account the structure and capabilities of the language model. Figure \ref{prompt-pattern-overview} shows an overview of the interaction between the user, prompt pattern, AI Assisted tools, and \ac{LLM}.
-
-\begin{figure}[!ht]
-    \centering
-    \caption{\centering Interaction between the User, Prompt Pattern, AI Assisted tools, and
-LLM.}\label{prompt-pattern-overview}
-    \includegraphics[width=0.95\textwidth]{figures/prompt-patterns-overview.png}
-     \objectsource{\objectsourceauthor}
-\end{figure}
-
-Successful integration of Prompt Patterns with \ac{LLM} depends on careful wording of commands, considering context sensitivity and keyword choice. It is essential to test and iterate prompt patterns to get the best results, as different \ac{LLM} templates may behave slightly differently.
-
-Chapter introduction
+% Chapter introduction
 % Ligação com o que veio antes
 % Objetivo do capítulo no contexto da tese
 % Conteúdo do capítulo
+Chapter 3 delves deeper into the empirical study of current practices in selecting design patterns in software architecture. It uncovers the main insights and challenges faced by professionals in the field. Based on these findings, Chapter 4, "Instant Approach to Architectural Decisions," shifts our focus from the theoretical and empirical to applying Prompt Patterns to the Software Architecture domain. 
+
+The main objective of Chapter 4 is to propose and elucidate a new 'Prompt Approach' for architectural decisions in software projects. This approach is designed to leverage the capabilities of AI, particularly in the context of prompt engineering, to help software architects make more informed, efficient, and practical design decisions. By integrating AI tools into the decision-making process, this approach addresses the challenges and limitations identified in previous chapters. This chapter is crucial in demonstrating how the insights gained in the previous study can be effectively translated into practical AI-assisted solutions using existing patterns and creating new ones.
 
 \section{Approach General Description}
+\MyParaBold{Integrating AI Tools for Architectural Decision-Making}
 
-Objetivo: usar ferramentas para auxiliary em decisões arquiteturais. 
+Given the dynamic nature of the field, effective decision-making is critical for the success of software architecture projects. In this context, AI-powered tools can be crucial in assisting architects in making informed choices. The key to this approach is using prompt patterns, which guide architects to navigate the complex design choices they face.
 
-Do que se trata: se base nos prompt patterns existence. Utiliza padrões existentes, expecializa alguns desses padrões e propõe novos.
+\MyParaBold{Objective of the Approach}
+%Objetivo: usar ferramentas para auxiliary em decisões arquiteturais. 
+%Do que se trata: se base nos prompt patterns existence. Utiliza padrões %existentes, expecializa alguns desses padrões e propõe novos.
+
+The primary objective is to utilize AI tools to simplify and enhance architectural decision-making. By leveraging prompt patterns, the approach aims to provide a structured, efficient, and context-sensitive method for architects to navigate various design options, ensuring that the chosen solutions are innovative, practical, and well-suited to the project's specific needs.
+
+\MyParaBold{Patterns Used}
+
+The following existing patterns are used in this work: The Persona Pattern and the Fact Check List Pattern explained in Boards \ref{board:persona-pattern} and \ref{board:fact-check-list}. 
+
+The pattern form employed in patterns used in this work is the Patlet (Pattern Identification, Context, Problem, and Solution) \cite{buschmann2007pattern}.
 
 
-Os seguintes padrões existences são usados nesse trabalho:
+\MyParaBold{Name:}\textit{Persona}
 
-- \texttt{Padrão 1}: ...
-- Padrão 2: ...
+\MyParaBold{Category:}Output Customization
 
-* Usar o format de "patlet": (1 frase contexto) (1 frase problema) (1 frase solução)
+\MyParaBold{Context:} In many cases, users would like the results of the LLM always to adopt a certain point of view or perspective, as if the LLM were an expert in a certain area of knowledge, such as software architecture, with this being able to select the types of results to be generated and the details to focus on.
+
+\MyParaBold{Problem:} How can we consistently assign a specialized role to an LLM that adopts a particular perspective, generates relevant results, and focuses on pertinent details?
+
+\MyParaBold{Solution:} The Persona Pattern, encapsulate the specialized role and use these prompts to guide the LLM's responses.
+         
+
+
+
+\begin{table}[!ht]    
+    \centering
+    \board{Persona}  \label{board:persona-pattern}
+    \noindent    
+    \begin{tabular}{|p{\linewidth}|}  
+    \hline
+    \rowcolor[gray]{0.9} \textbf{Pattern Identification} \\ 
+     \textbf{Name:}\textit{Persona}  \textbf{Category:}Output Customization  \\
+    \hline
+    \rowcolor[gray]{0.9} \textbf{Context} \\ 
+    In many cases, users would like the results of the LLM always to adopt a certain point of view or perspective, as if the LLM were an expert in a certain area of knowledge, such as software architecture, with this being able to select the types of results to be generated and the details to focus on. \\
+    \hline
+    \rowcolor[gray]{0.9} \textbf{Problem} \\ 
+    How can we consistently assign a specialized role to an LLM that adopts a particular perspective, generates relevant results, and focuses on pertinent details? \\
+    \hline
+    \rowcolor[gray]{0.9} \textbf{Solution} \\ 
+    The Persona Pattern, encapsulate the specialized role and use these prompts to guide the LLM's responses. \\
+    \hline
+    \end{tabular}
+\objectsource{Elaborated by the author, inspired by \textcite{white2023prompt}}
+\end{table}
+
+\begin{table}[!ht]    
+    \centering
+    \board{Fact Check List} \label{board:fact-check-list}
+\noindent 
+\begin{tabular}{|p{\linewidth}|}
+\hline
+\rowcolor[gray]{0.9} \textbf{Pattern Identification} \\ 
+ \textbf{Name:}\textit{The Fact Check List Pattern}  \textbf{Category:}Error Identification \\
+\hline
+\rowcolor[gray]{0.9} \textbf{Context} \\ 
+LLMs have a significant drawback - they can generate text that appears to be true but is false. They can convincingly present misleading statistics or facts, making it difficult for users to verify the accuracy of the information. This can lead to problems in obtaining reliable information and applying it correctly. \\
+\hline
+\rowcolor[gray]{0.9} \textbf{Problem} \\ 
+How can we avoid false statistics and facts generated by LLM and ensure accuracy when users do not have the means or inclination to verify? \\
+\hline
+\rowcolor[gray]{0.9} \textbf{Solution} \\ 
+The Fact Check List Pattern can ensure that LLM produces a list of facts present in the output and forms an essential part of the statements in the output. This list of facts helps inform the user of the facts or assumptions based on the result. The user can then perform due diligence on these facts/assumptions to validate the veracity of the result. \\
+\hline
+\end{tabular}
+\objectsource{Elaborated by the author, inspired by \textcite{white2023prompt}}
+\end{table}
+
+%Os seguintes padrões existences são usados nesse trabalho:
+
+%- \texttt{Padrão 1}: ...
+%- Padrão 2: ...
+
+%* Usar o format de "patlet": (1 frase contexto) (1 frase problema) (1 frase solução)
+
+
+\MyParaBold{Proposed Patterns}
 
 Os seguintes padrões são propostos nesse trabalho:
 
@@ -80,7 +140,9 @@ Questões relevantes que são parte do problema. Fatos!
 
 %\subsubsection{Solution}
 
-The Persona Goals pattern is a strategic approach that helps in assigning and navigating roles within a specific domain. Figure \ref{prompt-patterns-persona-goals} shows the three main components: Role and Expert, Goals, and Limitations:
+The Persona Goals pattern is a strategic approach that helps in assigning and navigating roles within a specific domain. 
+
+% Figure \ref{prompt-patterns-persona-goals} shows the three main components: Role and Expert, Goals, and Limitations:
 
  \begin{itemize}
     \item \textbf{Role and Expert:} This entails defining the persona of the individual. For instance, "Neo" is designated as an experienced software architect, which prescribes his domain of expertise and the perspective from which he will respond.
@@ -90,12 +152,12 @@ The Persona Goals pattern is a strategic approach that helps in assigning and na
     \item \textbf{Limitations:} This aspect is crucial as it defines the boundaries within which the persona operates. Neo, for example, is restricted from addressing doubts and questions that fall outside of the realm of Software Architecture, such as code implementation or historical events.
  \end{itemize}    
  
-    \begin{figure}[!ht]
-        \centering
-        \caption{\centering Phases of defining the Persona Gals Pattern}\label{prompt-patterns-persona-goals}
-        \includegraphics[width=0.95\textwidth]{figures/prompt-patterns-persona-goals.png}
-        \objectsource{\objectsourceauthor}
-    \end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \caption{\centering Phases of defining the Persona Gals Pattern}\label{prompt-patterns-persona-goals}
+%     \includegraphics[width=0.95\textwidth]{figures/prompt-patterns-persona-goals.png}
+%     \objectsource{\objectsourceauthor}
+% \end{figure}
 
 The following are consequences in using \texttt{Software Architect Persona}:
     
@@ -106,11 +168,7 @@ The following are consequences in using \texttt{Software Architect Persona}:
         \item \textcolor{red}{( \textbf{-} ) } Requires more effort to define the persona upfront and ensure prompts align with it.
         \item \textcolor{red}{( \textbf{-} )} May limit response flexibility if constraints are too narrow.
         \item \textcolor{red}{( \textbf{-} )} Persona could introduce unintended biases if not defined carefully.
-    \end{itemize}   
-     
-\paragraph{\textbf{For the LLM:}}
 
-    \begin{itemize}
         \item \textcolor{blue}{(+)} Clear guidance on what type of responses are appropriate and expected.
         \item \textcolor{blue}{(+)} Less ambiguity in prompts, which helps focus generation.
         \item \textcolor{blue}{(+)} Maintains model safety by avoiding out-of-scope topics.
@@ -167,25 +225,25 @@ Finally, we asked ChatGPT in the persona Neo to summarize in 2 paragraphs the st
         \objectsource{\objectsourceauthor}
     \end{figure}
 
-        
-    
 
+\section{Architectural Company Context}
 
-\subsection{Architectural Company Context}
+\section{Quality Attribute Question}
 
-\subsection{Quality Attribute Question}
+\section{Technical Premises - extends Fact Check}
 
-\subsection{Technical Premises - extends Fact Check}
+\section{Uncertain Requirement Statement}
 
-\subsection{Uncertain Requirement Statement}
-
-\subsection{Proposed Pattern Sequence}
+\section{Proposed Pattern Sequence}
 
 Descrever a sequência. Para cada passo colocar: objetivo, padrão utilizado. 
 
 1- Architect Persona: dizer que tipo de liberdade esse arquiteto tem. 
+
 2- Descrição do sistema atual -> Se aplicável: Uncertain Requirement Statement 
+
 3- Architectural Company Context: (tempo, equipe, budget)
+
 4- Eu quero tomar tal tipo de decisão (relacionadas a estrutura e distribuição dos componentes do sistema), tem algum requisito adicional que vc precisa antes de responder? Padrão Quality Attribute Question
 5- Ao responder, Uncertain Requirement Statement 
 6- Perguntar a decisão + Reflection Pattern 

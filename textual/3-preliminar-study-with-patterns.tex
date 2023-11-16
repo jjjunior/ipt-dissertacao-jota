@@ -1,13 +1,17 @@
 % Preliminary Study about Design Patterns Selection
 
-Chapter introduction
+%Chapter introduction
 % Ligação com o que veio antes
 % Objetivo do capítulo no contexto da tese
 % Conteúdo do capítulo
 
+The previous chapter explored the evolution of AI, particularly in large language models and prompt engineering, and trends in software design patterns. Now, we focus on the practical application of these concepts. This chapter is a crucial bridge between the Literature Review and applied methodologies the aims to conduct an empirical study on selecting design patterns in software architecture. The study aims to identify areas where AI, particularly prompt engineering, could enhance the decision-making process in software design.
+
+\textbf{Study Description:}Introduces the methodology, scope, and study participants. This sets the stage for understanding the findings' context and relevance.\textbf{Research Questions for Design Pattern Selection:}Presents the specific questions this study aims to address, linking to the gaps identified in the Literature Review.\textbf{Questions Collection:}Describes the process of gathering relevant questions and criteria used in the design pattern selection process, providing insights into the practical considerations of software architects.\textbf{Design Patterns Selection Results:}Analyzes the results obtained from the study, offering a comprehensive view of the current state of design pattern selection practices.\textbf{Discussion of the Findings:}Discuss the implications of the study’s findings, particularly in integrating AI tools for decision-making in software architecture.
+
 \section{Study description}
 
-General-purpose AI-assisted tools, such as ChatGPT, have recently gained much attention from the media and the general public. That raised questions about in which tasks we can apply such a tool. A good code design is essential for agile software development to keep it ready for change. 
+General-purpose AI-assisted tools, such as ChatGPT, have recently gained much attention from the media and the general public. That raised questions about in which tasks we can apply such a tool. A code design is essential for agile software development to keep it ready for change. 
 
 In this context, identifying which design pattern can be appropriate for a given scenario can be considered an advanced skill that requires a high degree of abstraction and a good knowledge of object orientation. This preliminary study with design pattern questions aimed to perform an exploratory study investigating the effectiveness of an AI-assisted tool in assisting developers in choosing a design pattern to solve design scenarios. To reach this goal, we gathered 56 existing questions used by teachers and public tenders that provide a concrete context and ask which design pattern would be suitable. 
 
@@ -65,7 +69,7 @@ The qualitative analysis inspected each correct answer and evaluated the followi
 
 In selecting questions, we obtained a total of 56 Design Pattern questions. There are 19 questions from university courses: 9 questions from the United States, 6 from Portugal, and 4 from Italy. We also found 37 questions in Portuguese from public tenders in Brazil, inspecting selection exams of twenty-nine different institutions shown in Table~\ref{table:instituttion}. Since the questions obtained from teachers are used in exams and some asked to keep them private, we did not make the questions dataset open.
 
-\begin{table}[H]
+\begin{table}[!ht]
     \small
     \centering
     \caption{Number of questions by institutions, countries, and language}
@@ -110,10 +114,10 @@ In selecting questions, we obtained a total of 56 Design Pattern questions. Ther
 
 From the selected questions, all patterns in the study scope were covered with at least one question. Figure~\ref{number-questions} presents how many questions have each pattern as a correct answer.
   
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \caption{\centering Number of questions collected by design patterns.}\label{number-questions}
-\includegraphics[width=0.9\textwidth]{figures/number-questions.png}
+\includegraphics[width=0.7\textwidth]{figures/number-questions.png}
  \objectsource{\objectsourceauthor}
 \end{figure}
 
@@ -122,14 +126,14 @@ Considering the pattern categories Figure~\ref{type-patterns}, there are 25 ques
 \begin{figure}[!ht]
 \centering
 \caption{\centering Number of questions collected per design pattern category.}\label{type-patterns}
-\includegraphics[width=0.7\textwidth]{figures/types-patterns.png}
+\includegraphics[width=0.6\textwidth]{figures/types-patterns.png}
  \objectsource{\objectsourceauthor}
 \end{figure}
 
 % ---------------------------------------------------------------------------
 % Inicio da Seção Results
 % ---------------------------------------------------------------------------
-\section{Design Patterns Selection Results}\label{ResulttsPreliminaryStudy}
+\section{Results}\label{ResulttsPreliminaryStudy}
 
 The questions were sent to ChatGPT (version 3.5) in the period comprised between 2023-03-03 and 2023-04-16. Based on the results, ChatGPT was generally effective in answering our questions, with an overall accuracy rate of 93\%. Most of the questions were in Portuguese, with 31 of the 34 questions answered correctly, while 21 of the 22 in English were answered correctly. 
 
@@ -145,7 +149,7 @@ The answers have an average number of 1033 chars with a standard deviation of 65
 
 \textbf{Information Present in the Answers.} A qualitative analysis evaluated the six criteria proposed in Section~\ref{ResearchPreliminaryStudy}. In Table~\ref{table:cps} are the results:
 
-\begin{table}[h] 
+\begin{table}[!ht] 
     \small
     \centering
     \caption{(CPS: Criteria Number),(Rate: Percentage of correct answers for each criterion), (A/Q: Number of correct answers versus total questions), and Criteria Description.}
@@ -180,7 +184,7 @@ The answers have an average number of 1033 chars with a standard deviation of 65
 % ---------------------------------------------------------------------------
 % Inicio da Seção Discussion
 % ---------------------------------------------------------------------------
-\section{Design Patterns Selection Discussion}\label{DiscussionPreliminaryStudy}
+\section{Discussion}\label{DiscussionPreliminaryStudy}
 
 This section performs a discussion based on the obtained results, answering each research question. We also point out some limitations of the present study.
 
@@ -209,7 +213,7 @@ This section performs a discussion based on the obtained results, answering each
     
 \end{itemize}
 
-\subsection{Limitations of Design Patterns Selection}\label{sec5sub4}
+\MyPara{Limitations of Design Patterns Selection}\label{sec5sub4}
 
 Our study focused only on "Gang of Four" (GoF) design patterns, which are well-known and widely used in the software development community. The performance of ChatGPT may differ for other design patterns that are newer and have less material available.
 
