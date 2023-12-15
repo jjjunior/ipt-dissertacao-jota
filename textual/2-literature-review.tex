@@ -1,18 +1,6 @@
-Following the Introduction's exploration of AI's emerging role in software architecture, this Literature Review aims to deepen our understanding. It sets out to map the current landscape of AI advancements and software pattern methodologies, framing the context for our research. 
+Following the Introduction's exploration of AI's emerging role in software architecture, this Literature Review aims to deepen our understanding. It sets out to map the current landscape of AI advancements and software pattern methodologies, framing the context for our research.The chapter provides a thorough overview of two key areas: the evolution of AI, particularly \ac{LLM} and Prompt Engineering, and the selection methods of software patterns. This review will underpin our investigation into AI-assisted tools for design decision-making in software projects.
 
-The chapter provides a thorough overview of two key areas: the evolution of AI, particularly \ac{LLM} and Prompt Engineering, and the selection methods of software patterns. This review will underpin our investigation into AI-assisted tools for design decision-making in software projects.
-
-\MyParaBold{Chapter Overview}
-\begin{itemize}
-    \item \textbf{Evolution of AI and Large Language Models:} Examines how AI has evolved, focusing on large language models and their impact on software development.
-
-    \item \textbf{Prompt Engineering in AI:} Discusses prompt engineering principles and their applications in software development.
-
-    \item \textbf{Tools for Developers:} Reviews current AI tools for software development. 
-
-    \item \textbf{Software Patterns and Design Pattern Selection Methods:} Traces the history of software patterns and analyzes methods for selecting design patterns, setting the stage for our AI-focused exploration in subsequent chapters.
-\end{itemize}
-
+\textbf{Evolution of AI and Large Language Models:} Examines how AI has evolved, focusing on large language models and their impact on software development.\textbf{Prompt Engineering in AI:} Discusses prompt engineering principles and their applications in software development.\textbf{Tools for Developers:} Reviews current AI tools for software development.\textbf{Software Patterns and Design Pattern Selection Methods:} Traces the history of software patterns and analyzes methods for selecting design patterns, setting the stage for our AI-focused exploration in subsequent chapters.
 
 \section{An Overview of the Evolution of AI}\label{sec:AI-evolution}
 \ac{AI} is a broad field encompassing the study and creation of systems that can perform tasks that usually require human intelligence, such as reasoning, learning, perception, and decision-making. The term was coined by John McCarthy in 1956, who defined it as "the science and engineering of making intelligent machines." \cite{Mccarthy2006}. Since then, AI has evolved into various sub-fields and paradigms, such as symbolic AI, connectionism, evolutionary computation, and machine learning. 
@@ -94,7 +82,7 @@ It's important to note that there is no one-size-fits-all solution when it comes
 Effective communication skills are key in human and AI interaction. Clearly defined guidelines and expectations can help AI generate creative and unique product names that meet specific criteria. Treat the AI model as a collaborator to maximize its potential in solving complex problems~\cite{Phoenix2024}.
 % The potential of these principles and design extends beyond the field of AI. Many of these principles also apply to human collaboration, suggesting that effective communication skills are key in human and AI interaction. For instance, in the context of product naming, clearly defined guidelines and expectations can help the AI generate creative and unique product names that meet specific criteria. By treating the AI model as a collaborator, users can maximize its potential and harness the true power of AI in solving complex problems~\cite{Phoenix2024}.
 
-\MyPara{Few-Shot Learning}
+\MyParaBold{Few-Shot Learning}
 
 Refers to the ability of the \ac{LLM} to generalize and produce valuable results with only a few examples in the prompt, as illustrated in Figure~\ref{fig-prompt-few-examples}. In the few-shot learning, you give examples of the task you want the model to perform. These examples guide the model to understand the desired output format and the problem-solving process.
 
@@ -215,7 +203,7 @@ The success of \ac{DP} had to wait until 1994 when the Gang of Four(GoF) publish
 \subsection{Design Pattern Selection Methods} \label{sec:pattern:selection-methods}
 Software design patterns have a considerable impact on the software development life cycle. However, due to the many design patterns, selecting the appropriate one is quite difficult. Several approaches with different methods have been presented to overcome this difficulty to indicate the appropriate \ac{DP}. The following subsections summarize the literature review on design pattern selection methods.
 
-\MyPara{UML-Based Approach}\label{subsec:uml-approach}
+\MyParaBold{UML-Based Approach}\label{subsec:uml-approach}
 
 The UML-based approach provides a set of "visual" descriptive graphical and textual techniques that system developers easily understand was selected some existing studies for selecting a design pattern based on the UML approach. The process of suggesting patterns in this approach is shown in Figure \ref{fig-uml-based-approach}. The first step in the process is a formal specification of the problem/solution domain using UML diagrams as a meta-model. The UML includes several class, collaboration, and sequence diagrams used to describe the meta-model. The next step is to specify different aspects of the patterns to obtain different properties, such as structural and behavioral. Finally, mapping is performed, and if the design pattern specifications can satisfy the problem diagram, a design pattern is suggested~\textcite {Hsueh2009} and~\textcite{Kim2007, Kim2008} used this approach to suggest suitable design patterns.
 
@@ -231,7 +219,7 @@ The UML-based approach provides a set of "visual" descriptive graphical and text
 
 However, this approach has two limitations. Firstly, some patterns have similar structures but different intentions, such as State, Strategy, Façade, and Adapter patterns, resulting in similar meta-models. Secondly, due to the overhead of generating meta-models, the scalability of this approach is limited. As the number of patterns augments, the similarity between meta-models also increases.
 
-\MyPara{Question-Answer-Based Approach}\label{subsec:question-answer-approach}
+\MyParaBold{Question-Answer-Based Approach}\label{subsec:question-answer-approach}
 
 The question-answer-based approach involves developers presenting multiple questions and suggesting appropriate patterns based on the user's responses. Figure~\ref{fig-question-answers-base-approach} demonstrates the process for suggesting patterns using this approach, which involves creating intermediate representations like trees and rules from the design pattern description and suggesting patterns based on user interaction.
 
@@ -253,7 +241,7 @@ The model evaluation has been done by a total of six graduate students, along wi
 
 Nevertheless, constructing the questions in this approach is challenging, especially with many patterns. Furthermore, the questions are usually biased toward the specifics of the design patterns rather than the software design problem.
 
-\MyPara{CBR-Based Approach}\label{subsec:cbr-approach}
+\MyParaBold{CBR-Based Approach}\label{subsec:cbr-approach}
 
 The \ac{CBR} Based Approach uses old experiences to understand and solve new problems. Each of the experiences stored in memory is called a case. Each case in \ac{CBR} represents a situation that can take different formats based on experience. Typically, each case consists of three parts; the problem, the solution, and the explanation that states how the solution solves the problem~\cite{Kolodner1992}. The process of pattern suggestion in this approach is shown in Figure~\ref{fig-cbr-approach}. A case base can have different formats, such as text, diagram, and ontology.
 
@@ -274,7 +262,7 @@ As a result, the \ac{CBR} system is enriched and improved by adding new cases to
 
 Each case is a Design Pattern Application (DPA) in the form of UML diagrams that describe the specific situation in which the design pattern applies. A pattern is recommended based on a score obtained by mapping a domain-specific class diagram imported by a user with cases in the knowledge base.
 
-\MyPara{Anti-Patterns-Based Approach}\label{subsec:anti-pattern-approach}
+\MyParaBold{Anti-Patterns-Based Approach}\label{subsec:anti-pattern-approach}
 
 Design patterns offer practical solutions using tested formulas and methods to enhance development. However, anti-patterns provide reusable solutions that may seem helpful initially but eventually result in more harm than benefit. This can occur for various reasons, such as implementing the pattern in the wrong place or time~\cite{Nahar2016}. Every design pattern has several corresponding anti-patterns~\cite{Nahar2016improved}. Identifying these anti-patterns makes it possible to determine which patterns are inappropriate for a given problem.
 
@@ -294,7 +282,7 @@ These three levels of analysis are performed to ensure the accurate capture of a
 
 ~\textcite{Nahar2016} identified Anti-patterns corresponding to the design patterns in the software design phase and performed three structural, behavioral, and semantic analysis levels. Design patterns were then suggested based on their scores and the matching threshold value. However, a logical description of these anti-patterns has yet to be created.~\textcite{Smith2012} presented the same method for the Singleton pattern in the coding phase, which was not the right time since the software had already been developed.
 
-\MyPara{Text-Classification-Based Approach}\label{subsec:text-classification-approach}
+\MyParaBold{Text-Classification-Based Approach}\label{subsec:text-classification-approach}
 
 In Design Pattern Selection, two categories of text classification approaches, supervised and unsupervised processing algorithms, automatically suggest design patterns. Machine learning techniques classify Texts into specific classes based on one or more characteristics. Thus, there is no need for interaction with the designer, and the Design Pattern Selection process is fully automatic. The methodology overview of selecting a design pattern based on the text classification approach and the pattern suggestion process within this approach is shown in Figure \ref{fig-text-classification-based-approach}.
 
@@ -324,7 +312,7 @@ In the learning step, various supervised learning algorithms such as C4.5, Decis
 According to a study by~\textcite{Naghdipour2023Semi}, text classification using semi-supervised learning is more accurate and efficient than supervised and unsupervised learning methods. This method was chosen due to its superior performance and automation, which saves time and eliminates the need for designer interaction or professional work on design patterns. Additionally, this approach can be applied to all design patterns and meets the comprehensiveness criterion. The proposed method aims to achieve three goals: organizing patterns into classes using semi-supervised learning, selecting a suitable pattern class for a given real design problem, and suggesting the most appropriate pattern(s) for the actual design problem. Notably, the text classification approach showed better results in terms of RCD compared to other methods.
     
 
-\MyPara{Information-Retrieval-Based Approach:}\label{subsec:retrieval-approach}
+\MyParaBold{Information-Retrieval-Based Approach:}\label{subsec:retrieval-approach}
 
 Existing studies select a design pattern based on the information-retrieval approach whose pattern suggestion process in this approach is shown in Figure~\ref{fig-text-classification-retrieval-approach}.
 
@@ -350,7 +338,7 @@ Initially, the system operates on this collection of query words to find a suita
 
 However, they have implemented and partially tested their framework. Also, using pattern intent only in the first step will yield poor performance and require user involvement in the selection process.
 
-\MyPara{Ontology-Based Approach}\label{subsec:ontology-approach}
+\MyParaBold{Ontology-Based Approach}\label{subsec:ontology-approach}
 
 Ontology is very popular in computer science which enables domain knowledge to be modeled abstractly and enables queries to be evaluated against a knowledge base. There are various tools and methods to create an ontology domain. The Web Ontology Language (OWL) is a standard language for ontology representation whose primary syntax is XML/RDF (resource description framework) and is used to model knowledge of a particular domain. 
 
@@ -375,7 +363,7 @@ The existing studies for selecting a design pattern based on the ontology approa
 However, the designer can only use the concepts defined in the ontology.~\textcite{Bou2018} preprocessed the constructed ontology and the design problem to create feature vectors. They suggested design patterns based on the similarity between design patterns and design problem vectors.~\textcite{Blomqvist2008} created an ontology for the design problem and tried to find the similarity between the constructed ontology from patterns and problems.
 
 
- \MyPara{Others Approaches}\label{subsec:others-approach}
+ \MyParaBold{Others Approaches}\label{subsec:others-approach}
  
 In addition to the mentioned approaches, some researchers have employed alternative methods, known as other approaches, to suggest suitable design patterns~\cite{Zdun2007, Pearson2010, Pearson2010}. 
 
@@ -384,7 +372,7 @@ In addition to the mentioned approaches, some researchers have employed alternat
 \textcite{Bouassida2011} developed a tool that recommends the appropriate design pattern from a pattern repository and assists in instantiating the chosen pattern. Their approach utilizes a set of comparison criteria and creates rules for pattern recommendation. In the first step, the user's design fragment is analyzed using various semantic criteria, generating an XML file to identify the most suitable solution. In the second step, they employ forty rules based on semantic comparison criteria to recommend and instantiate the design patterns.
 
 
-\MyPara{Combination of Approaches:}\label{subsec:combination-approach}
+\MyParaBold{Combination of Approaches}\label{subsec:combination-approach}
 
 
 It is worth mentioning that certain articles have employed a blend of various methods. Board \ref{board:combined-approach} exhibits the approach combinations utilized in diverse studies and their references. The combination of QA, CBR, and IR is the most commonly employed.
@@ -407,7 +395,7 @@ It is worth mentioning that certain articles have employed a blend of various me
     \objectsource{\objectsourceauthor}
 \end{table}
   
-\MyPara{Trade-offs between the Design Patterns Selection Approaches} \label{subsec:trade-offs-approaches}
+\MyParaBold{Trade-offs between the Design Patterns Selection Approaches} \label{subsec:trade-offs-approaches}
 
 \textcite{Kim2007} presented a UML-based method that utilizes Role-Based Modeling Language (RBML) to create the meta-model for each pattern and problem. They used collaboration and class diagrams to specify different aspects of patterns, resulting in different properties, such as structural and behavioral. Finally, if the design pattern's specifications can meet the problem's diagram, a pattern is suggested. However, the method's scalability could be improved due to overlapping meta-models.
 
