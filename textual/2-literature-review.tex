@@ -9,7 +9,7 @@ Following the Introduction's exploration of AI's emerging role in software archi
 
 \ac{DL} is a branch of \ac{ML} that uses multi-layered artificial neural networks to learn from large and complex datasets~\cite{LeCun2015}.~\ac{DL} can perform various tasks involving images, text, and audio, such as classification, recognition, generation, and translation. For example,~\ac{DL} can sort animal images into different categories~\cite{Krizhevsky2017}, recognize celebrity faces~\cite{Schroff2015}, generate captions for images~\cite{Vinyals2015}, translate sentences from one language to another~\cite{Sutskever2014}, and synthesize realistic human voices~\cite{Oord2016}. \ac{DL} has also improved domains such as medicine, finance, and entertainment by providing customized solutions, detecting fraud, and creating realistic simulations. For example, \ac{DL} can diagnose skin cancer from images of skin lesions~\cite{Esteva2017}, identify credit card fraud from transaction data~\cite{Awoyemi2017}, create human-like agents for games~\cite{Silver2017}, and generate photorealistic faces of non-existent people~\cite{Karras2019}.
 
-\ac{NLP} is a subfield of~\ac{AI} that deals with the interaction between computers and human languages.~\ac{NLP} aims to enable systems to understand, analyze, generate, and manipulate natural language texts and speech. NLP has many applications in various domains~\cite{Devlin2018}, such as information retrieval, sentiment analysis, summarization, dialogue systems, chatbots, and natural language understanding.~\ac{NLP} also involves studying the linguistic and cognitive aspects of human language processing and communication.
+\ac{NLP} is a subfield of~\ac{AI} that deals with the interaction between computers and human languages.~\ac{NLP} aims to enable systems to understand, analyze, generate, and manipulate natural language texts and speech. NLP has many applications in various domains~\cite{Devlin2018}, such as information retrieval, sentiment analysis, summarization, dialogue systems, chatbots, and natural language understanding. \ac{NLP} also involves studying the linguistic and cognitive aspects of human language processing and communication.
 
 \subsection{Large Language Models}\label{sec:llm}
 
@@ -19,17 +19,17 @@ Transformers are a type of neural network architecture and, therefore, a type of
 
 % Start Figure ---------------------------
 \begin{figure}[ht]
-\caption{A nested set of technologies from AI to transformers.}
+\caption{Evolution of AI Technologies and Their Capabilities.}
 \centering
 \label{fig-transformers}
 \includegraphics[width=.95\textwidth]{figures/transformers.png}
-\objectsource{\textcite{Olivier2024}}
+\objectsource{\textcite{Caelen2023developing}}
 \end{figure}
 % End Figure ---------------------------
 
 As~\ac{AI} progresses, ethical concerns about privacy, bias, and liability are becoming increasingly significant ~\cite{Floridi2022}. This is especially true for large language models like GPT-4, which can generate coherent and diverse text based on a given prompt~\cite{Brown2020}. These models present challenges, including data leakage, misinformation, intellectual property rights, and responsibility for generated text, as~\cite{Yan2023}) noted. Thus, it is imperative to evaluate the potential benefits~\cite{Bender2021}.
 
-With the advances of LLMs and Transforms~\cite{Olivier2024}, AI-assisted tools can provide valuable insights and support in various tasks such as solution architecture, agile model storytelling, code generation, automated testing, and DevSecOps. They can improve some stages of the development cycle so software developers, engineers, and architects can improve their project design, resulting in faster and more efficient production and improving overall effectiveness.
+With the advances of LLMs and Transforms~\cite{Caelen2023developing}, AI-assisted tools can provide valuable insights and support in various tasks such as solution architecture, agile model storytelling, code generation, automated testing, and DevSecOps. They can improve some stages of the development cycle so software developers, engineers, and architects can improve their project design, resulting in faster and more efficient production and improving overall effectiveness.
 
 The shift from a "data-driven" to an "AI-driven" approach to decision-making workflows is inevitable. While data provides valuable information, human processors have limitations due to cognitive biases and the inability to process large volumes of data efficiently~\cite{Colson2019}. By bringing AI into the workflow, organizations can harness the processing power of AI to extract insights from data and make better decisions. AI can handle complex relationships, non-linear patterns, and large data sets, reducing the impact of human biases~\cite{MichaelRoss2021}.
 
@@ -67,15 +67,15 @@ It's important to note that there is no one-size-fits-all solution when it comes
      \item \textbf{Dividing Labor}: It's important to recognize that different models and prompts may be better suited for different tasks. Chaining together multiple models with well-structured prompts can accomplish more sophisticated tasks. 
 \end{enumerate}
 
-\textcite{Olivier2024} propose design prompt effective to create a successful prompt\cite{white2023prompt} is usually divided into three parts: context, task, and role, as shown in Figure \ref{fig-design-prompt-effective}. While not all elements are necessary, a well-constructed prompt with clearly defined parts can significantly improve the result.
+\textcite{Caelen2023developing} propose design prompt effective to create a successful prompt\cite{white2023prompt} is usually divided into three parts: context, task, and role, as shown in Figure \ref{fig-design-prompt-effective}. While not all elements are necessary, a well-constructed prompt with clearly defined parts can significantly improve the result.
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
-\caption{Design of Prompt Effective.}
+\caption{Components of an Effective Design Prompt Structure.}
 \centering
 \label{fig-design-prompt-effective}
 \includegraphics[width=0.9\textwidth]{figures/effetive-prompt.png}
-\objectsource{\textcite{Olivier2024}}
+\objectsource{\textcite{Caelen2023developing}}
 \end{figure}
 % End Figure ---------------------------
 
@@ -88,11 +88,11 @@ Refers to the ability of the \ac{LLM} to generalize and produce valuable results
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
-\caption{A prompt containing a few examples}
+\caption{Illustration of Few-Shot Learning in AI Prompt Design.}
 \centering
 \label{fig-prompt-few-examples}
 \includegraphics[width=0.9\textwidth]{figures/prompt-few-examples.png}
-\objectsource{\textcite{Olivier2024}}
+\objectsource{\textcite{Caelen2023developing}}
 \end{figure}
 % End Figure ---------------------------
 
@@ -100,11 +100,11 @@ Consider this example in Figure~\ref{fig-prompt-few-shots-question} of convertin
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
-\caption{A prompt few-shot question}
+\caption{Example of a Few-Shot Learning Prompt Question}
 \centering
 \label{fig-prompt-few-shots-question}
 \includegraphics[width=0.8\textwidth]{figures/prompt-few-shots-question.png}
-\objectsource{\textcite{Olivier2024}}
+\objectsource{\textcite{Caelen2023developing}}
 \end{figure}
 % End Figure ---------------------------
 
@@ -112,11 +112,11 @@ Moreover, we get as output the following message:
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
-\caption{A prompt few-shot answers}
+\caption{Responses to a Few-Shot Learning Prompt}
 \centering
 \label{fig-prompt-few-shots-answers}
 \includegraphics[width=0.8\textwidth]{figures/prompt-few-shots-answer.png}
-\objectsource{\textcite{Olivier2024}}
+\objectsource{\textcite{Caelen2023developing}}
 \end{figure}
 % End Figure ---------------------------
 
@@ -209,7 +209,7 @@ The UML-based approach provides a set of "visual" descriptive graphical and text
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of UML-Based Approach.}
+\caption{Schematic of the UML-Based Design Pattern Suggestion Approach.}
 \centering
 \label{fig-uml-based-approach}
 \includegraphics[width=0.9\textwidth]{figures/uml-based-selecion-pattern-approach.png}
@@ -225,7 +225,7 @@ The question-answer-based approach involves developers presenting multiple quest
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of question-answer based approach.}
+\caption{Flowchart of the Question-Answer Based Design Pattern Selection Approach.}
 \centering
 \label{fig-question-answers-base-approach}
 \includegraphics[width=0.9\textwidth]{figures/question-answers-select-pattern-approach.png}
@@ -247,7 +247,7 @@ The \ac{CBR} Based Approach uses old experiences to understand and solve new pro
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of CBR-Based approach.}
+\caption{Process Diagram of the Case-Based Reasoning Approach in Design Pattern Selection.}
 \centering
 \label{fig-cbr-approach}
 \includegraphics[width=1.0\textwidth]{figures/cbr-selection-pattern-approach.png}
@@ -270,7 +270,7 @@ Figure~\ref{fig-anti-pattern-approach} illustrates the pattern suggestion proces
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of anti-pattern based approach.}
+\caption{Flowchart of the Anti-Patterns Approach for Design Pattern Selection.}
 \centering
 \label{fig-anti-pattern-approach}
 \includegraphics[width=1.0\textwidth]{figures/ant-pattern-selection-approach.png}
@@ -288,7 +288,7 @@ In Design Pattern Selection, two categories of text classification approaches, s
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of text-classification-based approach.}
+\caption{Schematic of the Text Classification Approach for Design Pattern Selection.}
 \centering
 \label{fig-text-classification-based-approach}
 \includegraphics[width=1.0\textwidth]{figures/text-classification-selecion-pattern-aproach.png}
@@ -318,7 +318,7 @@ Existing studies select a design pattern based on the information-retrieval appr
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of text or information retrieval-based approach.}
+\caption{Flowchart of the Information Retrieval-Based Approach for Design Pattern Selection.}
 \centering
 \label{fig-text-classification-retrieval-approach}
 \includegraphics[width=0.9\textwidth]{figures/text-classification-retrieval-selected-pattern-approach.png}
@@ -350,7 +350,7 @@ The existing studies for selecting a design pattern based on the ontology approa
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
-\caption{Overview of ontological approach for analysis patterns.}
+\caption{Diagram of the Ontological Approach in Pattern Analysis.}
 \centering
 \label{fig-ontology-base-approach}
 \includegraphics[width=1.0\textwidth]{figures/ontology-base-selected-pattern-approach.png}

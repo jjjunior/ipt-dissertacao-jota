@@ -17,6 +17,16 @@
 \usepackage{colortbl}
 \usepackage{amsmath}
 \usepackage{booktabs}
+\usepackage[super]{nth}
+\usepackage{mdframed}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox} % Caixas coloridas
+\usepackage{enumitem} % Listas personalizadas
+\usepackage{geometry} % Margens da página
+\usepackage{hyperref}
+\geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                       CUSTOM AREA                         %
@@ -69,9 +79,60 @@
 
 \newcommand{\MyParaText}[1]{\vspace{.2em}\noindent#1\hspace{.3em}}
 
+\newcommand{\ts}{\textsuperscript}
+
 \definecolor{mycolorgreen}{RGB}{84,196,94}
 \definecolor{mycolorpink}{RGB}{219,48,122}
 \definecolor{mycolororange}{RGB}{204,102,0}
+\definecolor{mycolorlilas}{RGB}{155,69,161}
+\definecolor{mycolorblue}{RGB}{109,108,176}
+\definecolor{mycolorred}{RGB}{227,51,2}
+\definecolor{chatbackground}{RGB}{245, 245, 245}
+\definecolor{usercolor}{RGB}{0, 0, 0}       % Preto
+\definecolor{botcolor}{RGB}{0, 0, 255}      % Azul
+\definecolor{userbubble}{RGB}{230, 230, 230} % Cinza claro
+\definecolor{botbubble}{RGB}{180, 180, 255}  % Azul claro
+
+\newtcolorbox{chatbox}[3][]{
+  colback=chatbackground,
+  colframe=#2,
+  colbacktitle=#2,
+  coltitle=white,
+  title=\textbf{#1 \hfill #3},
+  enhanced,
+  attach boxed title to top left={xshift=3mm,yshift=-2mm},
+  left=2mm,
+  right=2mm,
+  top=2mm,
+  bottom=2mm,
+  boxsep=0mm,
+  toprule=2mm,
+  bottomrule=2mm,
+  toptitle=1mm,
+  bottomtitle=1mm,
+  boxrule=1pt,
+  breakable,
+  parbox=false,
+  #1
+}
+
+% Definindo contadores que são reiniciados a cada nova seção
+\newcounter{counterIn}
+\newcounter{counterOut}
+
+% Comando para entradas do ChatGPT
+\newcommand{\chatgptin}[2][]{ % #1 é opcional para o label
+  \refstepcounter{counterIn}\par\medskip
+  \textbf{Prompt \thecounterIn: #2Architect }\ifx&#1&\else\label{#1}\fi
+}
+
+% Comando para saídas do ChatGPT
+\newcommand{\chatgptout}[2][]{ % #1 é opcional para o label
+  \refstepcounter{counterOut}\par\medskip
+  \textbf{Output \thecounterOut: #2ChatGPT }\ifx&#1&\else\label{#1}\fi
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % NOTE: Choose the best for you.                            %
