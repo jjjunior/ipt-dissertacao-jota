@@ -26,6 +26,9 @@
 \usepackage{enumitem} % Listas personalizadas
 \usepackage{geometry} % Margens da página
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{tikz-uml}
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,16 +91,62 @@
 \definecolor{mycolorblue}{RGB}{109,108,176}
 \definecolor{mycolorred}{RGB}{227,51,2}
 \definecolor{chatbackground}{RGB}{245, 245, 245}
-\definecolor{usercolor}{RGB}{0, 0, 0}       % Preto
+\definecolor{usercolor}{RGB}{64, 184, 184}       % Preto
 \definecolor{botcolor}{RGB}{0, 0, 255}      % Azul
 \definecolor{userbubble}{RGB}{230, 230, 230} % Cinza claro
-\definecolor{botbubble}{RGB}{180, 180, 255}  % Azul claro
+\definecolor{botbubble}{RGB}{175, 235, 235}  % Verde claro
 
-\newtcolorbox{chatbox}[3][]{
+\newtcolorbox{chatout}[3][]{
   colback=chatbackground,
   colframe=#2,
   colbacktitle=#2,
-  coltitle=white,
+  coltitle=black, % Isso será sobrescrito conforme o contexto
+  title=\textbf{#1 \hfill #3},
+  enhanced,
+  attach boxed title to top left={xshift=3mm,yshift=-2mm},
+  left=2mm,
+  right=2mm,
+  top=2mm,
+  bottom=2mm,
+  boxsep=0mm,
+  toprule=2mm,
+  bottomrule=2mm,
+  toptitle=1mm,
+  bottomtitle=1mm,
+  boxrule=1pt,
+  breakable,
+  parbox=false,
+  #1
+}
+
+\newtcolorbox{chatin}[3][]{
+  colback=chatbackground,
+  colframe=#2,
+  colbacktitle=#2,
+  coltitle=white, % Isso será sobrescrito conforme o contexto
+  title=\textbf{#1 \hfill #3},
+  enhanced,
+  attach boxed title to top left={xshift=3mm,yshift=-2mm},
+  left=2mm,
+  right=2mm,
+  top=2mm,
+  bottom=2mm,
+  boxsep=0mm,
+  toprule=2mm,
+  bottomrule=2mm,
+  toptitle=1mm,
+  bottomtitle=1mm,
+  boxrule=1pt,
+  breakable,
+  parbox=false,
+  #1
+}
+
+\newtcolorbox{chatquest}[3][]{
+  colback=chatbackground,
+  colframe=#2,
+  colbacktitle=#2,
+  coltitle=white, % Isso será sobrescrito conforme o contexto
   title=\textbf{#1 \hfill #3},
   enhanced,
   attach boxed title to top left={xshift=3mm,yshift=-2mm},
@@ -120,10 +169,17 @@
 \newcounter{counterIn}
 \newcounter{counterOut}
 
+
 % Comando para entradas do ChatGPT
 \newcommand{\chatgptin}[2][]{ % #1 é opcional para o label
   \refstepcounter{counterIn}\par\medskip
   \textbf{Prompt \thecounterIn: #2Architect }\ifx&#1&\else\label{#1}\fi
+}
+
+
+\newcommand{\chatgptquest}[2][]{ % #1 é opcional para o label
+  \refstepcounter{counterIn}\par\medskip
+  \textbf{Prompt \thecounterIn: #2Teacher }\ifx&#1&\else\label{#1}\fi
 }
 
 % Comando para saídas do ChatGPT
@@ -132,7 +188,29 @@
   \textbf{Output \thecounterOut: #2ChatGPT }\ifx&#1&\else\label{#1}\fi
 }
 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
+\lstdefinestyle{mystyle}{
+    % backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},    
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                     
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % NOTE: Choose the best for you.                            %

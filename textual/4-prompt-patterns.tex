@@ -232,29 +232,29 @@ By including these additional elements, you're enriching the pattern description
 
 \MyPara{Usage example:} We created an example prompt to test the effectiveness of Persona on ChatGPT. The objective is to verify whether the LLM can assign the persona in the software architect's domain. For more information, full prompt at the following link: \href{https://chat.openai.com/share/ee2385fe-0040-4468-9db7-72d8e6bd2864}{Software Architect Persona}.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-persona-1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-persona-1]}
 
 From now on, you are Neo in the role of an experienced software architect. Your main goal is to ensure the reliability, performance, and maintainability of the software for which you are responsible. You have experience designing scalable and secure systems. You cannot under any circumstances resolve doubts and questions that involve other topics or subjects that are not Software Architecture, such as code implementation, so respond that it is not your persona's responsibility.
-\end{chatbox}
+\end{chatin}
 
 In Prompt \ref{chatgpt-in-persona-1}, the persona`s name was defined as a role, a goal, and limitations.
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-persona-1]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-persona-1]}
 
 As "Neo" the software architect, I'm ready to assist you with any questions or challenges related to software architecture, including system design, scalability, reliability, performance, and maintainability. If you have questions in these areas or need advice on architectural patterns and practices, feel free to ask.
-\end{chatbox}
+\end{chatout}
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-persona-2]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-persona-2]}
 Summarize in 2 paragraphs the best strategies or techniques for migrating a monolithic system with MVC architecture to a microservices system?
-\end{chatbox}
+\end{chatin}
 
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-persona-2]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-persona-2]}
 
 When migrating a monolithic system with an MVC (Model-View-Controller) architecture to a microservices architecture, the first step is typically to identify and segregate bounded contexts. This involves breaking down the monolith into domains that represent discrete business capabilities. You would assess the model layer for business logic that can be decoupled and organized into independent services. An incremental approach is often recommended, where you start by carving out the least dependent modules and gradually work towards the more complex ones, ensuring that the monolith and new microservices can coexist during the transition phase. This is known as the Strangler Fig Pattern, where new microservices gradually "strangle" the old monolith until it is eventually decommissioned.
 
 In terms of techniques, it's crucial to establish a robust communication mechanism between microservices, which can be achieved through APIs or messaging queues. Interim APIs can serve as a bridge between the monolith and new microservices. It's also important to implement a comprehensive testing strategy to ensure that as each microservice is extracted, the system continues to function as expected. Continuous Integration / Continuous Deployment (CI/CD) pipelines are vital to maintain a smooth and reliable delivery process during the transition. Finally, you need to address cross-cutting concerns such as authentication, logging, and monitoring at the microservices level, often using sidecars or external services. These strategies ensure not only a smooth transition but also the maintainability and scalability of the new microservices architecture.
-\end{chatbox}
+\end{chatout}
 
 During a conversation in the "Neo" persona, ChatGPT recognized its limitations in non-architectural tasks. However, it provided successful strategies for migrating to a micro-service architecture, as shown in Prompt \ref{chatgpt-in-persona-1}, Output \ref{chatgpt-out-persona-1} and  \ref{chatgpt-out-persona-2}.
 
@@ -315,22 +315,22 @@ During a conversation in the "Neo" persona, ChatGPT recognized its limitations i
 
 \MyPara{Usage example:} We have created an example prompt that uses the Architectural Company Context pattern to assist in making decisions related to software architecture. The prompt involves four variables - Time, Time Size, Budget, and Architectural Description, as shown in Prompt \ref{chatgpt-in-company-1}. This example will help demonstrate how the pattern can be applied in real-world scenarios. You can choose to remove any variables that are not relevant to the context and requirement of the software architect's decision-making process. For more information, full prompt at the following link: \href{https://chat.openai.com/share/5b124d5f-cc5e-422c-ab11-b932d482de1d}{Architectural Company Context}.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-company-1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-company-1]}
 
 Given a 6-month development timeline, a team of 10 developers, and a budget of \$500,000.00, determine whether implementing a microservices-based architecture for a new, non-existent e-commerce platform is feasible and can provide scalability. and performance required within the constraints of time, staff, and budget.
-\end{chatbox}
+\end{chatin}
     
 ChatGPT highlighted some factors that need to be considered, such as qualified developers with experience in microservices and distributed systems. These are crucial to success, especially for e-commerce platforms where complexity can significantly impact the project. The technology stack and tools used significantly impact development speed and costs. Agile methodologies are suitable for microservices, providing flexibility in development. However, hosting microservices is challenging due to the need for robust infrastructure and comprehensive testing strategies. Operating a large-scale microservices architecture often requires additional tools and knowledge to manage many services efficiently.
 
 After analyzing the factors above, ChatGPT responded by listing the variables Timeline, Team, and Budget. As shown in Output \ref{chatgpt-out-company-1}.
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-company-1]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-company-1]}
 \begin{itemize}
     \item \textbf{Timeline:} 6 months is a relatively short time for building a microservices-based e-commerce platform from scratch, especially considering the complexity of both the architecture and the business domain.    
     \item \textbf{Team:} 10 developers could be sufficient if they are experienced in microservices, but it might be tight considering the need for specialized roles (e.g., DevOps, backend/frontend developers, QA engineers).    
     \item \textbf{Budget:} \$500,000 might be adequate for the development phase, but consider additional costs for infrastructure, tools, and post-launch maintenance and support.
 \end{itemize}
-\end{chatbox}
+\end{chatout}
     
 \begin{center}
                        
@@ -401,14 +401,14 @@ After analyzing the factors above, ChatGPT responded by listing the variables Ti
 
 \MyParaBold{Iteration 1:} Running Quality Attribute Question
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-quality-attribute-question-1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-quality-attribute-question-1]}
 
 You are an experienced software architect responsible for creating a credit card processing system for a medium-sized financial institution. Your primary focus is to design an architecture that excels in scalability, security, and performance. 
 
 Your task is to carefully navigate through the decision-making process of the credit card processing system architecture, step by step. You should ask any necessary questions to clarify doubts about the quality attributes of the new system. Avoid making any architectural decisions until all questions are answered. 
 
 Additionally, provide a comprehensive prompt that includes all the data collected in the previous steps, along with an explanation of the rationale behind each architectural decision-making.
-\end{chatbox}
+\end{chatin}
 
 After running the Prompt \ref{chatgpt-in-quality-attribute-question-1} Quality Attribute Questions Prompt Pattern, ChatGPT reported that designing a credit card processing system for a mid-sized financial institution is a complex task that requires careful consideration of several vital factors. 
 
@@ -460,7 +460,7 @@ Compliance with Brazilian financial regulations is a key legal consideration. Th
 
 To create a secure credit card processing system that aligns with your financial institution's objectives and requirements, ChatGPT designed the architectural framework outlined below and presented in Output \ref{chatgpt-out-quality-attribute-question-2}, which is robust and scalable.
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-quality-attribute-question-2]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-quality-attribute-question-2]}
 \begin{enumerate}
     \item \textbf{Microservices Architecture: }To ensure scalability and ease of maintenance.
     \item \textbf{Cloud Infrastructure:} For scalability and cost-effectiveness.
@@ -472,7 +472,7 @@ To create a secure credit card processing system that aligns with your financial
     \item \textbf{Monitoring and Logging:} For real-time monitoring and troubleshooting.
 \end{enumerate}
 This architecture aims to create a robust, scalable, and secure credit card processing system, aligning with your financial institution's objectives and requirements.
-\end{chatbox}
+\end{chatout}
 
 \begin{center}
                        
@@ -523,7 +523,7 @@ This architecture aims to create a robust, scalable, and secure credit card proc
 
 \MyPara{Usage Example:} We used ChatGPT and created an example prompt that uses the Technical Premises Pattern to validate the interaction with generative AI to help make decisions. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. Prompt \ref{chatgpt-in-premises-1} shows the pattern applied in ChatGPT. For more information, full prompt at the following link: \href{https://chat.openai.com/share/b0a0651d-2e1f-4be3-9995-1d4babdd1da4}{Technical Premises}.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-premises-1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-premises-1]}
 \noindent
 \textbf{Project:} Development of a Smart Home Automation System
 
@@ -537,7 +537,7 @@ This architecture aims to create a robust, scalable, and secure credit card proc
     \item \textbf{Energy Efficiency:}  integration of AI-driven algorithms to optimize energy usage across various devices, potentially reducing overall energy consumption in the smart home.    
 \end{enumerate}
 From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts must be verified and written in a condensed and succinct manner, so as to take up less screen space, at the end of the result as: (Facts, Rationale, Architectural decision making).
-\end{chatbox}
+\end{chatin}
 
 The proposed smart home automation system is designed with a focus on three fundamental architectural pillars: interoperability, user privacy, and energy efficiency, each addressing crucial aspects of a modern smart home environment.
 
@@ -545,7 +545,7 @@ The architecture of the smart home automation system is strategically developed
 around these core principles. Each decision is taken with an eye towards creating a
 seamless, secure, and sustainable smart home experience. By melding these technological considerations, the system is poised to deliver an intuitive, eﬀicient, and user-friendly environment for homeowners.
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-premises-1]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-premises-1]}
 
 For the development of a Smart Home Automation System with the given objectives and technical premises, here's a set of specific facts and justifications for each architectural decision-making:
 
@@ -572,7 +572,7 @@ For the development of a Smart Home Automation System with the given objectives 
     \item \textbf{Rationale:} Smart homes often consume substantial energy. AI can automate the process of energy saving by learning user habits and adjusting device operation accordingly.
     \item \textbf{Architectural Decision Making:} Integrate AI-based energy management software that interfaces with all smart devices and can autonomously control them to enhance energy efficiency.    
 \end{itemize}
-\end{chatbox}
+\end{chatout}
 
 According to recommendations given by ChatGPT, see Output \ref{chatgpt-out-premises-1}, the system must support several communication protocols, such as Zigbee, Wi-Fi, and Bluetooth. This ensures smooth device interaction without compatibility issues, creating a simplified smart home ecosystem.
 Prioritize end-to-end encryption and routine data audits to protect user data from breaches and hacking attempts, ensuring data remains secure and private.
@@ -635,10 +635,10 @@ Together, these patterns form a robust framework for decision-making in software
 
 \MyPara{Usage Example:} We used ChatGPT and created an example prompt that uses the Uncertain Requirement Statement Pattern to validate the interaction with generative AI to help make decisions. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. Prompt~\ref{chatgpt-in-uncertain-requirement-1} shows the pattern applied.For more information, full prompt at the following link: \href{https://chat.openai.com/share/4155325e-0d73-4e69-816a-b38df4588660}{Uncertain Requirement Statement}.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-uncertain-requirement-1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-uncertain-requirement-1]}
 
 When developing a smart city traffic management system, the project team faces uncertainties related to evolving regulatory compliance standards and the integration of emerging autonomous vehicle technologies. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced, but also flexible and responsive to regulatory and technological changes. Output format, Problem, Impact of not adopting the requirement and architectural decision making.
-\end{chatbox}
+\end{chatin}
 
 
 The Output~\ref{chatgpt-out-uncertain-requirement-1} highlights the need for a system architecture that can adapt to changes in regulatory standards. The impact of not doing so includes legal issues, downtime, and expensive modifications. The solution is to implement a modular architecture that allows for easy updates and integration of new compliance modules. 
@@ -649,7 +649,7 @@ The strategy involves developing a flexible and scalable architecture using clou
  
 Concentrating on strategic planning elements such as managing risks for regulatory changes and technological advances, investing in research and development for innovative solutions, training the development team in new technologies and standards, and employing agile methodologies for flexibility and rapid adaptation. These measures aim to make the traffic management system resilient, adaptable, and future-proof, especially in the context of smart city infrastructure.
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-uncertain-requirement-1]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-uncertain-requirement-1]}
 
 \noindent
 \textbf{Problem: Evolving Regulatory Compliance Standards}
@@ -684,7 +684,7 @@ Concentrating on strategic planning elements such as managing risks for regulato
 \noindent
 \textbf{Strategic Planning Considerations:} Develop a risk management plan focusing on potential regulatory changes and technological advancements. Regularly review and update this plan.
 
-\end{chatbox}
+\end{chatout}
 
 \begin{center}
                        
@@ -692,7 +692,7 @@ Concentrating on strategic planning elements such as managing risks for regulato
 
 \section{Pattern-based Prompt Sequence} \label{sec:proposed-pattern-sequence}
 
-The Pattern-based Prompt Sequence in Use Cases \ref{use-case-1} and \ref{use-case-2} suggests a structured approach for generative AI to assist software architects in decision-making. The prompt patterns can be varied based on the project context and requirements. 
+The Pattern-based Prompt Sequence in Use Case \ref{use-case-1} suggests a structured approach for generative AI to assist software architects in decision-making. The prompt patterns can be varied based on the project context and requirements. 
 % The flowchart illustrated in Figure~\ref{flowchart-pattern} provides alternatives across each pattern's situations, allowing bypassing the pattern if it is not applicable.
 
 % \begin{figure}[!ht]
@@ -707,21 +707,21 @@ The Pattern-based Prompt Sequence in Use Cases \ref{use-case-1} and \ref{use-cas
 
 \MyParaText{\texttt{\nth{1} Software Architect Persona:}}  This pattern should be the first to be used as it can give more focus to generative AI when addressing specific situations and contexts, emphasizing the objectives and rules the LLM must follow and promoting a balance between technical and commercial considerations.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case1:1]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case1:1]}
 
 Scenario: Imagine a startup company that is in the process of developing a cloud-based application for managing customer relationships. The company has a small and dynamic team, and the project requirements constantly change as they incorporate market trends and customer feedback.
 
 In this scenario, you will assume the role of Jota, an experienced software architect. Jota balances technical proficiency and a keen understanding of the startup's dynamic business environment. As Jota, you must demonstrate innovative thinking and adaptability to navigate the role's challenges effectively. You cannot, under any circumstances, resolve doubts and questions involving other topics or subjects that are not Software Architecture, such as code implementation, so answer that it is not your persona's responsibility.
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:1]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:1]}
 
 Understood. I am now Jota, the experienced software architect at this startup. I'm here to provide insights and guidance on software architecture, particularly in the context of a dynamic, cloud-based application for managing customer relationships. If you have any questions or need advice on architectural decisions, design patterns, scalability, cloud services, or related topics, feel free to ask! Please note that I won't be able to assist with code implementation or other non-architectural topics.
-\end{chatbox}
+\end{chatout}
 
 \MyParaText{\texttt{\nth{2} Uncertain Requirement Statement:}} The second pattern is essential for projects that have unclear or uncertain requirements. It allows examining the reasons and outcomes if a requirement is absent, ensuring that the architecture remains pliable and can adapt to changes. This pattern establishes a foundation for managing indefinite project requirements so that the architecture can evolve as the requirements become more defined.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case1:2]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case1:2]}
 
 CloudConnect CRM is a project to create a cloud-based CRM application for small and medium-sized businesses, focusing on customer relationships, sales, and marketing management. The project team comprises developers, designers, a product manager, and a software architect. The first version is scheduled to launch in 12 months, with funding primarily from angel investors on a limited budget.
 
@@ -741,9 +741,9 @@ CloudConnect CRM is a project to create a cloud-based CRM application for small 
 
     
 Act as Jota in Project Context, Known Requirements, and Uncertain Aspects. Examine the potential repercussions of not adequately addressing these uncertainties in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:2]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:2]}
 As Jota, the software architect for CloudConnect CRM, my primary role involves navigating both the known requirements and the uncertainties to ensure the system is robust, flexible, and capable of adapting to changes. Let's examine the potential repercussions of not adequately addressing these uncertainties in our system architecture:
 
 \MyParaBold{Social Media Integration:}\textbf{\textit{Repercussion:}}{ If we don't build a flexible architecture that can handle various social media integrations, we might find ourselves limited to specific platforms, which can become obsolete or less relevant over time. This would hinder our ability to stay competitive and responsive to market trends.}\textbf{\textit{Mitigation:}}{ Adopt a modular approach that allows for easy plug-and-play integration of different social media platforms as they become relevant. This approach would also facilitate updates or replacements without significant overhauls.}
@@ -755,16 +755,16 @@ As Jota, the software architect for CloudConnect CRM, my primary role involves n
 \MyParaBold{AI for Predictive Analytics:}\textbf{\textit{Repercussion:}}{ Premature investment in complex AI features without understanding user interest can lead to resource wastage. Conversely, not being prepared can delay implementation when there is a demand.}\textbf{\textit{Mitigation:}}{ Build the foundation for AI capabilities but initially focus on core features. We can later integrate AI as a modular upgrade, ensuring we're responding to actual user needs and interests.}
 
 \MyParaBold{Adoption of New Technologies:}\textbf{\textit{Repercussion:}}{ Choosing a technology stack that becomes obsolete, hard to maintain, or expensive can hinder our growth and ability to adapt to new trends.}\textbf{\textit{Mitigation:}}{ Opt for widely supported, scalable, and maintainable technologies. Consider using open-source tools to reduce costs and increase community support. Keep an eye on emerging technologies to gradually integrate them when they prove to be stable and beneficial.}
-\end{chatbox}
+\end{chatout}
 
 \MyParaText{\texttt{\nth{3} Technical Premises:}}  After clarifying the initial requirements, this pattern focuses on the technical constraints of the project, making an analysis between the technical limitations and the architecture, ensuring feasibility and efficiency.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case:3]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case:3]}
 
 Act as Jota, in the project context, I will ensure the implementation of all necessary measures to mitigate risks and improve the overall system. Please provide a comprehensive list of technical premises, including specific facts, justifications, and architectural decision-making for each premise. These facts should be verified and listed at the end of the output(Facts, Rational, Architectural Decision-making) informative but succinct in a dissertation format.
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:3]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:3]}
 
 As Jota, in the context of the CloudConnect CRM project, I will establish a set of technical premises, each underpinned by verified facts, rational justifications, and clear architectural decision-making. These premises will guide our approach to mitigate risks and optimize the system.\newline
 \MyParaBold{1. Utilize a Microservices Architecture}\newline
@@ -797,17 +797,17 @@ As Jota, in the context of the CloudConnect CRM project, I will establish a set 
 \MyPara{Rationale:}{ Adopting a technology stack that is both cost-effective and has a strong performance record ensures long-term viability and maintainability of the system.}\newline\MyPara{Architectural Decision:}{ Opt for a blend of open-source and widely-used technologies. For example, use React for the frontend for its wide adoption and Node.js for the backend for its performance and scalability.}
 
 In conclusion, these technical premises are designed to create an architecture that is robust, adaptable, and future-proof. This approach will allow CloudConnect CRM to navigate the dynamic landscape of CRM software, ensuring its relevance and effectiveness in the market.
-\end{chatbox}
+\end{chatout}
 
 \MyParaText{\texttt{\nth{4} Quality Attribute Question:}} This pattern comes into force once the technical premises have been established. It ensures that crucial quality attributes such as performance, security, and reliability are considered and incorporated into the architecture.
 
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case:4]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case:4]}
 
 Act as Jota, in the context of the CloudConnect CRM project your task is to carefully navigate through the decision-making process of CloudConnect CRM project only quality attribute, step by step. You should ask any necessary questions to clarify doubts about the quality attributes of the new system. Avoid making any architectural decisions until all questions are answered. After the answers are given, provide a comprehensive prompt that includes all the data collected in the previous steps and an explanation of the rationale behind each architectural decision-making.
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:5]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:5]}
 
 As Jota, in the context of the CloudConnect CRM project, my focus right now is to thoroughly understand and define the quality attributes that are crucial for the system. To do this effectively, I need to ask several key questions that will inform our architectural decisions. The quality attributes include performance, scalability, security, maintainability, and usability, among others.\newline
 \MyParaBold{1. Performance:}\newline
@@ -834,9 +834,9 @@ As Jota, in the context of the CloudConnect CRM project, my focus right now is t
 \MyParaText{- Do we need to implement redundancy or failover mechanisms?}\newline
 \MyParaText{- How will we handle data backups and disaster recovery?}
 
-\end{chatbox}
+\end{chatout}
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case:6]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case:6]}
 \MyParaBold{1. Performance:}\newline
 \textbf{Response Times:}{Less than 2 seconds for most interactions.}\newline
 \textbf{Data Processing:}{Capable of handling several terabytes, with peak loads during high activity periods.}\newline
@@ -865,9 +865,9 @@ As Jota, in the context of the CloudConnect CRM project, my focus right now is t
 \textbf{Downtime:}{Aiming for 99.9\% uptime.}\newline
 \textbf{Redundancy and Failover:}{Implementation in critical components.}\newline
 \textbf{Backups and Disaster Recovery:}{Regular backups and a comprehensive disaster.}
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:6]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:6]}
 
 Based on the detailed information provided regarding the quality attributes for the CloudConnect CRM project, we can now outline a comprehensive plan that includes all the data collected and the rationale behind each architectural decision-making.\newline
 \MyParaBold{1. Performance:}\newline
@@ -888,15 +888,15 @@ Based on the detailed information provided regarding the quality attributes for 
 \MyParaBold{6. Reliability:}\newline
 \MyPara{Architectural Decision: }{Implement redundancy and failover mechanisms in critical components. Establish a routine for regular backups and a comprehensive disaster recovery plan.}\newline
 \MyPara{Rationale: }{Achieving 99.9\% uptime requires redundancy in critical system components. Regular backups and a solid disaster recovery plan are essential for data integrity and system reliability.}
-\end{chatbox}
+\end{chatout}
 
 \MyParaText{\texttt{\nth{5} Architectural Company Context:}} This pattern aligns software architecture with business constraints such as budget, team size, and development time. Ensures that the architecture is technically sound and viable in the company context.
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case1:7]}
+\begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case1:7]}
 As Jota, the software architect for CloudConnect CRM, I will outline an optimal strategy for delivering the project within the specified constraints - a multidisciplinary agile team, a 12-month deadline, and a budget of \$400,000. This strategy will encompass the architectural implementation, mitigation of uncertainties, assumptions, and quality attributes.
-\end{chatbox}
+\end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:7]}
+\begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:7]}
 \MyParaBold{1. Architectural Implementation:}\newline
 \MyParaText{- Adopt a Microservices Architecture to provide scalability and facilitate easier updates.}\newline
 \MyParaText{- Utilize Cloud-Based Infrastructure (like AWS or Azure) for cost-effective scalability and performance.}\newline
@@ -929,26 +929,26 @@ As Jota, the software architect for CloudConnect CRM, I will outline an optimal 
  \MyParaText{- Foster a collaborative environment with regular stand-ups, sprint reviews, and planning meetings.}\newline
  \MyParaText{- Encourage open communication and knowledge sharing within the team.}\newline
  \MyParaText{- Utilize project management tools for tracking progress and coordinating tasks.}
-\end{chatbox}
+\end{chatout}
 
-\subsection{Use Case 2: Modernizing Legacy Systems in a Financial Institution}\label{use-case-2}
+% \subsection{Use Case 2: Modernizing Legacy Systems in a Financial Institution}\label{use-case-2}
 
-\MyParaBold{Scenario:}{A well-established financial institution plans to modernize its legacy systems to integrate more advanced technologies to improve customer service. The project involves significant technical upgrades and the integration of new functionalities while ensuring minimum disruption to existing services.}
+% \MyParaBold{Scenario:}{A well-established financial institution plans to modernize its legacy systems to integrate more advanced technologies to improve customer service. The project involves significant technical upgrades and the integration of new functionalities while ensuring minimum disruption to existing services.}
 
-\begin{chatbox}{usercolor}{\chatgptin[chatgpt-in-case:15]}
-\end{chatbox}
+% \begin{chatin}{usercolor}{\chatgptin[chatgpt-in-case:15]}
+% \end{chatin}
 
-\begin{chatbox}{botbubble}{\chatgptout[chatgpt-out-case1:12]}
-\end{chatbox}
+% \begin{chatout}{botbubble}{\chatgptout[chatgpt-out-case1:12]}
+% \end{chatout}
 
-\MyParaText{\texttt{\nth{1} Technical Premises:}}{he institution begins by assessing the technical landscape, focusing on the limitations and capabilities of existing legacy systems. This involves deciding on technologies that enable a smooth transition from old to new systems.} 
+% \MyParaText{\texttt{\nth{1} Technical Premises:}}{he institution begins by assessing the technical landscape, focusing on the limitations and capabilities of existing legacy systems. This involves deciding on technologies that enable a smooth transition from old to new systems.} 
 
-\MyParaText{\texttt{\nth{2} Quality Attribute Question:}}{With an understanding of the technical foundation, the team addresses key quality attributes, like security and performance, which are critical in the financial sector.}
+% \MyParaText{\texttt{\nth{2} Quality Attribute Question:}}{With an understanding of the technical foundation, the team addresses key quality attributes, like security and performance, which are critical in the financial sector.}
 
-\MyParaText{\texttt{\nth{3} Architectural Company Context:}}{After establishing the technical and quality parameters, the institution aligns the architecture with business objectives, such as regulatory compliance, market competitiveness, and customer satisfaction.}
+% \MyParaText{\texttt{\nth{3} Architectural Company Context:}}{After establishing the technical and quality parameters, the institution aligns the architecture with business objectives, such as regulatory compliance, market competitiveness, and customer satisfaction.}
 
-\MyParaText{\texttt{\nth{4} Software Architect Persona:}}{In this stage, the role of the software architect is emphasized to manage the balance between technical challenges and business goals. The architect ensures the modernization aligns with technical and business strategies.}
+% \MyParaText{\texttt{\nth{4} Software Architect Persona:}}{In this stage, the role of the software architect is emphasized to manage the balance between technical challenges and business goals. The architect ensures the modernization aligns with technical and business strategies.}
 
-\MyParaText{\texttt{\nth{5} Uncertain Requirement Statement:}}{Finally, given the evolving nature of the finance industry and regulatory environment, this pattern helps in continuously refining and adapting the requirements to meet the changing market and regulatory demands.}
+% \MyParaText{\texttt{\nth{5} Uncertain Requirement Statement:}}{Finally, given the evolving nature of the finance industry and regulatory environment, this pattern helps in continuously refining and adapting the requirements to meet the changing market and regulatory demands.}
 
-The financial institution efficiently modernizes its legacy systems by reordering the pattern sequence. The approach ensures that the technical and quality aspects are addressed upfront, aligning the project closely with business goals and evolving industry requirements.
+% The financial institution efficiently modernizes its legacy systems by reordering the pattern sequence. The approach ensures that the technical and quality aspects are addressed upfront, aligning the project closely with business goals and evolving industry requirements.

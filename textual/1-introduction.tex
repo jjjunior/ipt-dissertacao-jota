@@ -11,54 +11,50 @@ Mastering the understanding and implementation of design patterns presents a for
 
 Applying \ac{AI} solutions to this problem has been on the agenda for some time. These AI tools aim to simplify the detection and application of design patterns. However, they come with challenges as they require massive amounts of data and training to teach the \ac{AI} to interpret the design patterns ~\cite{Naghdipour2023}. This prerequisite can often prevent its adoption by companies, as it demands time, resources, and specific knowledge.
 
-The \ac{LLM} and \ac{GPT}, like ChatGPT, have opened up new possibilities. These AI tools are paving the way for a more accessible approach, avoiding the need for specialized training. Nonetheless, it is still uncertain whether these more generalized tools can accurately identify and apply design patterns in real-world situations without specialized training.
+The \ac{LLM} and \ac{GPT}, like ChatGPT, have opened up new possibilities. These \ac{GAI Tools} are paving the way for a more accessible approach, avoiding the need for specialized training. Nonetheless, it is still uncertain whether these more generalized tools can accurately identify and apply design patterns in real-world situations without specialized training.
 
-Consequently, our investigation evaluates whether the application of such AI tools can simplify the process of understanding and implementing design patterns. The preliminary study showed promising results using AI-assisted design decision-making tools for pattern selection. However, further explorations and evaluations are needed, increasing the scope of research to develop these findings, which is what most motivates this work.
+Consequently, our investigation evaluates whether applying such \ac{GAI Tools} can simplify the process of understanding and implementing design patterns. The preliminary study showed promising results using \ac{GAI Tools} design decision-making tools for pattern selection. However, further explorations and evaluations are needed, increasing the scope of research to develop these findings, which is what most motivates this work.
 
 \section{Context}\label{sec:context}
-\ac{GPT} is a type of~\ac{LLM} and form a prominent framework for generative~\ac{AI}. Introduced by OpenAI in 2018, GPT models are artificial neural networks based on transformer architecture, pre-trained on vast datasets of unlabeled text. Their capabilities extend to generating novel human-like content, making them suitable for a wide range of applications.
+\ac{GPT} is a type of~\ac{LLM} and form a prominent framework for \ac{GAI}. Introduced by OpenAI in 2018, GPT models are artificial neural networks based on transformer architecture, pre-trained on vast datasets of unlabeled text. Their capabilities extend to generating novel human-like content, making them suitable for a wide range of applications.
 
-ChatGPT, an AI-assisted tool based on the \ac{GPT} model, offers conversational interaction and problem-solving capabilities. The potential applications of this tool have piqued interest from the media, the general public, and several professional sectors such as public health~\cite{Biswas2023} and academia~\cite{Lund2023}. Recent research has explored the use of ChatGPT for software engineering tasks, including debugging~\cite{Surameery2023} and enhancing engineering requirements and code quality~\cite{White2023}.
+ChatGPT, an \ac{GAI Tools} based on the \ac{GPT} model, offers conversational interaction and problem-solving capabilities. The potential applications of this tool have piqued interest from the media, the general public, and several professional sectors such as public health~\cite{Biswas2023} and academia~\cite{Lund2023}. Recent research has explored the use of ChatGPT for software engineering tasks, including debugging~\cite{Surameery2023} and enhancing engineering requirements and code quality~\cite{White2023}.
 
 The work of~\textcite{Ahmad2023towards} proposes DevBots, which are software development bots that~\ac{LLM} power. They enable collaboration between human architects and AI decision support in~\ac{ACSE}. The ChatGPT is used to refine artifact architectural designs through natural language processing. A case study demonstrates how ChatGPT collaborates with a novice software architect to design service-based software. Future research will aim to gather empirical evidence on the productivity of architects using ChatGPT and explore the sociotechnical aspects of AI architecture to address \ac{ACSE} challenges effectively.
 
 Integrating AI into design pattern selection has been another area of promising research.~\textcite{Naghdipour2023Semi} explored a semi-supervised learning approach based on text classification  to evaluate design problems. The results indicated improved performance over traditional supervised learning techniques such as Naïve Bayes and K-Nearest Neighbor. 
 
-Notably, even with the increasing use of AI tools, humans play a significant role in decision-making, particularly with unstructured data and variables such as vision, strategy, and values. AI's integration can enhance decision-making, leading to more confident choices~\cite{Colson2019}. Figure~\ref{fig-context} shows the integration of AI into workflows, signifying the emergence of companies that harmonize AI and human experience. 
+Notably, even with the increasing use of \ac{GAI Tools}, humans play a significant role in decision-making, particularly with unstructured data and variables such as vision, strategy, and values. AI's integration can enhance decision-making, leading to more confident choices~\cite{Colson2019}. Figure~\ref{fig-context} shows the integration of AI into workflows, signifying the emergence of companies that harmonize AI and human experience. 
 
 % Start Figure---------------------------
 \begin{figure}[ht]
 \caption{AI-Enhanced Workflow in Software Development Decision-Making.}
 \centering
 \label{fig-context}
-\includegraphics[width=1.0 \textwidth]{figures/context.png}
+\includegraphics[width=0.80 \textwidth]{figures/context.png}
 \objectsource{\objectsourceauthor}
 \end{figure}
 % End Figure ---------------------------
 
-This collaboration between AI tools and developers is relatively new, so it is crucial to understand its effectiveness and possible side effects, the nature of interactions, how these tools will be incorporated into the software development cycle, and the perceived benefits of particular interest. Furthermore, assessing whether using such devices leads to improvements or accelerates the software development process is necessary. Thus, detailed assessments of how developers and companies use AI tools in their software development cycles are essential to incorporate and optimize these new technologies successfully.
+This collaboration between \ac{GAI Tools} and developers is relatively new, so it is crucial to understand its effectiveness and possible side effects, the nature of interactions, how these tools will be incorporated into the software development cycle, and the perceived benefits of particular interest. Furthermore, assessing whether using such devices leads to improvements or accelerates the software development process is necessary. Thus, detailed assessments of how developers and companies use \ac{GAI Tools} in their software development cycles are essential to successfully incorporate and optimize these new technologies.
 
 \section{Objective}\label{sec:objective} 
 \label{section objective}
 \begin{quote}
-\textbf{The goal of this dissertation is:} 
-\end{quote}
-\begin{quote}
-\textbf{Evaluate the potential of using AI-assisted tools to make design decisions in software projects to understand their strengths and limitations to guide their application in this context.}
+\textbf{The goal of this dissertation is:} Evaluate the potential of using generative AI tools to make design decisions in software projects to understand their strengths and limitations to guide their application in this context.
 \end{quote}
 
 \section{Research Questions}\label{sec:research-questions}
 \begin{quote}
-\textbf{What is the potential of AI-assisted tools for design decision-making in software projects?}
+\textbf{How do generative AI tools, specifically from GPT models, can be used to support software architecture decision-making process?}
 
 \begin{itemize}
-    \item  \textbf{\textit{RQ\textsubscript{1}}} -  What are the characteristics and types of AI-assisted tools for design decision-making in software projects?
-    \item \textbf{\textit{RQ\textsubscript{2}}} - What are the strengths and limitations of AI-assisted tools for design decision-making in software projects?
-    \item \textbf{\textit{RQ\textsubscript{3}}} -  How can AI-assisted tools be applied and integrated with different phases and contexts of software development?
-    \item \textbf{\textit{RQ\textsubscript{4}}} - How do software engineers perceive and use AI-assisted tools for design decision-making in software projects?
+    \item  \textbf{\textit{RQ\textsubscript{1}}} - What is the efficiency and accuracy of generative AI tools, such as GPT, in solving software design problems?\newline \textit{To answer that question, we performed an exploratory study that used existing questions that asked the right design pattern for a design problem to investigate how generative AI tools perform.}
+    \item \textbf{\textit{RQ\textsubscript{2}}} - What approaches can be applied in the usage of generative AI tools to support decision-making in software architecture?\newline \textit{To answer that question, our work based on existing prompt patterns, and used design science to explore other alternatives. As a result, a new set of prompt patterns and a prompt sequence was proposed.}
+    \item \textbf{\textit{RQ\textsubscript{3}}} -  What are the perceived benefits and challenges of using the proposed prompt sequence with generative AI tools in the architectural decision-making process from the perspective of software architects?\newline \textit{To answer that question, we applied the prompt sequence in past problems faced by companies and interviewed software architects that participated in the decision process to collect their impressions.}   
 \end{itemize}
 
-Answering these research questions will provide a comprehensive view of current AI-assisted tools for design decision-making in software projects and insights into their future directions and opportunities.
+% Answering these research questions will provide a comprehensive view of current AI-assisted tools for design decision-making in software projects and insights into their future directions and opportunities.
 \end{quote}
 
 \section{Methodology}\label{sec:methodology}
@@ -75,7 +71,7 @@ Based on the positive results from our preliminary study, we plan to move forwar
 \caption{Overview of the methodology adopted for AI-Assisted Design Decision Research.}
 \centering
 \label{fig-methodology}
-\includegraphics[width=0.96 \textwidth]{figures/methodology.png}
+\includegraphics[width=0.90 \textwidth]{figures/current-methodology.png}
 \objectsource{\objectsourceauthor}
 \end{figure}
 % Fim Figura1 ---------------------------
