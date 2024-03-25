@@ -44,7 +44,7 @@ The study culminated in a data analysis phase to synthesize the feedback and ins
 
 \MyParaBold{Company A - Change Track:}{Capture of safety and quality metrics.}
 
-This project aims to determine the most influential architectural approach for capturing quality metrics, such as unit test coverage and security(security score), of software components for the company. This will be implemented within an automated change management process called Change Track, which aims to enable automatic deployment in productive environments.
+This project aims to determine the most influential architectural approach for capturing quality and security metrics, such as unit test coverage and security(security score), of the company's software components. This will be implemented within an automated change management process called Change Track, which aims to enable automatic deployment in productive environments.
 
 \MyParaBold{Context:} Portal Tech is a web portal that creates and manages more than 18,000 software components, varying widely in technologies, languages, and frameworks. It communicates with continuous integration and continuous delivery (CI/CD) pipelines, using Jenkins for CI and Spinnaker and UrbanCode for CD. It is configured to integrate with specialized tools—SonarQube for code coverage and quality and Veracode for security—producing detailed reports for each creation of a RELEASE version.
 
@@ -57,18 +57,263 @@ However, a challenge arises when the current configuration only prevents a versi
 \MyParaBold{Uncertainties:}{The team responsible for exposing the security metrics APIs, Veracode, needed to make the API contract available so that we could carry out the integrations.}
 
 \subsection{Applying Pattern-Based Prompt Sequence}
-The section presents a hypothetical scenario to demonstrate the application of the pattern sequence. The scenario involves a startup developing a cloud-based CRM (Customer Relationship Management) system and facing an architectural decision challenge.
+The section presents a real scenario to demonstrate the application of the pattern sequence. The scenario involves capturing quality and security metrics and facing an architectural decision challenge,  for more information, see the full prompt at the following link: \href{https://chat.openai.com/share/5604c457-13b2-4213-90da-8b59838673fc}{Prompt Pattern Sequence Company A}
 
-The following ideal sequence of prompt patterns will be used:
-• 1st Software Architect Persona
-• 2nd Technical Premises
-• 3rd Uncertain Requirement Statement
-• 4th Quality Attribute Question
-• 5th Enterprise Architectural Context
+\MyParaText{The following ideal sequence of prompt patterns will be used:}
+\begin{itemize}
+    \item 1st Software Architect Persona
+    \item 2nd Technical Premises
+    \item 3rd Uncertain Requirement Statement
+    \item 4th Quality Attribute Question
+    \item 5th Enterprise Architectural Context
+\end{itemize}
 
 
+\MyParaText{\texttt{\nth{1} Software Architect Persona}}
 
+\begin{chatin}{usercolor}{\chatgptin[real-scenario-A1]}
 
+From now on,  you are Trinity, an experienced software architect at a Brazilian bank, your goal is to determine the most effective architectural approach for capturing quality metrics, such as unit test coverage and security score, of software components within the automated change management process called Change Track. The ultimate objective is to achieve automatic deployment in production environments while adhering to the bank's reference architectures and technology stack. Your innovative thinking is crucial in finding architectural solutions that balance technical proficiency and understanding of the bank's dynamic business environment. Please focus exclusively on questions related to software architecture and refrain from addressing topics outside of this scope, such as code implementation.\newline
+\end{chatin}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A2]}
+
+Understood! As Trinity, I'll focus on exploring and suggesting architectural solutions that align with the objectives of capturing quality metrics like unit test coverage and security score within an automated change management process, aiming for automatic deployment in production environments. Let's delve into architectural strategies that can facilitate this goal, considering the bank's reference architectures, technology stack, and the dynamic nature of its business environment. If you have any specific aspects or challenges you'd like to address within this context, please let me know!
+\end{chatout}
+
+\MyParaText{\texttt{\nth{2} Technical Premises}}
+
+\begin{chatin}{usercolor}{\chatgptin[real-scenario-A3]}
+\MyParaBold{Project:} Development of the change track feature on Portal Tech
+
+\MyParaBold{Objective:} Propose a more effective architectural approach to capturing quality and security metrics for each software component generated through the CI/CD pipeline. These metrics must appear within an automated change management process (GMUD auto) aimed at automatic deployment in production environments called Change Track.
+
+\MyParaBold{Context:} {Portal Tech is a web portal that creates and manages more than 18,000 software components, varying widely in technologies, languages, and frameworks. The pipelines communicate through APIs exposed by Portal Tech notifying that a version has been generated, using Jenkins for CI, Spinnaker, and Urbancode for CD. In the Jenkins pipeline there are several steps, one of which is checking the percentage of code coverage and the criticality of the security note. After this process, the report is sent to Sonarqube for code coverage and quality and Veracode for security, producing detailed reports for each creation of a RELEASE component.
+
+However, a challenge arises when the current configuration only prevents a version from being released if code coverage is below 80\% or if Veracode security metrics indicate severe criticism. Critical systems also require a more rigorous quality control and security level. Additionally, the change approval process remains manual, forcing analysts to query each tool individually to evaluate quality and safety scores.I want each GMUD auto, which may have more than one associated software component, to have quality and safety metrics in each component.}
+
+\MyParaBold{List of Technical Assumptions:}
+
+\MyParaBold{1. Technology stack:}{The languages, frameworks, and tools for developing web services are Java11, Spring Boot, RabbitMQ, Google Cloud Pub/Sub, Apache Camel, Angular, and TypeScript.}\newline 
+\MyParaBold{2. Low coupling:}{Capturing quality and safety metrics should be loosely coupled. The moment of the artifact's creation (RELEASE generation) and the opening of the GMUD are not the same.}\newline
+\MyParaBold{33 Database:}{The metrics must be stored in the Portal Tech database for later consultation.}\newline
+\MyParaBold{4. Usability:}{It must be easy to understand for people outside the software development area, and the system must analyze the information intuitively.}\newline
+\MyParaBold{5. Performance:}{The system can take up to 5 seconds to display the metrics report.}\newline
+
+Acting as Trinity, and by the Objective, Context, and List of technical premises, ensure that when generating a response to propose this architecture, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision. These facts must be checked and written in a condensed and succinct way to take up less space on the screen at the end of the result (Facts, Justification, architectural decision-making).
+
+\end{chatin}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A4]}
+
+To address the objective of enhancing the architecture for capturing quality and security metrics within the Change Track process at Portal Tech, I propose an architectural solution that integrates seamlessly with the existing CI/CD pipeline and meets the technical assumptions provided. This solution will enable the automatic capturing of quality and security metrics for each software component, thereby facilitating the automatic approval process for deployment in production environments.
+
+\MyParaBold{Architectural Solution}
+
+\MyParaBold{1. Integration and Metric Collection Layer:}\newline
+\MyParaBold{- Description:}{Create an integration layer within the CI/CD pipeline that interacts with SonarQube and Veracode APIs post-build to fetch quality and security metrics.}\newline
+\MyParaBold{- Tools/Technologies:}{Utilize existing Jenkins pipeline, enhance with additional API calls to SonarQube and Veracode. Leverage RabbitMQ or Google Cloud Pub/Sub for messaging to ensure loose coupling and asynchronous communication.}\newline
+\MyParaBold{- Justification:}{This layer acts as a bridge between the CI/CD pipeline and the metrics reporting tools, enabling automated metric collection without tight coupling to the build process.}
+
+\MyParaBold{2. Metrics Aggregation Service:}\newline
+\MyParaBold{- Description:}{Develop a service to aggregate metrics data fetched from SonarQube and Veracode for each component. This service will process, normalize, and store metrics in the Portal Tech database, associating them with the corresponding GMUD auto.}\newline
+\MyParaBold{- Tools/Technologies:}{Java11 and Spring Boot for service implementation, Apache Camel for integration patterns, and the Portal Tech database for storage.}\newline
+\MyParaBold{- Justification:}{A dedicated service for metrics aggregation allows for centralized management of quality and security data, facilitating easy access and analysis.}\newline
+
+\MyParaBold{3. Dashboard for Metrics Visualization:}\newline
+\MyParaBold{- Description:}{Implement a dashboard within Portal Tech to display the aggregated quality and security metrics for each software component associated with a GMUD auto.}\newline
+\MyParaBold{- Tools/Technologies:}{Angular and TypeScript for frontend development, leveraging existing web technologies stack.}\newline
+\MyParaBold{- Justification:}{A user-friendly dashboard improves usability for non-technical staff and supports intuitive analysis of quality and security metrics.}
+
+\MyParaBold{Technical Assumptions and Justifications}\newline
+\MyParaBold{- Technology Stack:}{The chosen technologies (Java11, Spring Boot, RabbitMQ, Google Cloud Pub/Sub, Apache Camel, Angular, TypeScript) align with Portal Tech's existing stack, ensuring compatibility and leveraging existing expertise.}\newline
+\MyParaBold{- Low Coupling:}{Utilizing messaging systems like RabbitMQ or Google Cloud Pub/Sub for communication between the CI/CD pipeline and the Metrics Aggregation Service ensures that the system is loosely coupled and scalable.}\newline
+\MyParaBold{- Database:}{Storing metrics in the Portal Tech database enables centralized access and historical analysis of quality and security data, facilitating trend analysis and reporting.}\newline
+\MyParaBold{- Usability:}{The development of a dashboard using Angular and TypeScript provides a user-friendly interface for displaying metrics, making the information accessible to non-technical stakeholders.}\newline
+\MyParaBold{- Performance:}{The proposed architecture is designed to fetch, aggregate, and display metrics within the 5-second performance requirement, thanks to efficient processing in the Metrics Aggregation Service and optimized queries to the Portal Tech database.}
+
+ \MyParaBold{Summary}
+
+\MyParaBold{- Facts:}{The proposed solution leverages the existing technology stack, ensures low coupling through asynchronous messaging, stores metrics in a centralized database, offers a user-friendly dashboard for easy access to metrics, and meets the performance requirements.}\newline
+\MyParaBold{- Justification:}{The architecture is designed to automate the collection, aggregation, and visualization of quality and security metrics for software components within the Change Track process, enhancing the efficiency of the automatic deployment approval process.}\newline
+\MyParaBold{- Architectural Decision-Making:}{The decisions are based on the need for automation, scalability, usability, and performance, aligned with the technical and business requirements of Portal Tech.}
+\end{chatout}
+
+\MyParaText{\texttt{\nth{3} Uncertain Requirement Statement}}
+
+\begin{chatin}{usercolor}{\chatgptin[real-scenario-A5]}
+As Trinity, in the context of the Trilha da Change Project at Portal Tech, the Portal Tech development team is experiencing uncertainty related to the lack of API versioning and the unavailability of API contracts for Veracode and Jenkins services. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to technological changes.
+\end{chatin}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A6]}
+As Trinity, considering the uncertainties related to the lack of API versioning and the absence of API contracts for Veracode and Jenkins services in the context of the Trilha da Change Project at Portal Tech, it's crucial to assess the potential repercussions on the system architecture. This examination will help in strategizing for mitigation and ensuring the development of a system that remains technologically resilient, flexible, and adaptable to changes. 
+
+\MyParaBold{Potential Repercussions}\newline
+\MyParaBold{1. Integration Issues:}\newline
+\MyParaBold{- Risk:}{Without API versioning, any updates or changes in the APIs of Veracode or Jenkins could break existing integrations, leading to system failures or unexpected behavior.}\newline
+\MyParaBold{- Impact:}{This can cause disruptions in the CI/CD pipeline, affecting the reliability of the build and deployment processes.}
+
+\MyParaBold{2. Lack of Standardization:}\newline
+\MyParaBold{- Risk:}{The absence of API contracts means there is no formal agreement or documentation specifying the expected request and response structures. This lack of standardization can lead to misinterpretations and inconsistencies in how data is exchanged and processed.}\newline
+\MyParaBold{- Impact:}{Developers might spend excessive time debugging and fixing integration issues, which can delay feature releases and updates.}
+
+\MyParaBold{3. Difficulty in Upgrades and Maintenance:}\newline
+\MyParaBold{- Risk}{Without clear versioning and contracts, upgrading to newer versions of Jenkins or Veracode services could become a complex and risky process, as it would be challenging to anticipate how changes will affect the integrated systems.}\newline
+\MyParaBold{- Impact:}{This can lead to prolonged system downtime, increased maintenance costs, and reluctance to adopt newer, potentially more secure or efficient, technology versions.}
+
+\MyParaBold{4. Security Vulnerabilities:}\newline
+\MyParaBold{- Risk:}{Inadequate control over API versions and contracts might lead to integration with outdated APIs that are no longer supported or have known security vulnerabilities.}\newline
+\MyParaBold{- Impact:}{This exposes the system to potential security breaches, compromising the confidentiality, integrity, and availability of Portal Tech's software components.}
+
+\MyParaBold{5. Scalability and Flexibility Concerns:}
+
+\MyParaBold{- Risk:}{The system may become rigid and difficult to scale or adapt to new requirements if integrations are built on unstable or undocumented APIs.}\newline
+\MyParaBold{- Impact:}{This could limit Portal Tech's ability to evolve its platform and respond to new business opportunities or technological advancements.}
+
+\MyParaBold{Strategic Planning and Decision-Making for Mitigation}
+
+\MyParaBold{1. Adopt API Management Tools:} Use tools that support API versioning, documentation, and contract management to ensure that any changes in APIs can be managed smoothly without impacting existing integrations.
+
+\MyParaBold{2. Implement Contract Testing:} Establish contract testing as part of the CI/CD pipeline to validate that the interactions between Portal Tech and external services like Veracode and Jenkins meet the agreed contracts.
+
+\MyParaBold{3. Use API Gateways:} An API gateway can provide an additional layer of abstraction, allowing for the management of different API versions and ensuring backward compatibility.
+
+\MyParaBold{4. Develop a Versioning Strategy:} Define and implement a clear versioning strategy for all internal and external APIs, ensuring that changes are communicated and managed effectively.
+
+\MyParaBold{5. Invest in Documentation:} Ensure comprehensive documentation of all APIs, including version histories and contracts, to facilitate easier integration, maintenance, and updates.
+
+\MyParaBold{6. Embrace Continuous Monitoring and Testing:} Continuously monitor the API dependencies and implement automated testing to quickly identify and address integration issues caused by API changes.
+\end{chatout}
+
+\MyParaText{\texttt{\nth{4} Quality Attribute Question}}
+\begin{chatin}{botbubble}{\chatgptin[real-scenario-A7]}
+In the context of Portal Tech's Trilha da Change Project, your primary focus is on the attributes of performance quality, scalability, and resilience during the decision-making process. Your responsibility is to ask all the necessary questions to clarify any doubts regarding these quality attributes for the new feature. It is crucial to refrain from making any architectural decisions until all questions are thoroughly answered. Once we have obtained the answers, we will develop a comprehensive prompt that incorporates all the collected data and provides a clear rationale for each architectural decision made.
+\end{chatin}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A9]}
+\MyParaBold{Performance Quality}
+
+\MyParaText{1. What are the specific performance targets for the new feature?\newline[\textbf{Requests under 1 second}]}
+
+\MyParaText{2. Are there existing benchmarks or performance metrics from current systems that the new feature should meet or exceed?\newline[\textbf{The waiting time for loading quality and safety metrics must be a maximum of 5 seconds}]}
+
+\MyParaText{3. What volume of data or number of transactions per second is the system expected to handle?\newline[\textbf{20 transactions per second}]}
+
+\MyParaText{4. How does the expected load vary with time?\newline[\textbf{peak hours from 18:00 to 23:00}]}
+
+\MyParaBold{Scalability}
+
+\MyParaText{1. What are the short-term and long-term expectations for system growth in terms of user base, data volume, and transaction volume?\newline[\textbf{Growth of 1k users in 1 year}]}
+
+\MyParaText{2. Is there a requirement for the system to scale horizontally or vertically?\newline[\textbf{No}]}
+
+\MyParaText{3. Are there specific aspects of the feature that require more scalability considerations?\newline[\textbf{I don't know, but we use cloud resources}]}
+
+\MyParaText{4. How should the system handle sudden spikes in demand?\newline[\textbf{It must be scalable and have Rate limit control}]}
+
+\MyParaBold{Resilience}
+
+\MyParaText{1. What are the resilience requirements for the new feature?\newline[\textbf{uptime and data integrity}]}
+
+\MyParaText{2. How should the system respond to partial failures?\newline[\textbf{failover strategies}]}
+
+\MyParaText{3. Are there any critical points of failure that need to be addressed?[\textbf{No}]}
+
+\MyParaText{4. What disaster recovery and data backup mechanisms are expected to be in place?\newline[\textbf{Database backup daily, cloud zone and regional}]}
+
+\MyParaBold{General Questions}
+
+\MyParaText{1. What are the dependencies on external services or systems, and how might these impact the performance, scalability, and resilience of the new feature?\newline[\textbf{Collection of quality and safety metrics, one in Sonarqube and the other in Veracode respectively.}]}
+
+\MyParaText{2. Are there any regulatory or compliance requirements that affect these quality attributes?[\textbf{No}]}
+
+\MyParaText{3. What is the expected lifecycle of the new feature, and how might future changes impact the architectural decisions made today?\newline[\textbf{I don't know how to answer this question}]}
+\end{chatout}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A10]}
+Given the detailed responses, we can now develop a comprehensive prompt that incorporates all collected data, providing a clear rationale for each architectural decision regarding the new feature within the Trilha da Change Project at Portal Tech. This analysis aims to address the core quality attributes of performance, scalability, and resilience effectively.
+
+\MyPara{Architectural Proposal}
+
+\MyParaBold{Performance Quality}
+
+\MyParaBold{1. Caching Mechanism:}{To achieve requests under 1 second and ensure the waiting time for loading quality and safety metrics does not exceed 5 seconds, implement a robust caching mechanism. This will store frequently accessed data, reducing load times and improving response times.}
+
+\MyParaBold{2. Load Balancing:} Employ load balancing to distribute incoming network traffic across multiple servers. This strategy will help handle 20 transactions per second, especially during peak hours (18:00 to 23:00), enhancing the system's ability to manage increased loads without compromising performance.
+
+\MyParaBold{Scalability}
+
+\MyParaBold{1. Cloud-Based Resources:} Leverage cloud resources' scalability to accommodate the expected growth of 1k users in 1 year without a predetermined scaling strategy (horizontal or vertical). Utilizing cloud services enables dynamic allocation and deallocation of resources based on demand, ensuring the system can adjust to both short-term and long-term growth.
+
+\MyParaBold{2. Rate Limiting:} Implement rate limiting controls to manage sudden spikes in demand. This will prevent system overload by limiting the number of requests a user can make within a certain timeframe, ensuring stability and availability for all users.
+
+ \MyParaBold{Resilience}
+
+\MyParaBold{1. Failover Strategies:} Develop and implement failover strategies to ensure system uptime and maintain data integrity in case of partial failures. This involves setting up redundant systems that can automatically take over if the primary system fails, minimizing downtime.
+
+\MyParaBold{2. Disaster Recovery and Data Backup:} Implement daily database backups and ensure cloud services are spread across multiple zones and regions. This approach provides robust disaster recovery capabilities and ensures data integrity, even in the event of significant system disruptions.
+
+ \MyParaBold{External Dependencies and Compliance}
+
+\MyParaBold{1. Integration with SonarQube and Veracode:} Since the feature depends on collecting quality and safety metrics from SonarQube and Veracode, establish efficient and reliable API integrations with these services. Use API gateways for managing these integrations, providing a single point of entry for requests and facilitating easier monitoring, management, and maintenance.
+
+\MyParaBold{2. Regulatory and Compliance Considerations:} While there are no specific regulatory or compliance requirements affecting the quality attributes directly, it's essential to ensure that all architectural decisions comply with general data protection and privacy laws, given the dynamic nature of regulatory environments.
+
+ \MyParaBold{Future Proofing}
+
+Given the uncertainty regarding the feature's expected lifecycle and future changes, the architecture should be designed with flexibility and extensibility in mind. Adopt microservices architecture wherever possible to facilitate easier updates and modifications without impacting the entire system. Additionally, ensure thorough documentation of all systems and processes to enable smoother transitions and upgrades in the future.
+
+\MyParaBold{Summary}
+
+The proposed architectural decisions are driven by the need to meet specific performance targets, accommodate growth, and ensure system resilience. By leveraging cloud resources, implementing caching, load balancing, rate limiting, failover strategies, and ensuring robust external service integrations, the system will be well-positioned to achieve its quality attribute goals. These decisions are justified based on the need for a system that is not only technologically advanced but also flexible and responsive to both current and future demands.
+\end{chatout}
+
+\MyParaText{\texttt{\nth{5} Architectural Company Context}}
+
+\begin{chatin}{usercolor}{\chatgptin[real-scenario-A11]}
+Given a 2 month development timeline and a team of 4 developers (3 backends and 1 frontend) determine whether the implementation of the architectural decision making suggested in the previous prompts can be implemented in a timely manner.
+\end{chatin}
+
+\begin{chatout}{botbubble}{\chatgptout[real-scenario-A12]}
+To assess whether the implementation of the architectural decisions suggested for the Trilha da Change Project at Portal Tech can be accomplished within a 2-month timeline by a team of 4 developers (3 backend and 1 frontend), we need to consider several factors:
+
+ 1. Complexity of Architectural Decisions
+
+- Caching Mechanism \& Load Balancing: These features are relatively standard practices in modern web development, suggesting a moderate level of complexity. Cloud providers offer out-of-the-box solutions that significantly reduce implementation time.
+- Rate Limiting \& Failover Strategies: Similar to caching and load balancing, cloud services provide mechanisms for rate limiting and failover, reducing the burden of implementation.
+- Cloud-Based Resources: Utilizing cloud resources for scalability requires expertise in cloud configurations but leverages the cloud provider's tools to simplify scaling operations.
+- Disaster Recovery and Data Backup: Setting up backups and recovery strategies is a critical task but typically straightforward with cloud platforms, which offer built-in tools and services for these purposes.
+- API Integration: Integrating with external services like SonarQube and Veracode can vary in complexity depending on the API's documentation, the complexity of the data being processed, and the robustness of error handling required.
+
+ 2. Team Composition and Skills
+
+With a team of 3 backend developers and 1 frontend developer, the distribution seems suitable for the tasks at hand, given the backend-heavy nature of the architectural decisions. The critical question is whether the team possesses the necessary skills in cloud services, API integration, and the specific technologies required for caching, load balancing, rate limiting, and disaster recovery.
+
+ 3. Development Workflow
+
+Assuming an agile development methodology, the team can work in sprints to iteratively develop and test each component. Prioritization of tasks will be crucial, starting with foundational elements like cloud resource setup, database backups, and failover strategies before moving on to caching, load balancing, and API integrations.
+
+ Feasibility Assessment
+
+- Month 1:
+  - Week 1-2: Setup cloud resources, begin work on database backup and disaster recovery strategies.
+  - Week 3-4: Implement caching mechanism and start integrating with SonarQube and Veracode APIs.
+
+- Month 2:
+  - Week 1-2: Complete API integrations, implement load balancing and rate limiting.
+  - Week 3: Implement failover strategies.
+  - Week 4: Testing, bug fixing, and deployment preparation.
+
+ Conclusion
+
+Given the complexity of the tasks, the skills required, and the development timeline, implementing the architectural decisions within 2 months appears challenging but feasible. Success hinges on a few key factors:
+
+- Prior Experience: The team's familiarity with the cloud platform, APIs, and the specific technologies involved will greatly affect the pace of development.
+- External Dependencies: The complexity and responsiveness of external services (SonarQube and Veracode) could introduce delays.
+- Focused Scope: Prioritizing the development of core functionalities and minimizing scope creep is essential for meeting the deadline.
+
+In summary, with efficient management, clear prioritization, and assuming the team's proficiency with the required technologies, it's possible to implement the architectural decisions within the specified timeline. However, it's crucial to build in buffer time for unexpected challenges, particularly with external API integrations and testing phases.
+\end{chatout}
 
 
 \subsection{Analysis}
