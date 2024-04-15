@@ -209,46 +209,6 @@ As Trinity, considering the uncertainties related to the lack of API versioning 
 In the context of Portal Tech's Trilha da Change Project, your primary focus is on the attributes of performance quality, scalability, and resilience during the decision-making process. Your responsibility is to ask all the necessary questions to clarify any doubts regarding these quality attributes for the new feature. It is crucial to refrain from making any architectural decisions until all questions are thoroughly answered. Once we have obtained the answers, we will develop a comprehensive prompt that incorporates all the collected data and provides a clear rationale for each architectural decision made.
 \end{chatin}
 
-\begin{chatout}{botbubble}{\chatgptout[real-scenario-A9]}
-\MyParaBold{Performance Quality}
-
-\MyParaText{1. What are the specific performance targets for the new feature?\newline[\textbf{Requests under 1 second}]}
-
-\MyParaText{2. Are there existing benchmarks or performance metrics from current systems that the new feature should meet or exceed?\newline[\textbf{The waiting time for loading quality and safety metrics must be a maximum of 5 seconds}]}
-
-\MyParaText{3. What volume of data or number of transactions per second is the system expected to handle?\newline[\textbf{20 transactions per second}]}
-
-\MyParaText{4. How does the expected load vary with time?\newline[\textbf{peak hours from 18:00 to 23:00}]}
-
-\MyParaBold{Scalability}
-
-\MyParaText{1. What are the short-term and long-term expectations for system growth in terms of user base, data volume, and transaction volume?\newline[\textbf{Growth of 1k users in 1 year}]}
-
-\MyParaText{2. Is there a requirement for the system to scale horizontally or vertically?\newline[\textbf{No}]}
-
-\MyParaText{3. Are there specific aspects of the feature that require more scalability considerations?\newline[\textbf{I don't know, but we use cloud resources}]}
-
-\MyParaText{4. How should the system handle sudden spikes in demand?\newline[\textbf{It must be scalable and have Rate limit control}]}
-
-\MyParaBold{Resilience}
-
-\MyParaText{1. What are the resilience requirements for the new feature?\newline[\textbf{uptime and data integrity}]}
-
-\MyParaText{2. How should the system respond to partial failures?\newline[\textbf{failover strategies}]}
-
-\MyParaText{3. Are there any critical points of failure that need to be addressed?[\textbf{No}]}
-
-\MyParaText{4. What disaster recovery and data backup mechanisms are expected to be in place?\newline[\textbf{Database backup daily, cloud zone and regional}]}
-
-\MyParaBold{General Questions}
-
-\MyParaText{1. What are the dependencies on external services or systems, and how might these impact the performance, scalability, and resilience of the new feature?\newline[\textbf{Collection of quality and safety metrics, one in Sonarqube and the other in Veracode respectively.}]}
-
-\MyParaText{2. Are there any regulatory or compliance requirements that affect these quality attributes?[\textbf{No}]}
-
-\MyParaText{3. What is the expected lifecycle of the new feature, and how might future changes impact the architectural decisions made today?\newline[\textbf{I don't know how to answer this question}]}
-\end{chatout}
-
 \begin{chatout}{botbubble}{\chatgptout[real-scenario-A10]}
 Given the detailed responses, we can now develop a comprehensive prompt that incorporates all collected data, providing a clear rationale for each architectural decision regarding the new feature within the Trilha da Change Project at Portal Tech. This analysis aims to address the core quality attributes of performance, scalability, and resilience effectively.
 
