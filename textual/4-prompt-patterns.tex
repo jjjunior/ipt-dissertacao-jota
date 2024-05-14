@@ -184,21 +184,25 @@ By including these additional elements, you're enriching the pattern description
 
 \MyPara{Specializes:}\texttt{Persona}
 
-\MyPara{Context:} People interacting with LLM often need responses considering their perspective, experience, or context. To make decisions, software architects must balance functional and non-functional requirements, software business rules, and their constraints and goals. A customized persona can be assigned specific roles, specialties, objectives, and limitations to overcome this challenge. By using these resources, communication with LLM can be structured, and responses to the user can be consistent and appropriate to their context.
+\MyPara{Context:} Software architects require responses that consider their specific perspective, expertise, and the architectural context in which they operate. Unlike general user personas, software architects face unique challenges such as balancing functional and non-functional requirements, adhering to software business rules, and navigating complex stakeholder landscapes. A specialized persona helps tailor AI-generated interactions to these specific needs, enhancing decision-making in complex architectural scenarios.
 
-\MyPara{Problem:} How can we make requests more accurate by incorporating roles, experts, objectives, and limitations into AI-generated content while maintaining coherence with users' perspectives and contexts?
+\MyPara{Problem:} How can we ensure that AI-generated content for software architects is accurate and contextually relevant, addressing their unique roles and constraints?
 
 \MyPara{Forces:} The following are forces in using Software Architect Persona:
-\newline
-- \textit{Scope limitation:} A software architect has limited decision-making power and should not suggest solutions outside their role.
-\newline
-- \textit{Prompt answer applicability:} An answer that suggests a solution out of the architect's decision power would not be useful.
-\newline
-- \textit{Simple persona usage:} An architect can have different roles and responsibilities in different contexts, and only declaring their role in the prompt might not be enough.
 
-\MyPara{Solution:} Create a prompt that describes the software architect's role and limitations regarding the target design decision.
+\MyParaText{\textit{- Decision-making Complexity:}}{Architects often face complex decisions that require a deep understanding of technical and project impacts.}
 
-\MyPara{Rationale:} The rationale behind the Software Architect Persona pattern is to enhance the relevance and accuracy of AI-generated responses for software architects. The responses become more aligned with the user's context and perspective by embedding specific roles, expertise, objectives, and limitations into the AI interaction.
+\MyParaText{\textit{- Technical Specificity:}}{Solutions must respect architectural constraints and project standards, such as technology stacks and architectural styles.}
+
+\MyParaText{\textit{- Scope limitation:}}{A software architect has limited decision-making power and should not suggest solutions outside their role.}
+
+\MyParaText{\textit{- Prompt answer applicability:}}{An answer that suggests a solution out of the architect's decision power would not be helpful.}
+
+\MyParaText{\textit{- Simple persona usage:}}{ An architect can have different roles and responsibilities in various contexts, and only declaring their role in the prompt might not be enough.}
+
+\MyPara{Solution:} Create a specialized persona for software architects that incorporates roles, specialties, objectives, and limitations specific to software architecture. This persona should guide AI interactions to produce technically precise responses relevant to the architect’s current project context and aligned with broader business goals.
+
+\MyPara{Rationale:} The logic behind the Software Architect Persona pattern is to increase the accuracy and relevance of AI-generated responses by incorporating detailed roles, expertise, and specific project goals into the interaction model. By focusing on the unique aspects of architectural decision-making, this standard ensures that AI responses are sensitive to project context and technically accurate, helping architects make informed decisions more effectively.
 
 \MyParaText{This is achieved by creating prompts that clearly outline the software architect's role, goals, and constraints regarding the targeted design decision. This ensures that the AI's responses are technically accurate and contextually appropriate, aiding in more effective decision-making.}
 
@@ -221,14 +225,16 @@ By including these additional elements, you're enriching the pattern description
 \textcolor{red}{(-)} May limit response flexibility if constraints are too narrow\newline
 \textcolor{red}{(-)} Persona can introduce unintentional biases if not well defined\newline
 \textcolor{red}{(-)} May produce less natural or creative responses when imposing the persona\newline
+\textcolor{blue}{(+)} Improved decision-making by providing personalized suggestions directly addressing the architect's needs in the project context\newline
 \textcolor{blue}{(+)} Get answers specifically adapted to your needs and context\newline
 \textcolor{blue}{(+)} Get more realistic and consistent advice by simulating a knowledge expert\newline
+\textcolor{blue}{(+)} Reduction of misaligned suggestions by reducing the likelihood of suggestions that do not fit into the architectural context or go beyond the project's scope.\newline
 \textcolor{blue}{(+)} Avoid unfiltered or off-topic responses\newline
 \textcolor{blue}{(+)} Clear guidance on appropriate and expected response types\newline
 \textcolor{blue}{(+)} Less ambiguity in prompts, which helps generate more focused responses\newline
 \textcolor{blue}{(+)} Greater probability of a more accurate answer, avoiding topics outside the scope
 
-\MyPara{Related Patterns:} This pattern specializes \texttt{Persona} by adding more details on the Persona decision scope and the limitations. This pattern is related to \texttt{Context Manager} because it is also a way to limit the scope of the answer.
+\MyPara{Related Patterns:} This pattern builds upon the \texttt{Persona} by adding a layer of specialization focused on the decision scope and limitations specific to software architecture. It is also related to the \texttt{Context Manager}, as it helps define the scope of responses more narrowly and relevantly.
 
 \MyPara{Usage example:} Created an example prompt to test the effectiveness of Persona on ChatGPT. The objective is to verify whether the LLM can assign the persona in the software architect's domain. For more information, full prompt at the following link: \href{https://chat.openai.com/share/ee2385fe-0040-4468-9db7-72d8e6bd2864}{Software Architect Persona}.
 
@@ -266,24 +272,24 @@ During a conversation in the "Neo" persona, ChatGPT recognized its limitations i
 
 \MyPara{Name:} Architectural Company Context
 
-\MyPara{Specializes:} \texttt{Reflection}
+\MyPara{Specializes:} \texttt{None}
 
-\MyPara{Context:} In the dynamic software development environment, architectural decisions are significantly influenced by three critical factors: the maximum development time available for creating or modifying software, the development team size, and the project budget.
+\MyPara{Context:} In the fast-paced world of software development, architectural decisions are critically shaped by three key factors: available development time, team size, and project budget. These factors directly influence the feasibility and direction of architectural solutions, necessitating a pattern that integrates these elements effectively into the decision-making process~\cite{bass2012software,brooks1974mythical,cohn2005agile,reinertsen1997managing}.
 
-\MyPara{Problem:}How can software architects create an architecture that aligns with business and technical requirements while effectively navigating practical constraints of development time, team size, and budget without compromising software quality and functionality?
+\MyPara{Problem:}How can software architects design and evaluate architectures that align with business and technical requirements while effectively navigating constraints like development time, team size, and budget without compromising software quality and functionality?
 
-\MyPara{Forces:} The following are forces in using Architectural Company Context:
-\newline
-- \textit{Realistic architectural solutions:} enables the creation of viable architectural solutions considering the budget, team size, and development schedule, reducing the risk of delays and project failures.
-\newline
-- \textit{Alignment with Business Objectives:} Important information so that architectural decisions must be aligned with business objectives to support the company's strategic direction.
-\newline
-- \textit{Risk Mitigation:} Identifying potential risks early in the architectural design process can avoid costly mistakes and ensure a safer, more compliant architecture.
-\newline
-- \textit{Helps decision-making:} The pattern improves architectural decision-making, improving project results and satisfaction.
+\MyPara{Forces:}{The following are forces in using Architectural Company Context:}
+
+\MyParaText{\textit{- Team Size:}}{The size of the development team significantly shapes architectural choices. Larger teams can support more complex, distributed architectures due to their ability to segment work across multiple units. This can allow for parallel development streams, reducing time to market. In contrast, smaller teams might necessitate simpler, more consolidated architectural designs to maintain manageability and clear communication channels, essential for agile responses to project demands.}
+
+\MyParaText{\textit{- Development Time:}}{The time available to complete the project directly influences the architectural strategy. Limited time frames may force architects to opt for quicker implementation and deployment designs, potentially favoring modular over monolithic structures if they allow for phased rollouts. Extended timelines allow for a more thorough exploration of innovative solutions, including experimenting with new technologies that might enhance scalability and performance.}
+
+\MyParaText{\textit{- Budget:}}{Financial resources play a critical role in determining the scope and ambition of the architectural design. A generous budget can enable high-end technologies, external consultations, and more extensive testing phases, collectively contributing to a robust and scalable architecture. Conversely, tight budgets might restrict choices to more cost-effective technologies and prioritize essential functionality over expansive feature sets to control costs.}
+
+\MyParaText{\textit{- Risk Mitigation:}}{Identifying potential risks early in the architectural design process can avoid costly mistakes and ensure a safer, more compliant architecture.}
 
 
-\MyPara{Solution:}Create a prompt that evaluates whether the proposed Architecture is implementable based on development time, team size, and available budget. 
+\MyPara{Solution:}Create a prompt with a structure that allows the development and evaluation of architectures in projects that have not started or are in progress. This prompt must consider crucial constraints such as development time, team size, and budget when making decisions. Architectural solutions can be considered theoretically sound and practically feasible within the specified constraints using this approach.
 
 \MyPara{Rationale:} The rationale behind the Architectural Company Context pattern is to ensure that architectural decisions are grounded in the reality of the company's constraints. It emphasizes the alignment of software architecture with the practical limitations and opportunities presented by time, team size, and budget.
  
@@ -304,14 +310,14 @@ During a conversation in the "Neo" persona, ChatGPT recognized its limitations i
 
 \MyPara{Consequences:} 
 \newline
-\textcolor{red}{(-)} May restrict innovation or the adoption of ideal architectural practices due to practical limitations.\newline
-\textcolor{red}{(-)} It might lead to conservative choices, potentially overlooking cutting-edge or innovative architectural solutions.\newline
-\textcolor{red}{(-)} It can create a risk-averse culture where teams might shy away from ambitious or experimental approaches due to perceived constraints.\newline
-\textcolor{blue}{(+)} Encourages efficient resource management, optimizing time, team capabilities, and budget.\newline
-\textcolor{blue}{(+)} Promotes pragmatic decision-making, focusing on what is achievable and sustainable in the given context.\newline
-\textcolor{blue}{(+)} Leads to the development of realistic, feasible architectural solutions that are tailored to the company's specific context.
+\textcolor{red}{(-)} May inhibit the adoption of innovative architectural practices due to practical limitations.\newline
+\textcolor{red}{(-)} Could lead to conservative choices that might overlook more cutting-edge solutions.\newline
+\textcolor{red}{(-)} May foster a risk-averse culture, deterring teams from pursuing ambitious architectural strategies.\newline
+\textcolor{blue}{(+)} Encourages efficient resource management, optimizing the use of time, team capabilities, and budget.\newline
+\textcolor{blue}{(+)} Promotes pragmatic decision-making, ensuring designs are achievable and sustainable given the context.\newline
+\textcolor{blue}{(+)} Leads to the development of realistic, feasible architectural solutions tailored to the specific needs of the company.
 
-\MyPara{Related Patterns:} The Architectural Company Context is related to the  \texttt{Reflection} pattern as it requires continuous reassessment and adaptation of the architecture to align with changing company contexts, resources, and constraints.
+\MyPara{Related Patterns:} The Architectural Company Context is unrelated to any Prompt Pattern.
 
 \MyPara{Usage example:} Created an example prompt that uses the Architectural Company Context pattern to assist in making decisions related to software architecture. The prompt involves four variables - Time, Time Size, Budget, and Architectural Description, as shown in Prompt \ref{chatgpt-in-company-1}. This example will help demonstrate how the pattern can be applied in real-world scenarios. You can choose to remove any variables that are not relevant to the context and requirement of the software architect's decision-making process. For more information, full prompt at the following link: \href{https://chat.openai.com/share/5b124d5f-cc5e-422c-ab11-b932d482de1d}{Architectural Company Context}.
 
@@ -344,7 +350,7 @@ After analyzing the factors above, ChatGPT responded by listing the variables Ti
 
 \MyPara{Context:} Software architecture is crucial in meeting functional and non-functional requirements while maintaining desired quality attributes. This is achieved by selecting appropriate architectural patterns, technologies, and design strategies. The critical challenge is systematically identifying and addressing these attributes, ensuring a balanced and effective architectural design during software construction or maintenance.
 
-\MyPara{Problem:} How can generative AI help architects discover and evaluate quality attributes when making architectural decisions?
+\MyPara{Problem:} How can architects evaluate and prioritize quality attributes within given design constraints to ensure efficient architectural designs that align with essential system requirements?
 
 \MyPara{Forces:} The following are forces in using Quality Attribute Question:
 \newline
@@ -356,10 +362,11 @@ After analyzing the factors above, ChatGPT responded by listing the variables Ti
 \newline
 - Personalization of responses to fit the specific context of the architectural question.
 
-\MyPara{Solution:} Create a prompt pattern that leverages the synthetic knowledge of generative AI to extract and evaluate quality attributes in an approach where the AI can analyze and ask about the software context to collect information for later architectural decision-making.
+\MyPara{Solution:} This pattern introduces generative AI as a strategic tool for balancing quality attributes in architectural designs. AI-generative assists architects by asking questions about system requirements and project quality attributes. This interactive questioning process gathers insights into the system's functional and non-functional demands.
+
+After this information collection, AI uses the collected data to propose architectural suggestions. Each suggestion accompanies a justification explaining how the recommended architectural design optimally integrates the quality attributes discussed. This iterative process between generative AI and the Architect facilitates a deeper understanding of necessary trade-offs and provides a structured approach to architectural decision-making.
 
 \MyPara{Rationale:} The logic behind the Quality Attribute Question Pattern is to help with architectural decision-making through quality attributes so that generative AI can ask the architect questions about the software context to give more precise guidance on the architectural decision.
- 
 
 \MyPara{Statement Template:} You are \textcolor{mycolorgreen}{\textbf{[Role]}} responsible for \textcolor{blue}{\textbf{[Description Project]}}. Your primary focus is to design an architecture that excels in \textcolor{mycolorpink}{\textbf{[List Of The Quality Attribute]}}. Your task is  \textcolor{mycolororange}{\textbf{[Decision-making Process]}}. You should ask  \textcolor{mycolorlilas}{\textbf{[Clarify Doubts]}}. \textcolor{mycolorblue}{\textbf{[Recommendations]}}. Additionally, provide a \textcolor{mycolorred}{\textbf{[Comprehensive Prompt].}}
 
