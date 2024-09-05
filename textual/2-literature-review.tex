@@ -1,11 +1,11 @@
-Following the Introduction's exploration of AI's emerging role in software architecture, this Literature Review aims to deepen our understanding. It sets out to map the current landscape of AI advancements and software pattern methodologies, framing the context for our research.The chapter provides a thorough overview of two key areas: the evolution of AI, particularly \ac{LLM} and Prompt Engineering, and the selection methods of software patterns. This review will underpin our investigation into AI-assisted tools for design decision-making in software projects.
+Following the Introduction's exploration of AI's emerging role in software architecture, this Literature Review aims to deepen our understanding. It sets out to map the current landscape of AI advancements and software pattern methodologies, framing the context for our research. The section provides a thorough overview of two key areas: the evolution of AI, particularly \ac{LLM} and Prompt Engineering, and the selection methods of software patterns. This review will underpin our investigation into AI-assisted tools for design decision-making in software projects.
 
-\textbf{Evolution of AI and Large Language Models:} Examines how AI has evolved, focusing on large language models and their impact on software development.\textbf{Prompt Engineering in AI:} Discusses prompt engineering principles and their applications in software development.\textbf{Tools for Developers:} Reviews current AI tools for software development.\textbf{Software Patterns and Design Pattern Selection Methods:} Traces the history of software patterns and analyzes methods for selecting design patterns, setting the stage for our AI-focused exploration in subsequent chapters.
+\textbf{Evolution of AI and Large Language Models:} Examines how AI has evolved, focusing on large language models and their impact on software development.~\textbf{Prompt Engineering in AI:} Discusses prompt engineering principles and their applications in software development.~\textbf{Tools for Developers:} Reviews current AI tools for software development.~\textbf{Software Patterns and Design Pattern Selection Methods:} Traces the history of software patterns and analyzes methods for selecting design patterns, setting the stage for our AI-focused exploration in subsequent sections.
 
 \section{An Overview of the Evolution of AI}\label{sec:AI-evolution}
-AI is a broad field encompassing the study and creation of systems that can perform tasks that usually require human intelligence, such as reasoning, learning, perception, and decision-making. The term was coined by John McCarthy in 1956, who defined it as "the science and engineering of making intelligent machines." \cite{Mccarthy2006}. Since then, AI has evolved into various sub-fields and paradigms, such as symbolic AI, connectionism, evolutionary computation, and machine learning. 
+AI is a broad field encompassing the study and creation of systems that can perform tasks that usually require human intelligence, such as reasoning, learning, perception, and decision-making. The term was coined by John McCarthy in 1956, who defined it as ``the science and engineering of making intelligent machines.''~\cite{Mccarthy2006}. Since then, AI has evolved into various subfields and paradigms, such as symbolic AI, connectionism, evolutionary computation, and machine learning. 
 
-\ac{ML} is a subset of AI that uses data and algorithms to allow systems to learn and improve from experience without being explicitly programmed~\cite{Mitchell2007}. This concept can be applied in several domains, such as computer vision, speech recognition, natural language processing, bioinformatics, recommendation and virtual assistants. For example, Alexa\footnote{\url{https://www.amazon.com/alexa}} , Google Assistant\footnote{\url{https://assistant.google.com}}, Apple Siri\footnote{\url{https://www.apple.com/siri}} are products that use \ac{ML} techniques for understanding and responding to voice commands, providing information, and performing tasks. Another example is Netflix\footnote{\url{https://www.netflix.com}}, which uses \ac{ML} to recommend movies and shows to its users based on their preferences and behavior.
+\ac{ML} is a subset of AI that uses data and algorithms to allow systems to learn and improve from experience without being explicitly programmed~\cite{Mitchell2007}. This concept can be applied in several domains, such as computer vision, speech recognition, natural language processing, bioinformatics, recommendation, and virtual assistants. For example, Alexa\footnote{\url{https://www.amazon.com/alexa}}, Google Assistant\footnote{\url{https://assistant.google.com}}, Apple Siri\footnote{\url{https://www.apple.com/siri}} are products that use \ac{ML} techniques for understanding and responding to voice commands, providing information, and performing tasks. Another example is Netflix\footnote{\url{https://www.netflix.com}}, which uses \ac{ML} to recommend movies and shows to its users based on their preferences and behavior.
 
 \ac{DL} is a branch of \ac{ML} that uses multi-layered artificial neural networks to learn from large and complex datasets~\cite{LeCun2015}.~\ac{DL} can perform various tasks involving images, text, and audio, such as classification, recognition, generation, and translation. For example,~\ac{DL} can sort animal images into different categories~\cite{Krizhevsky2017}, recognize celebrity faces~\cite{Schroff2015}, generate captions for images~\cite{Vinyals2015}, translate sentences from one language to another~\cite{Sutskever2014}, and synthesize realistic human voices~\cite{Oord2016}. \ac{DL} has also improved domains such as medicine, finance, and entertainment by providing customized solutions, detecting fraud, and creating realistic simulations. For example, \ac{DL} can diagnose skin cancer from images of skin lesions~\cite{Esteva2017}, identify credit card fraud from transaction data~\cite{Awoyemi2017}, create human-like agents for games~\cite{Silver2017}, and generate photorealistic faces of non-existent people~\cite{Karras2019}.
 
@@ -31,9 +31,9 @@ As Artificial Intelligence progresses, ethical concerns about privacy, bias, and
 
 With the advances of LLMs and Transforms~\cite{Caelen2023developing}, AI-assisted tools can provide valuable insights and support in various tasks such as solution architecture, agile model storytelling, code generation, automated testing, and DevSecOps. They can improve some stages of the development cycle so software developers, engineers, and architects can improve their project design, resulting in faster and more efficient production and improving overall effectiveness.
 
-The shift from a "data-driven" to an "AI-driven" approach to decision-making workflows is inevitable. While data provides valuable information, human processors have limitations due to cognitive biases and the inability to process large volumes of data efficiently~\cite{Colson2019}. By bringing AI into the workflow, organizations can harness the processing power of AI to extract insights from data and make better decisions. AI can handle complex relationships, non-linear patterns, and large data sets, reducing the impact of human biases~\cite{MichaelRoss2021}.
+The shift from a ``data-driven'' to an ``AI-driven'' approach to decision-making workflows is inevitable. While data provides valuable information, human processors have limitations due to cognitive biases and the inability to process large volumes of data efficiently~\cite{Colson2019}. By bringing AI into the workflow, organizations can harness the processing power of AI to extract insights from data and make better decisions. AI can handle complex relationships, non-linear patterns, and large data sets, reducing the impact of human biases~\cite{MichaelRoss2021}.
 
-However, it is important to note that humans still have a role in decision-making, especially regarding unstructured data and factors such as vision, strategy, and values, and the need for collaboration between AI and humans to achieve decision-making more assertive. The integration of AI into workflows, explained in Figure~\ref{fig-decision-making}, is the next phase in our evolution and envisions the collaboration of AI tools with human judgment that will result in the emergence of new companies that embrace AI and human contributions from the ground up start.~\cite{Colson2019}
+However, it is important to note that humans still have a role in decision-making, especially regarding unstructured data and factors such as vision, strategy, and values, and the need for collaboration between AI and humans to make decision-making more assertive. The integration of AI into workflows, explained in Figure~\ref{fig-decision-making}, is the next phase in our evolution and envisions the collaboration of AI tools with human judgment that will result in the emergence of new companies that embrace AI and human contributions from the ground up start.~\cite{Colson2019}
 % Start Figure ---------------------------
 \begin{figure}[ht]
 \caption{A Decision-Making Model combines the power of AI and Human Judgment.}
@@ -44,16 +44,14 @@ However, it is important to note that humans still have a role in decision-makin
 \end{figure}
 % End Figure ---------------------------
 
-% \subsection{AI-Assisted Tools in Software Design}\label{sec:AI tools}
-
 \subsection{Prompt Engineering for Generative AI}\label{sec:prompt-engenieer}
-Prompt Engineering is critical to interfacing with AI-assisted tools such as GPT-4. Prompts are the starting point of the conversation with the model, acting as an essential guide for the AI's response~\cite{Brown2020}. The AI model generates its response based on the input prompt, with the aim of completing the implied task as accurately as possible.
+Prompt Engineering is critical to interfacing with AI-assisted tools such as GPT-4. Prompts are the starting point of the conversation with the model, acting as an essential guide for the AI's response~\cite{Brown2020}. The AI model generates its response based on the input prompt to complete the implied task as accurately as possible.
 
-Prompt Engineering refers to the art and science of crafting effective prompts that can guide the AI model to produce desired and valuable results~\cite{White2023}. An expertly engineered prompt can significantly enhance the performance of an AI tool by narrowing down the scope of potential responses and focusing the AI's "attention" on the relevant aspects of the problem at hand. Therefore, prompt engineering is crucial to using AI tools to solve specific problems.
+Prompt Engineering refers to the art and science of crafting effective prompts that can guide the AI model to produce desired and valuable results~\cite{White2023}. An expertly engineered prompt can significantly enhance the performance of an AI tool by narrowing down the scope of potential responses and focusing the AI's ``attention'' on the relevant aspects of the problem at hand. Therefore, prompt engineering is crucial to using AI tools to solve specific problems.
 
-In software design, prompt engineering becomes particularly significant. Crafting a well-structured prompt that accurately encapsulates the design problem can guide the AI tool to suggest an appropriate design pattern. This not only saves time and effort for developers but also helps to ensure that the resulting software design is robust and efficient.
+In software design, prompt engineering becomes particularly significant. Crafting a well-structured prompt that accurately encapsulates the design problem can guide the AI tool in suggesting an appropriate design pattern. This saves developers time and effort and helps ensure that the software design is robust and efficient.
 
-It's important to note that there is no one-size-fits-all solution when it comes to engineering solutions quickly. Different situations may call for different requests in order to achieve the best possible results. To construct effective prompts, there are five key principles to keep in mind. These principles, known as the "Five Principles of Prompting,"~\cite{Phoenix2024} are as follows:
+It's important to note that there is no one-size-fits-all solution for engineering solutions quickly. Different situations may call for different requests to achieve the best possible results. There are five key principles to remember when constructing effective prompts. These principles, known as the ``Five Principles of Prompting''~\cite{Phoenix2024} are as follows:
 
 \begin{enumerate}
     \item \textbf{Giving Direction}: Providing clear instructions and details about your expectations can lead to output that better matches your vision. This is similar to briefing a human co-worker on a task—without adequate context, even the most intelligent AI may struggle to deliver satisfactory results.
@@ -80,11 +78,10 @@ It's important to note that there is no one-size-fits-all solution when it comes
 % End Figure ---------------------------
 
 Effective communication skills are key in human and AI interaction. Clearly defined guidelines and expectations can help AI generate creative and unique product names that meet specific criteria. Treat the AI model as a collaborator to maximize its potential in solving complex problems~\cite{Phoenix2024}.
-% The potential of these principles and design extends beyond the field of AI. Many of these principles also apply to human collaboration, suggesting that effective communication skills are key in human and AI interaction. For instance, in the context of product naming, clearly defined guidelines and expectations can help the AI generate creative and unique product names that meet specific criteria. By treating the AI model as a collaborator, users can maximize its potential and harness the true power of AI in solving complex problems~\cite{Phoenix2024}.
 
 \MyParaBold{Few-Shot Learning}
 
-Refers to the ability of the \ac{LLM} to generalize and produce valuable results with only a few examples in the prompt, as illustrated in Figure~\ref{fig-prompt-few-examples}. In the few-shot learning, you give examples of the task you want the model to perform. These examples guide the model to understand the desired output format and the problem-solving process.
+Refers to the ability of the \ac{LLM} to generalize and produce valuable results with only a few examples in the prompt, as illustrated in Figure~\ref{fig-prompt-few-examples}. In the few-shot learning, you give examples of the task you want the model to perform. These examples guide the model in understanding the desired output format and the problem-solving process.
 
 % Start Figure ----------------------------
 \begin{figure}[ht]
@@ -132,21 +129,21 @@ To optimize the performance of LLMs, we have explored various techniques of prom
 \subsection{AI tools for developers}
 Building on the same technology as LLMs like GPT-3~\cite{Brown2020}, AI-powered code completion tools such as GitHub Copilot\footnote{\url{https://github.com/features/copilot}} (built on OpenAI’s Codex model ~\cite{MarkChen2021}, Amazon’s CodeWhisperer\footnote{\url{https://aws.amazon.com/codewhisperer}}, and DeepMind’s AlphaCode\footnote{\url{https://alphacode.deepmind.com/}}, recommend code completions within an integrated development environment (IDE) to help programmers author software. These tools are projected to profoundly impact the productivity and experience of professional programmers and, more broadly, anyone engaging in programming tasks~\cite{Ziegler2022productivity}.
 
-GitHub Copilot, an "AI pair programmer," is optimized for code auto-completion. It completes a given initial code snippet, whether it's a method's documentation, signature, or partial implementation~\cite{MarkChen2021}. Based on the OpenAI Codex model\footnote{\url{https://platform.openai.com/docs/guides/code}}, a 12 billion parameter version of GPT-3~\cite{Brown2020}, Copilot has been fine-tuned using code samples from 54 million public software repositories on GitHub.
+GitHub Copilot, an ``AI pair programmer'', is optimized for code auto-completion. It completes a given initial code snippet, whether it's a method's documentation, signature, or partial implementation~\cite{MarkChen2021}. Based on the OpenAI Codex model\footnote{\url{https://platform.openai.com/docs/guides/code}}, a 12 billion parameter version of GPT-3~\cite{Brown2020}, Copilot has been fine-tuned using code samples from 54 million public software repositories on GitHub.
 
 Beyond auto-completion, Copilot can explain code, generate documentation, and translate code between languages. However, its effectiveness can fluctuate, especially when a developer's intent is unclear. Developers often have a general idea but lack specifics such as suitable functions, libraries, or algorithms.
 
 Studies have shown mixed results regarding Copilot's impact on productivity. Some discovered increased users' perceived productivity~\cite{Ziegler2022productivity} and acceptance of proposed code completions~\cite{Vaithilingam2022}. In contrast, others found no significant improvement in task completion times or success rates~\cite{Vaithilingam2022}. Interestingly, a study by~\cite{Ziegler2022productivity} showed that developers using Copilot implemented a JavaScript web server 55\% faster than those not using it.
 
-An analysis of programmer interactions with Copilot showed that the effectiveness of autocompletion depends on whether developers were speeding up familiar tasks ("acceleration mode") or exploring unfamiliar problem solutions ("exploration mode"). Developers often iteratively type comments, review Copilot's responses and modify their comments to explore other potential solutions. These comments are usually deleted after the relevant code is generated, reflecting their temporary function in this iterative refinement process.
+An analysis of programmer interactions with Copilot showed that the effectiveness of auto-completion depended on whether developers were speeding up familiar tasks ``acceleration mode'' or exploring unfamiliar problem solutions ``exploration mode''. Developers often iteratively type comments, review Copilot's responses and modify their comments to explore other potential solutions. These comments are usually deleted after the relevant code is generated, reflecting their temporary function in this iterative refinement process.
 
-However, the imperfection of these models can lead to challenges. They often struggle to distinguish correct outputs from seemingly coherent and plausible ones, leading to potential bugs or security vulnerabilities. This has gained widespread attention since the release of ChatGPT.
+However, these models' imperfection can lead to challenges. They often struggle to distinguish correct outputs from seemingly coherent and plausible ones, leading to potential bugs or security vulnerabilities. This has gained widespread attention since the release of ChatGPT.
 
 For effective human-AI collaboration in coding, programmers must be able to detect and correct any errors introduced by the code completion tool, which can be a challenge due to potential automation bias, overreliance, and automation-induced complacency~\cite{Wickens2015}. Therefore, conveying AI uncertainty and providing explanations is crucial, particularly in high-stakes domains like medical~\cite{Lundberg2018}, legal~\cite{Pagliario2022}, and hiring. However, translating these strategies into generative scenarios with complex outputs, where operators face numerous small decisions, remains unclear.
 
 
 \section{Software Patterns}\label{sec:software-patterns}
-Patterns are not an exclusive aspect of Software Engineering. Psychologists identify patterns of behavior upon which they can take one action or another; Economists look for patterns in changes in stock prices that support their buying and selling policies. 
+Patterns are not an exclusive aspect of Software Engineering. Psychologists identify behavior patterns upon which they can take one action or another. Economists look for patterns in changes in stock prices that support their buying and selling policies. 
 
 Software Patterns are solutions to recurring software problems. These solutions are the result of the experiences of experts and can be used over and over again~\cite{Gamma1994}. Software patterns can be categorized into classes according to the software development phase. Implementation patterns, testing patterns, analysis patterns, architectural patterns, and design patterns are examples of these classes~\cite{Hamza2004} and are an active field of research in software engineering~\cite{Zhang2011, Zhang2013, Riaz2015}.
 
@@ -170,7 +167,7 @@ Alexander’s idea was used by Kent Beck and Ward Cunningham in 1987 to facilita
 \subsection{Design Patterns of Gang of Four}\label{sec:gof}
 The success of \ac{DP} had to wait until 1994 when the Gang of Four(GoF) published the book Design Patterns: Elements of Reusable object-oriented software~\cite{Gamma1994}. This book contains twenty-three design patterns from the author's extensive personal experience.
  
-\ac{DP} have been organized into three categories, each defining different problems. They are categorized into creational, structural, and behavioral patterns, described in Board~\ref{board:pattern-category} above:
+\ac{DP} have been organized into three categories, each defining different problems. They are categorized into creational, structural, and behavioral patterns, described in Table~\ref{board:pattern-category} above:
 
 \begin{table}[ht]
     \centering
@@ -204,7 +201,7 @@ Software design patterns have a considerable impact on the software development 
 
 \MyParaBold{UML-Based Approach}\label{subsec:uml-approach}
 
-The UML-based approach provides a set of "visual" descriptive graphical and textual techniques that system developers easily understand was selected some existing studies for selecting a design pattern based on the UML approach. The process of suggesting patterns in this approach is shown in Figure \ref{fig-uml-based-approach}. The first step in the process is a formal specification of the problem/solution domain using UML diagrams as a meta-model. The UML includes several class, collaboration, and sequence diagrams used to describe the meta-model. The next step is to specify different aspects of the patterns to obtain different properties, such as structural and behavioral. Finally, mapping is performed, and if the design pattern specifications can satisfy the problem diagram, a design pattern is suggested~\textcite {Hsueh2009} and~\textcite{Kim2007, Kim2008} used this approach to suggest suitable design patterns.
+The UML-based approach provides a set of ``visual'' descriptive graphical and textual techniques that system developers easily understand was selected some existing studies for selecting a design pattern based on the UML approach. The process of suggesting patterns in this approach is shown in Figure \ref{fig-uml-based-approach}. The first step in the process is a formal specification of the problem/solution domain using UML diagrams as a meta-model. The UML includes several class, collaboration, and sequence diagrams used to describe the meta-model. The next step is to specify different aspects of the patterns to obtain different properties, such as structural and behavioral. Finally, mapping is performed, and if the design pattern specifications can satisfy the problem diagram, a design pattern is suggested~\textcite {Hsueh2009} and~\textcite{Kim2007, Kim2008} used this approach to suggest suitable design patterns.
 
 % Inicio Figura ---------------------------
 \begin{figure}[ht]
@@ -232,7 +229,7 @@ The question-answer-based approach involves developers presenting multiple quest
 \end{figure}
 % Fim Figura ---------------------------
 
-Many researchers, including~\textcite{Gueheneuc2007},~\textcite{Palma2012},~\textcite{Pavlivc2014},~\textcite{Sanyawong2014},~\textcite{Navarro2010},~\textcite{Issaoui2015},~\textcite{Diaz2010, Diaz2011} have utilized this approach to suggest appropriate design patterns.
+Many researchers, including \textcite{Gueheneuc2007}, \textcite{Palma2012}, \textcite{Pavlivc2014}, \textcite{Sanyawong2014}, \textcite{Navarro2010}, \textcite{Issaoui2015}, \textcite{Diaz2010, Diaz2011} have utilized this approach to suggest appropriate design patterns.
 
 The work of~\textcite{Palma2012} proposed a \ac{GQM} model for pattern selection. This model provides the conditions and sub-conditions of the design pattern, which are questions from the intent and applicability parts of the pattern description. A hierarchical tree is then presented, with each node containing a question. After the user interacts with the system and provides responses, the responses are weighted, and the design pattern with the highest weight (similarity) is suggested to the designer.
 
@@ -311,7 +308,7 @@ In the learning step, various supervised learning algorithms such as C4.5, Decis
 According to a study by~\textcite{Naghdipour2023Semi}, text classification using semi-supervised learning is more accurate and efficient than supervised and unsupervised learning methods. This method was chosen due to its superior performance and automation, which saves time and eliminates the need for designer interaction or professional work on design patterns. Additionally, this approach can be applied to all design patterns and meets the comprehensiveness criterion. The proposed method aims to achieve three goals: organizing patterns into classes using semi-supervised learning, selecting a suitable pattern class for a given real design problem, and suggesting the most appropriate pattern(s) for the actual design problem. Notably, the text classification approach showed better results in terms of RCD compared to other methods.
     
 
-\MyParaBold{Information-Retrieval-Based Approach:}\label{subsec:retrieval-approach}
+\MyParaBold{Information-Retrieval-Based Approach}\label{subsec:retrieval-approach}
 
 Existing studies select a design pattern based on the information-retrieval approach whose pattern suggestion process in this approach is shown in Figure~\ref{fig-text-classification-retrieval-approach}.
 
@@ -329,7 +326,7 @@ First, the design patterns and problems are preliminarily prepared using data mi
 
 \textcite{Hamdy2018automatic} provided a method to suggest patterns based on the degree of similarity between design pattern vectors and design problem vectors. In this study, the authors created unigram and bigram features. Bigrams are essential for distinguishing between design patterns. However, the accuracy of this method is affected by an efficient dataset of design pattern descriptions and the quality of design problem scenarios.
 
-Another method using the Latent Dirichlet Allocation (LDA) model to extract subject matter from pattern descriptions. A subject is a collection of words that usually appear together. Patterns are then suggested based on the similarity between the design pattern vector and the design problem vector~\cite{Hamdy2018Towards}.
+Another method using the Latent Dirichlet Allocation (LDA) model extracts subject matter from pattern descriptions. A subject is a collection of words that usually appear together. Patterns are then suggested based on the similarity between the design pattern vector and the design problem vector~\cite{Hamdy2018Towards}.
 
 \textcite{Suresh2011} used 26 case studies to evaluate a proposed framework for recommending design patterns that rely on two approaches: text retrieval and question-answer. This structure represents the design problem as a collection of words.
 
@@ -339,11 +336,11 @@ However, they have implemented and partially tested their framework. Also, using
 
 \MyParaBold{Ontology-Based Approach}\label{subsec:ontology-approach}
 
-Ontology is very popular in computer science which enables domain knowledge to be modeled abstractly and enables queries to be evaluated against a knowledge base. There are various tools and methods to create an ontology domain. The Web Ontology Language (OWL) is a standard language for ontology representation whose primary syntax is XML/RDF (resource description framework) and is used to model knowledge of a particular domain. 
+Ontology is very popular in computer science. It enables domain knowledge to be modeled abstractly and queries to be evaluated against a knowledge base. There are various tools and methods for creating an ontology domain. The Web Ontology Language (OWL) is a standard language for ontology representation whose primary syntax is XML/RDF (resource description framework) and is used to model knowledge of a particular domain. 
 
 In modeling a domain using an ontology, all existing knowledge is modeled as a family of related concepts with interconnected relationships. One of the most important decisions in the ontology construction process is to select the appropriate ontology method, tools, and language. Manual and semi-automatic creation are the two methods of ontology construction used in the papers. Tools like Protégé~\textcite{Gennari2003} and Ontostudio~\textcite{Weiten2009} provide a suitable environment for the creation of ontology manually. This method of ontology construction often does not use data mining tools.
 
-In contrast, human intervention is reduced in the semi-automatic creation method, and the speed of ontology construction and development is increased. Tools like text2onto~\textcite{Cimiano2005} and Ontolearn~\textcite{Velardi2013} use machine-learning techniques to create an ontology. These tools usually require a large sample for training. 
+In contrast, human intervention is reduced in the semi-automatic creation method, and the speed of ontology construction and development is increased. Tools like text2onto \textcite{Cimiano2005} and Ontolearn \textcite{Velardi2013} use machine-learning techniques to create an ontology. These tools usually require a large sample for training. 
 
 The existing studies for selecting a design pattern based on the ontology approach concluded that the pattern suggestion process in this approach is as shown in Figure~\ref{fig-ontology-base-approach}. As shown in this figure, the principal and typical phase in the ontology-based approach is constructing an ontology of the concepts in the pattern description.
 
@@ -395,7 +392,7 @@ It is worth mentioning that certain articles have employed a blend of various me
   
 \MyParaBold{Trade-offs between the Design Patterns Selection Approaches} \label{subsec:trade-offs-approaches}
 
-\textcite{Kim2007} presented a UML-based method that utilizes Role-Based Modeling Language (RBML) to create the meta-model for each pattern and problem. They used collaboration and class diagrams to specify different aspects of patterns, resulting in different properties, such as structural and behavioral. Finally, if the design pattern's specifications can meet the problem's diagram, a pattern is suggested. However, the method's scalability could be improved due to overlapping meta-models.
+\textcite{Kim2007} presented a UML-based method that utilizes Role-Based Modeling Language (RBML) to create the meta-model for each pattern and problem. They used collaboration and class diagrams to specify different aspects of patterns, resulting in different properties, such as structural and behavioral. Finally, a pattern is suggested if the design pattern's specifications can meet the problem's diagram. However, the method's scalability could be improved due to overlapping meta-models.
 
 \textcite{Muangon2013} presented a CBR-based method that uses formal concept analysis (FCA) to solve the problem of design pattern retrieval caused by differences between author and user keywords. A similarity function retrieves similar cases for the input problem in their proposed method. FCA is used to reformulate problem descriptions and retrieve related cases if the user is unsatisfied with the proposed pattern. The quality and variety of the case base can affect the accuracy of pattern suggestion, and finding similarities between the previous problems and the new problem can be time-consuming.
 
@@ -403,7 +400,7 @@ It is worth mentioning that certain articles have employed a blend of various me
 
 \textcite{Qureshi2017} proposed a Q-A-based design pattern selection model that provides questions based on the design patterns' properties. After interacting with the user, the answers are weighted, and the design pattern with the highest weight (similarity) is suggested to the designer. Providing the questions is the main challenge of this study.
 
-\textcite{Hussain2017software} proposed a three-phase method to automate the selection of design patterns. In the first phase, the problem part of the pattern description and the design problem are pre-processed to create their weighted vectors. In the second phase, the classifiers are trained on feature vectors using the "LambdaMART" algorithm, a supervised learning technique. In the last phase, the suitable patterns are retrieved for a given design problem using similarity measurements. The classifier's performance is influenced by sample size and ranking algorithms.
+\textcite{Hussain2017software} proposed a three-phase method to automate the selection of design patterns. In the first phase, the problem part of the pattern description and the design problem are pre-processed to create their weighted vectors. In the second phase, the classifiers are trained on feature vectors using the ``LambdaMART'' algorithm, a supervised learning technique. In the last phase, the suitable patterns are retrieved for a given design problem using similarity measurements. The classifier's performance is influenced by sample size and ranking algorithms.
 
 \textcite{Hamdy2018automatic, Hamdy2018Towards} presented a two-phase IR-based method to suggest design patterns. In the first phase, data mining techniques are used to pre-process the set of design patterns and design problems to reduce the feature set's size and the dataset's sparsity. In the second phase, the similarity between patterns and problem vectors is calculated, and a ranked list of design patterns for the given problem is retrieved. Efficient descriptions of design patterns and design problem scenarios influence the accuracy of the proposed method.
 
@@ -419,11 +416,23 @@ Another issue is the reliance on a narrow collection of design patterns in imple
 
 Semi-automatic methods that require interaction with developers or designers are also a limitation. The ideal approach would be fully automated, allowing large-scale applications without manual intervention. To achieve this, techniques such as text mining, clustering, \ac{ML}, and AI can be employed. These automated techniques can handle large amounts of data and accelerate implementation. The goal is to improve efficiency and accuracy in pattern suggestion by exploring different methods and algorithms related to these techniques~\cite {Naghdipour2023}.
 
-Despite the advances in design pattern selection, there are still concerns regarding the focus on specific patterns and issues related to cost, time, comprehensiveness, and the evaluation of methods. These areas require further improvement and exploration to enhance the effectiveness and practicality of design pattern selection approaches. 
+Despite the advances in design pattern selection, there are still concerns regarding the focus on specific patterns and issues related to cost, time, comprehensiveness, and method evaluation. These areas require further improvement and exploration to enhance the effectiveness and practicality of design pattern selection approaches.
 
-% \section{Architecture Decision-Making}\label{sec:architecture-decision-making}
+\subsection{Section Summary}
 
-% The state of the art on design patterns: A systematic mapping of the literature \cite{Mayvan2017}
-% \subsection{LLMs Design Patterns}
-% \subsection{Architectural Design Patterns} \cite{Taibi2018}
-% \subsection{LLM Prompt Design Patterns}
+Section 2 of this dissertation provides a literature review divided into two main sections: the evolution of artificial intelligence (AI) and methodologies for software pattern selection.
+
+\MyParaBold{Evolution of AI}
+
+This subsection begins with an overview of the historical development of AI, emphasizing the significant milestones and progression from early symbolic AI to modern machine learning (ML) and deep learning (DL) techniques. It details the emergence and capabilities of large language models (LLMs) and their transformative effects on natural language processing and software development tasks.
+    
+Special attention is given to prompt engineering, described as the art and science of crafting prompts to guide AI models such as GPT-4. Effective, prompt engineering is shown to be crucial in improving AI performance by narrowing the scope of responses and focusing on relevant aspects of the problem at hand, enlightening you about this important aspect of AI development.
+
+
+\MyParaBold{Software Patterns}
+
+The review delves deeper into the concept of software patterns, beginning with their origins in Christopher Alexander's work, which introduced the idea of patterns in architecture. This section explains how these ideas were adapted to software engineering, mainly through the Gang of Four (GoF) influential work, which categorized design patterns into creational, structural, and behavioral types.
+
+It further explores various methods for selecting appropriate design patterns, such as UML-based approaches, question-and-answer-based methods, case-based reasoning, anti-patterns, and information retrieval-based approaches. The advantages and limitations of each method are discussed, equipping you with a comprehensive understanding of the tools available to software architects for pattern selection.
+
+Overall, Section 2 lays the foundation for the dissertation's exploration of how generative AI can aid architectural decision-making, providing a thorough understanding of AI's capabilities and the established methodologies for using design patterns in software development.

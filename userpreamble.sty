@@ -1,5 +1,5 @@
 \ProvidesPackage{userpreamble}
-
+\ProvidesPackage{colorblind}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                     OPTIONAL PACKAGES                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,7 +20,6 @@
 \usepackage[super]{nth}
 \usepackage{mdframed}
 \usepackage{graphicx}
-\usepackage{color}
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox} % Caixas coloridas
 \usepackage{enumitem} % Listas personalizadas
@@ -39,17 +38,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Thesis title - brazilian
-\renewcommand{\doctitlebrazilian}{Avaliação do potencial das ferramentas assistidas por IA para a tomada de decisão de design em projetos de software.}
+\renewcommand{\doctitlebrazilian}{Uma abordagem de sequência de padrões de prompt para aplicar IA generativa no auxílio à tomada de decisões em arquitetura de software.}
 
 % Thesis title - english
-\renewcommand{\doctitle}{A Prompt Patterns Sequence Approach to Apply Generative AI in Assisting Software Architecture Decision-making}
+\renewcommand{\doctitle}{A Prompt Patterns Sequence Approach to Apply Generative AI in Assisting Software Architecture Decision-Making}
 
 % Thesis author
 \renewcommand{\authorname}{João José Maranhão Junior}
 
 % Main supervisor
-\renewcommand{\supervisor}{Prof. Ph.D. Eduardo Martins Guerra}
-\renewcommand{\supervisortitle}{Ph.D.}
+\renewcommand{\supervisor}{Professor of the Professional Master's Degree in Applied Computing}
+\renewcommand{\supervisortitle}{Prof. Dr.}
 
 % Co-supervisor
 \renewcommand{\cosupervisor}{}
@@ -59,9 +58,9 @@
 % \renewcommand{\knowledgeasrea}{Artificial Intelligence}
 
 % Keywords for abstract in English
-\renewcommand{\keywords}{Prompt Engineering.Design Patterns.Software Architecture.Generative Artificial Intelligence.}
+\renewcommand{\keywords}{Prompt Engineering. Design Patterns. Software Architecture. Generative Artificial Intelligence}
 % Keywords for abstract in Portuguese
-\renewcommand{\palavraschave}{Engenharia de Prompt.Padrões de Projetos.Arquitetura de Software.Inteligência Artificial Generativa}
+\renewcommand{\palavraschave}{Engenharia de Prompt. Padrões de Projetos. Arquitetura de Software. Inteligência Artificial Generativa}
 
 % Month of the publication (Three letters - defaults to current month).
 % You can hard code the value by replacing the parameter with a text
@@ -84,12 +83,22 @@
 
 \newcommand{\ts}{\textsuperscript}
 
-\definecolor{mycolorgreen}{RGB}{84,196,94}
-\definecolor{mycolorpink}{RGB}{219,48,122}
-\definecolor{mycolororange}{RGB}{204,102,0}
-\definecolor{mycolorlilas}{RGB}{155,69,161}
-\definecolor{mycolorblue}{RGB}{109,108,176}
-\definecolor{mycolorred}{RGB}{227,51,2}
+\definecolor{codereddish}{RGB}{96, 0, 39}  % Reddish
+\definecolor{codered}{RGB}{255, 0, 0}  % Red
+\definecolor{codepurple}{RGB}{153, 50, 204}  % Purple
+\definecolor{codebrownish}{RGB}{96, 48, 0}   % Brownish
+\definecolor{codeTeal}{RGB}{0, 128, 128}  % Teal
+\definecolor{codeOrange}{RGB}{224,130,20}  % Orange 240,59,32
+\definecolor{codeYellow}{RGB}{45,0,75}  % Roxo escuro
+\definecolor{codegray}{RGB}{80, 80, 80}  % Gray
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92} %Blac
+\definecolor{mycolorgreen}{RGB}{39,100,25}  % Green Daltonico
+\definecolor{mycolorpink}{RGB}{197,27,125}
+\definecolor{mycolororange}{RGB}{255, 127, 0}  % Orange
+\definecolor{mycolorlilas}{RGB}{136,86,167} % 136,86,167
+\definecolor{mycolorblue}{RGB}{67,147,195}  % Blueish 44,127,184
+\definecolor{mycolorred}{RGB}{178,24,43}  % Red
+
 \definecolor{chatbackground}{RGB}{245, 245, 245}
 \definecolor{usercolor}{RGB}{64, 184, 184}       % Preto
 \definecolor{botcolor}{RGB}{0, 0, 255}      % Azul
@@ -188,13 +197,9 @@
   \textbf{Output \thecounterOut: #2ChatGPT }\ifx&#1&\else\label{#1}\fi
 }
 
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\lstdefinestyle{mystyle}{
-    % backgroundcolor=\color{backcolour},   
+
+\lstdefinestyle{mystyle}{    
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},    
     stringstyle=\color{codepurple},

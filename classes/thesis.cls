@@ -188,8 +188,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Default main font
-%\setmainfont{Arial}
-\setsansfont{Arial}
+\setmainfont{Arial}
+% \setsansfont{Arial}
 
 % No special font is set and the current font is used for the URLs
 \urlstyle{same}
@@ -307,7 +307,7 @@
 \setlength{\cftbeforelottitleskip}{0pt}
 \setlength{\cftafterlottitleskip}{1.5ex}
 
-% Adjust spaces for LOB: Listing of Boards
+% Adjust spaces for LOB: Listing of Frames
 \setlength{\cftbeforelobtitleskip}{0pt}
 \setlength{\cftafterlobtitleskip}{1.5ex}
 
@@ -355,6 +355,7 @@
 \newenvironment{abstractpt}{
   \begin{center}
     \textbf{RESUMO}
+    \par \textbf{\doctitlebrazilian}
   \end{center}
   \par
 }
@@ -364,7 +365,7 @@
 \newenvironment{abstracten}{
   \begin{center}
     \textbf{ABSTRACT}
-    \par \textbf{\doctitle}
+    % \par \textbf{\doctitle}
   \end{center}
   \par
 }

@@ -1,13 +1,13 @@
-Chapter 3 delves into an empirical study of current practices in automatic selecting design patterns GoF. It aims to uncover the primary challenges and insights professionals encounter. The findings from this study lay the groundwork for a transition from theoretical understanding to practical application of Prompt Patterns in Software Architecture. This empirical investigation highlights the complexities and nuances associated with design pattern selection, thus setting a context for the subsequent chapters.
+Section~\ref{ch:preliminar-study} delves into an empirical study of current practices in automatic selecting design patterns GoF. It aims to uncover the primary challenges and insights professionals encounter. The findings from this study lay the groundwork for a transition from theoretical understanding to practical application of Prompt Patterns in Software Architecture. This empirical investigation highlights the complexities and nuances associated with design pattern selection, thus setting a context for the subsequent sections.
 
-The main objective of Chapter 4 is to propose and elucidate a new Prompt Approach for architectural decisions in software projects. This approach is designed to leverage the capabilities of AI, particularly in the context of prompt engineering, to help software architects make more informed, efficient, and practical design decisions. By integrating AI tools into the decision-making process, this approach addresses the challenges and limitations identified in previous chapters. This chapter is crucial in demonstrating how the insights gained in the previous study can be effectively translated into practical AI-assisted solutions using existing patterns and creating new ones.
+The main objective of Section~\ref{ch:prompt-patterns} is to propose and elucidate a new Prompt Approach for architectural decisions in software projects. This approach is designed to leverage the capabilities of AI, particularly in the context of prompt engineering, to help software architects make more informed, efficient, and practical design decisions. Integrating AI tools into the decision-making process addresses the challenges and limitations identified in previous sections. This section is crucial in demonstrating how the insights gained in the previous study can be effectively translated into practical AI-assisted solutions using existing patterns and creating new ones.
 \section{Approach General Description}
 
-Given software architecture's dynamic and often complex nature, effective decision-making is crucial. This chapter proposes a novel approach that leverages AI, particularly in prompt engineering, to assist software architects in making more informed, efficient, and practical design decisions. This approach is a direct response to the challenges and limitations identified in the empirical study of Chapter 3. It is instrumental in showcasing how empirical insights can be transformed into practical AI-assisted solutions by utilizing existing patterns and creating new ones.
+Given software architecture's dynamic and often complex nature, effective decision-making is crucial. This section proposes a novel approach that leverages AI, particularly in prompt engineering, to assist software architects in making more informed, efficient, and practical design decisions. This approach is a direct response to the challenges and limitations identified in the empirical study of Section 3. It is instrumental in showcasing how empirical insights can be transformed into practical AI-assisted solutions by utilizing existing patterns and creating new ones.
 
 
 \MyParaBold{Objective of the Approach}
-The primary goal of this approach is to harness AI tools to streamline and elevate the architectural decision-making process. By utilizing prompt patterns, this method offers a structured, efficient, and context-sensitive way for architects to navigate their myriad design choices. The intent is to ensure that the resulting architectural solutions are innovative, practical, and finely tuned to each project's unique requirements.
+The primary goal of this approach is to harness AI tools to streamline and elevate the architectural decision-making process. Utilizing prompt patterns offers a structured, efficient, and context-sensitive way for architects to navigate their myriad design choices. The intent is to ensure that the resulting architectural solutions are innovative, practical, and finely tuned to each project's unique requirements.
 
 \subsection{Patterns Used}\label{patterns-used}
 This work employs existing patterns such as \texttt{Persona},\texttt{Fact Check List}, \texttt{Context Manager}, \texttt{Recipe}, \texttt{Reflection}, and \texttt{Question Refinement}. Uses the Patlet format \MyParaText{Name, Context, Problem, and Solution)} outlined by \textcite{buschmann2007pattern} to demonstrate the application of these existing prompt patterns. The Patlet format is a foundational framework for identifying, contextualizing, and solving specific architectural problems, thereby underlining the practical utility of the prompt patterns in real-world scenarios.
@@ -43,7 +43,7 @@ This work employs existing patterns such as \texttt{Persona},\texttt{Fact Check 
 
 \MyPara{Problem:}How can LLMs generate off-topic or irrelevant responses when interpreting the context of a conversation inaccurately?
 
-\MyPara{Solution:} The Context Manager Pattern offers a solution to this challenge. Users can explicitly define or remove certain aspects of the context, guiding the LLM to focus on relevant topics. Examples of prompts include "Only consider security aspects" or "Do not consider formatting or naming conventions". This solution enhances the relevance and accuracy of the LLM's responses, making the interaction more user-centric.
+\MyPara{Solution:} The Context Manager Pattern offers a solution to this challenge. Users can explicitly define or remove certain aspects of the context, guiding the LLM to focus on relevant topics. Examples of prompts include ``Only consider security aspects'' or ``Do not consider formatting or naming conventions.''. This solution enhances the relevance and accuracy of the LLM's responses, making the interaction more user-centric.
 
 \begin{center}
 ***
@@ -126,25 +126,25 @@ Exploring prompt patterns for decision-making in software architecture using AI 
     \item \textbf{Result:}  Establish a refined set of new and adapted prompt patterns(\textit{\textbf{1st version}}), demonstrating their effectiveness in practical applications in software architecture.
 \end{itemize}
 
-Per the seven guidelines of Design Science Research (DSR), this structured, iterative process ensures the relevance and applicability of the prompt patterns. The methodical rigor of DSR is evident as each phase builds upon the insights and feedback from the previous one, resulting in a set of prompt patterns ready for deployment in the field of software architecture.
+Per the seven guidelines of Design Science Research (DSR), this structured, iterative process ensures the relevance and applicability of the prompt patterns. The methodical rigor of DSR is evident as each phase builds upon the insights and feedback from the previous one, resulting in a set of prompt patterns ready for deployment in software architecture.
 
 \MyParaBold{Proposed Patterns}
 
 \MyParaText{The following five prompt patterns are proposed in this work and proposed pattern sequence:}
 \begin{enumerate}
-    \item Software Architect Persona, section \ref{sec:software-architect-persona}
-    \item Architectural Company Context, section \ref{sec:architectural-company-context}
-    \item Quality Attribute Question, section \ref{sec:quality-attribute-question}
-    \item Technical Premises, section \ref{sec:technical-premises}
-    \item Uncertain Requirement Statement \ref{sec:uncertain-requirement-statement}
-    \item Fictional Scenario to Demonstrate the Pattern-based Prompt Sequence \ref{sec:fictional-scenario-prompt-pattern-sequence}
+    \item Software Architect Persona, Subsection~\ref{sec:software-architect-persona}
+    \item Architectural Company Context, Subsection~\ref{sec:architectural-company-context}
+    \item Quality Attribute Question, Subsection~\ref{sec:quality-attribute-question}
+    \item Technical Premises, Subsection~\ref{sec:technical-premises}
+    \item Uncertain Requirement Statement, Subsection~\ref{sec:uncertain-requirement-statement}
+    \item Fictional Scenario to Demonstrate the Pattern-based Prompt Sequence, Subsection~\ref{sec:fictional-scenario-prompt-pattern-sequence}
 \end{enumerate}
 
 \MyParaBold{Prompt Pattern Template}
 
 Defining objective rules for the most appropriate form to describe a specific pattern is difficult. The form depends on the pattern of the author's intention and target audience. Therefore, subjectivity and experience play a crucial role. However, some heuristics can help pattern writers decide which form to use \cite{buschmann2007pattern}.
 
-There are many forms available for documenting patterns, including the structured and detailed \textcite{Gamma1994} and  \textcite{buschmann1996pattern} forms, the narrative 'Portland' form by \textcite{cunningham1995checks}, the form used by \textcite{Alexander1977}, and even unusual forms such as the one developed by \textcite{cockburn1997surviving}, which introduces aspects like the 'overdose' effect of a pattern, reminiscent of the medical diagnostic metaphor.
+There are many forms available for documenting patterns, including the structured and detailed \textcite{Gamma1994} and  \textcite{buschmann1996pattern} forms, the narrative ``Portland'' form by \textcite{cunningham1995checks}, the form used by \textcite{Alexander1977}, and even unusual forms such as the one developed by \textcite{cockburn1997surviving}, which introduces aspects like the 'overdose' effect of a pattern, reminiscent of the medical diagnostic metaphor.
 
 The Coplien approach is a specific way of documenting design patterns in software engineering introduced by \textcite{coplien1995generative}. It is known for its concise and essence-focused approach to pattern documentation. The main elements of the Coplien form are as follows: \textbf{\textit{1.Name}}, \textbf{\textit{ 3.Problem}}, \textbf{\textit{4.Context}}, \textbf{\textit{5.Forces}}, \textbf{\textit{6.Solution}}, \textbf{\textit{7.Rationale}}, and \textbf{\textit{10.Consequences}} (formally known as Resulting Context).
 
@@ -158,25 +158,23 @@ The Pattern Form used in this work includes additional elements that offer a mor
 
 \MyPara{4.Problem:} A clear statement of the problem that the pattern addresses. This section defines the issue the pattern aims to solve, often highlighting the specific context where this problem arises.
 
-\MyPara{5.Forces:} Discuss the "forces" in the problem space. These constraints, trade-offs, or tensions must be balanced when applying the pattern. Understanding these forces helps grasp the problem's nuances and the pattern's appropriateness.
+\MyPara{5.Forces:} Discuss the ``forces'' in the problem space. When applying the pattern, these constraints, trade-offs, or tensions must be balanced. Understanding these forces helps grasp the problem's nuances and the pattern's appropriateness.
 
 \MyPara{6.Solution:} A description of the solution to the problem, as the pattern proposes. This is not a detailed implementation but rather an abstract description of how to resolve the problem or achieve the desired outcome.
 
 \MyPara{7.Rationale:} Explain why the solution works and how it addresses the forces and the problem. This section often includes insights into the underlying principles or theories that make the pattern effective.
 
-\MyPara{8.Statement Template:} Serves as a quick reference or succinct summary of the standard, providing an immediate overview of what the standard is about. It can be a model statement or a structured summary that encapsulates the essence of the patterns in a standardized format.
+\MyPara{8.Statement Template: }Serves as a quick reference or succinct summary of the standard, providing an immediate overview. It can be a model statement or a structured summary that encapsulates the essence of the patterns in a standardized format.
 
-\MyPara{9.Concrete Statement Example:} is a real-life example of the declaration template that illustrates how it can be applied in practice.
+\MyPara{9.Concrete Statement Example:} real-life example of the declaration template that illustrates how it can be applied in practice.
 
-\MyPara{10.Consequences:} A description of the state or situation after the pattern has been applied, including any new problems that might arise or how the context has been altered due to applying the pattern.
+\MyPara{10.Consequences:} description of the state or situation after the pattern has been applied, including any new problems that might arise or how the context has been altered due to applying the pattern.
 
-\MyPara{11.Related Patterns:} provides information about other patterns closely related to the current one. It shows dependencies or prerequisites and provides a network of patterns that can work well together or be considered together when solving complex problems.
+\MyPara{11.Related Patterns: } provides information about other patterns closely related to the current one. It shows dependencies or prerequisites and provides a network of patterns that can work well together or be considered together when solving complex problems.
 
-\MyPara{12.Usage example:} Goes beyond the theoretical explanation and provides a practical, real-world scenario where the pattern is applied. This can be particularly useful for readers to understand the applicability and implementation of the standard.
+\MyPara{12.Usage example:} goes beyond the theoretical explanation and provides a practical, real-world scenario where the pattern is applied. This can be particularly useful for readers to understand the standard's applicability and implementation.
 
-By including these additional elements, you're enriching the pattern description, making it more practical, and providing a more holistic view of how the pattern fits within the broader context of design patterns. This approach can be especially beneficial for practitioners looking to apply these patterns in real-world scenarios.
-
-
+By including these additional elements, you enrich the pattern description, make it more practical, and provide a more holistic view of how the pattern fits within the broader context of design patterns. This approach can be especially beneficial for practitioners applying these patterns in real-world scenarios.
 
 \section{The Software Architect Persona Pattern} \label{sec:software-architect-persona}
 
@@ -184,7 +182,7 @@ By including these additional elements, you're enriching the pattern description
 
 \MyPara{Specializes:}\texttt{Persona}
 
-\MyPara{Context:} Software architects require responses that consider their specific perspective, expertise, and the architectural context in which they operate. Unlike general user personas, software architects face unique challenges such as balancing functional and non-functional requirements, adhering to software business rules, and navigating complex stakeholder landscapes. A specialized persona helps tailor AI-generated interactions to these specific needs, enhancing decision-making in complex architectural scenarios.
+\MyPara{Context:} Software architects require responses that consider their specific perspective, expertise, and the architectural context in which they operate. Unlike general user personas, software architects face unique challenges such as balancing functional and non-functional requirements, adhering to software business rules, and navigating complex stakeholder landscapes. A specialized persona helps tailor AI-generated interactions to these needs, enhancing decision-making in complex architectural scenarios.
 
 \MyPara{Problem:} How can we ensure that AI-generated content for software architects is accurate and contextually relevant, addressing their unique roles and constraints?
 
@@ -207,32 +205,32 @@ By including these additional elements, you're enriching the pattern description
 \MyParaText{This is achieved by creating prompts that clearly outline the software architect's role, goals, and constraints regarding the targeted design decision. This ensures that the AI's responses are technically accurate and contextually appropriate, aiding in more effective decision-making.}
 
 
-\MyPara{Statement Template:}You are \textcolor{mycolorgreen}{[\textbf{Persona's Name}]} in the role \textcolor{mycolorgreen}{\textbf{[Role]}}.Your main goal is \textcolor{blue}{\textbf{[Main Goal]}.}You cannot \textcolor{mycolorpink}{\textbf{[Limitations/Constraints]}}.
+\MyPara{Statement Template:}You are \textcolor{mycolorgreen}{[\textbf{Persona's Name}]} in the role \textcolor{mycolorlilas}{\textbf{[Role]}}.Your main goal is \textcolor{mycolorblue}{\textbf{[Main Goal]}.}You cannot \textcolor{mycolorpink}{\textbf{[Limitations/Constraints]}}.
 
 \MyParaBold{\textcolor{mycolorgreen}{-[Persona's Name]:}} This variable represents the specific identity or role of the software architect. It helps to personalize the AI’s response by giving it a clear subject to address.
 
-\MyParaBold{\textcolor{mycolorgreen}{-[Role]:}} This details the specific role or responsibility of the software architect within the context of the project, helping to define the scope and focus of the AI’s responses.
+\MyParaBold{\textcolor{mycolorlilas}{-[Role]:}} This details the specific role or responsibility of the software architect within the context of the project, helping to define the scope and focus of the AI’s responses.
 
-\MyParaBold{\textcolor{blue}{-[Main Goal]:}} This outlines the primary goal or objective that the software architect is aiming to achieve. This guides the AI in generating responses aligned with achieving these specific goals.
+\MyParaBold{\textcolor{mycolorblue}{-[Main Goal]:}} This outlines the primary goal or objective that the software architect is aiming to achieve. This guides the AI in generating responses that are aligned with achieving these specific goals.
 
 \MyParaBold{\textcolor{mycolorpink}{-[Limitations/Constraints]:}} This includes any limitations or constraints that the software architect must work within. Acknowledging these constraints helps the AI provide realistic and applicable suggestions.
 
-\MyPara{Concrete statement example:}\textbf{ \textcolor{mycolorgreen}{You are a Senior Software Architect specializing in cloud-based solutions.}\textcolor{blue}{Your main goal is to optimize system scalability and performance.} \textcolor{mycolorpink}{You cannot propose solutions that significantly increase operational costs.}}
+\MyPara{Concrete statement example:}\textbf{ \textcolor{mycolorgreen}{You are a Senior Software Architect specializing in cloud-based solutions.}\textcolor{mycolorblue}{Your main goal is to optimize system scalability and performance.} \textcolor{mycolorpink}{You cannot propose solutions that significantly increase operational costs.}}
 
-\MyPara{Consequences:} The following are consequences of using Software Architect Persona: 
+\MyPara{Consequences:} The following are the consequences of using a Software Architect Persona: 
 \newline
-\textcolor{red}{(-)} It requires more effort to define the persona in advance and ensure that the instructions are aligned with it \newline
-\textcolor{red}{(-)} May limit response flexibility if constraints are too narrow\newline
-\textcolor{red}{(-)} Persona can introduce unintentional biases if not well defined\newline
-\textcolor{red}{(-)} May produce less natural or creative responses when imposing the persona\newline
-\textcolor{blue}{(+)} Improved decision-making by providing personalized suggestions directly addressing the architect's needs in the project context\newline
-\textcolor{blue}{(+)} Get answers specifically adapted to your needs and context\newline
-\textcolor{blue}{(+)} Get more realistic and consistent advice by simulating a knowledge expert\newline
-\textcolor{blue}{(+)} Reduction of misaligned suggestions by reducing the likelihood of suggestions that do not fit into the architectural context or go beyond the project's scope.\newline
-\textcolor{blue}{(+)} Avoid unfiltered or off-topic responses\newline
-\textcolor{blue}{(+)} Clear guidance on appropriate and expected response types\newline
-\textcolor{blue}{(+)} Less ambiguity in prompts, which helps generate more focused responses\newline
-\textcolor{blue}{(+)} Greater probability of a more accurate answer, avoiding topics outside the scope
+\textcolor{mycolorred}{(-)} It requires more effort to define the persona in advance and ensure that the instructions are aligned with it \newline
+\textcolor{mycolorred}{(-)} May limit response flexibility if constraints are too narrow\newline
+\textcolor{mycolorred}{(-)} Persona can introduce unintentional biases if not well defined\newline
+\textcolor{mycolorred}{(-)} May produce less natural or creative responses when imposing the persona\newline
+\textcolor{mycolorblue}{(+)} Improved decision-making by providing personalized suggestions directly addressing the architect's needs in the project context\newline
+\textcolor{mycolorblue}{(+)} Get answers specifically adapted to your needs and context\newline
+\textcolor{mycolorblue}{(+)} Get more realistic and consistent advice by simulating a knowledge expert\newline
+\textcolor{mycolorblue}{(+)} Reduction of misaligned suggestions by reducing the likelihood of suggestions that do not fit into the architectural context or go beyond the project's scope.\newline
+\textcolor{mycolorblue}{(+)} Avoid unfiltered or off-topic responses\newline
+\textcolor{mycolorblue}{(+)} Clear guidance on appropriate and expected response types\newline
+\textcolor{mycolorblue}{(+)} Less ambiguity in prompts, which helps generate more focused responses\newline
+\textcolor{mycolorblue}{(+)} Greater probability of a more accurate answer, avoiding topics outside the scope
 
 \MyPara{Related Patterns:} This pattern builds upon the \texttt{Persona} by adding a layer of specialization focused on the decision scope and limitations specific to software architecture. It is also related to the \texttt{Context Manager}, as it helps define the scope of responses more narrowly and relevantly.
 
@@ -240,26 +238,26 @@ By including these additional elements, you're enriching the pattern description
 
 \begin{chatin}{usercolor}{\chatgptin[chatgpt-in-persona-1]}
 
-From now on, you are Neo in the role of an experienced software architect. Your main goal is to ensure the reliability, performance, and maintainability of the software for which you are responsible. You have experience designing scalable and secure systems. You cannot under any circumstances resolve doubts and questions that involve other topics or subjects that are not Software Architecture, such as code implementation, so respond that it is not your persona's responsibility.
+From now on, you are Neo in the role of an experienced software architect. Your main goal is to ensure the software's reliability, performance, and maintainability, which you are responsible for. You have experience designing scalable and secure systems. Under no circumstances can you resolve doubts and questions that involve other topics or subjects that are not Software Architecture, such as code implementation, so respond that it is not your persona's responsibility.
 \end{chatin}
 
 In Prompt \ref{chatgpt-in-persona-1}, the persona`s name was defined as a role, a goal, and limitations.
 
 \begin{chatout}{botbubble}{\chatgptout[chatgpt-out-persona-1]}
 
-As "Neo" the software architect, I'm ready to assist you with any questions or challenges related to software architecture, including system design, scalability, reliability, performance, and maintainability. If you have questions in these areas or need advice on architectural patterns and practices, feel free to ask.
+As Neo, a software architect, I'm ready to assist you with any questions or challenges related to software architecture, including system design, scalability, reliability, performance, and maintainability. Feel free to ask if you have questions in these areas or need advice on architectural patterns and practices.
 \end{chatout}
 
 \begin{chatin}{usercolor}{\chatgptin[chatgpt-in-persona-2]}
-Summarize in 2 paragraphs the best strategies or techniques for migrating a monolithic system with MVC architecture to a microservices system?
+Summarize in 2 paragraphs the best strategies or techniques for migrating a monolithic system with MVC architecture to a microservices system.
 \end{chatin}
 
 
 \begin{chatout}{botbubble}{\chatgptout[chatgpt-out-persona-2]}
 
-When migrating a monolithic system with an MVC (Model-View-Controller) architecture to a microservices architecture, the first step is typically to identify and segregate bounded contexts. This involves breaking down the monolith into domains that represent discrete business capabilities. You would assess the model layer for business logic that can be decoupled and organized into independent services. An incremental approach is often recommended, where you start by carving out the least dependent modules and gradually work towards the more complex ones, ensuring that the monolith and new microservices can coexist during the transition phase. This is known as the Strangler Fig Pattern, where new microservices gradually "strangle" the old monolith until it is eventually decommissioned.
+When migrating a monolithic system with an MVC (Model-View-Controller) architecture to a microservices architecture, the first step is identifying and segregating bounded contexts. This involves breaking down the monolith into domains that represent discrete business capabilities. You would assess the model layer for business logic that can be decoupled and organized into independent services. An incremental approach is often recommended, where you start by carving out the least dependent modules and gradually work towards the more complex ones, ensuring that the monolith and new microservices can coexist during the transition phase. This is known as the Strangler Fig Pattern, where new microservices gradually "strangle" the old monolith until it is decommissioned.
 
-In terms of techniques, it's crucial to establish a robust communication mechanism between microservices, which can be achieved through APIs or messaging queues. Interim APIs can serve as a bridge between the monolith and new microservices. It's also important to implement a comprehensive testing strategy to ensure that as each microservice is extracted, the system continues to function as expected. Continuous Integration / Continuous Deployment (CI/CD) pipelines are vital to maintain a smooth and reliable delivery process during the transition. Finally, you need to address cross-cutting concerns such as authentication, logging, and monitoring at the microservices level, often using sidecars or external services. These strategies ensure not only a smooth transition but also the maintainability and scalability of the new microservices architecture.
+In terms of techniques, it's crucial to establish a robust communication mechanism between microservices, which can be achieved through APIs or messaging queues. Interim APIs can serve as a bridge between the monolith and new microservices. It's also important to implement a comprehensive testing strategy to ensure the system continues functioning as expected as each microservice is extracted. Continuous Integration / Continuous Deployment (CI/CD) pipelines are vital to maintain a smooth and reliable delivery process during the transition. Finally, you must address cross-cutting concerns such as authentication, logging, and monitoring at the microservices level, often using sidecars or external services. These strategies ensure a smooth transition and the maintainability and scalability of the new microservices architecture.
 \end{chatout}
 
 During a conversation in the "Neo" persona, ChatGPT recognized its limitations in non-architectural tasks. However, it provided successful strategies for migrating to a micro-service architecture, as shown in Prompt \ref{chatgpt-in-persona-1}, Output \ref{chatgpt-out-persona-1} and  \ref{chatgpt-out-persona-2}.
@@ -280,11 +278,11 @@ During a conversation in the "Neo" persona, ChatGPT recognized its limitations i
 
 \MyPara{Forces:}{The following are forces in using Architectural Company Context:}
 
-\MyParaText{\textit{- Team Size:}}{The size of the development team significantly shapes architectural choices. Larger teams can support more complex, distributed architectures due to their ability to segment work across multiple units. This can allow for parallel development streams, reducing time to market. In contrast, smaller teams might necessitate simpler, more consolidated architectural designs to maintain manageability and clear communication channels, essential for agile responses to project demands.}
+\MyParaText{\textit{- Team Size:}}{The size of the development team significantly shapes architectural choices. Larger teams can support more complex, distributed architectures due to their ability to segment work across multiple units. This can allow for parallel development streams, reducing time to market. In contrast, smaller teams might necessitate simpler, more consolidated architectural designs to maintain manageability and clear communication channels, which are essential for agile responses to project demands.}
 
-\MyParaText{\textit{- Development Time:}}{The time available to complete the project directly influences the architectural strategy. Limited time frames may force architects to opt for quicker implementation and deployment designs, potentially favoring modular over monolithic structures if they allow for phased rollouts. Extended timelines allow for a more thorough exploration of innovative solutions, including experimenting with new technologies that might enhance scalability and performance.}
+\MyParaText{\textit{- Development Time:}}{The time available to complete the project directly influences the architectural strategy. Limited time frames may force architects to opt for quicker implementation and deployment designs, potentially favoring modular over monolithic structures if they allow for phased rollouts. Extended timelines allow for a more thorough exploration of innovative solutions, including experimenting with new technologies that might enhance scalability and performance.
 
-\MyParaText{\textit{- Budget:}}{Financial resources play a critical role in determining the scope and ambition of the architectural design. A generous budget can enable high-end technologies, external consultations, and more extensive testing phases, collectively contributing to a robust and scalable architecture. Conversely, tight budgets might restrict choices to more cost-effective technologies and prioritize essential functionality over expansive feature sets to control costs.}
+When making decisions, this prompt must consider crucial constraints such as development time, team size, and budget for architectural design. A generous budget can enable high-end technologies, external consultations, and more extensive testing phases, collectively contributing to a robust and scalable architecture. Conversely, tight budgets might restrict choices to more cost-effective technologies and prioritize essential functionality over expansive feature sets to control costs.}
 
 \MyParaText{\textit{- Risk Mitigation:}}{Identifying potential risks early in the architectural design process can avoid costly mistakes and ensure a safer, more compliant architecture.}
 
@@ -295,27 +293,27 @@ During a conversation in the "Neo" persona, ChatGPT recognized its limitations i
  
 \MyParaText{This pattern helps architects create architecture that is not only theoretically sound but also practically feasible. Considering these constraints, architects can make informed decisions that balance quality, functionality, and practicality.}
 
-\MyPara{Statement Template:} Given a development timeline of \textcolor{mycolorgreen}{\textbf{[Time]}}, a team of \textcolor{blue}{\textbf{[Team Size]}}, and a budget of \textcolor{mycolorpink}{\textbf{[Budget]}}, determine if the proposed architecture \textcolor{mycolororange}{\textbf{[Architecture Description]}} is feasible and can meet the project requirements without compromising on quality.
+\MyPara{Statement Template:} Given a development timeline of \textcolor{mycolorgreen}{\textbf{[Time]}}, a team of \textcolor{mycolorblue}{\textbf{[Team Size]}}, and a budget of \textcolor{mycolorpink}{\textbf{[Budget]}}, determine if the proposed architecture \textcolor{mycolororange}{\textbf{[Architecture Description]}} is feasible and can meet the project requirements without compromising on quality.
 
 \MyParaBold{\textcolor{mycolorgreen}{[Time]:}}This variable represents the maximum development time available for the project. It sets the timeline within which the architecture must be designed and implemented, influencing decisions about complexity and scope. 
 
-\MyParaBold{\textcolor{blue}{[Team Size]:}}This refers to the number of team members involved in the project. It affects the division of labor and the team's complexity level to manage and implement effectively. 
+\MyParaBold{\textcolor{mycolorblue}{[Team Size]:}}This refers to the number of team members involved in the project. It affects the division of labor and the team's complexity level regarding managing and implementing effectively. 
 
 \MyParaBold{\textcolor{mycolorpink}{[Budget]:}}This variable indicates the financial resources allocated for the project. It determines the feasibility of certain architectural choices, especially those involving new technologies or significant investment. 
 
 \MyParaBold{\textcolor{mycolororange}{[Architecture Description]:}}This is a brief description of the proposed architectural approach or style (e.g., microservices, monolithic). It is the subject of evaluation against time constraints, team size, and budget.
        
-\MyPara{Concrete Statement Example:}\textbf{\textcolor{mycolorgreen}{Given a development timeline of 6 months, }\textcolor{blue}{a team of 10 developers, }\textcolor{mycolorpink}{and a budget of \$500,000.00, }\textcolor{mycolororange}{determine if implementing a microservices-based architecture for our e-commerce platform is feasible and can deliver the required scalability and performance within these constraints.}
+\MyPara{Concrete Statement Example:}\textbf{\textcolor{mycolorgreen}{Given a development timeline of 6 months, }\textcolor{mycolorblue}{a team of 10 developers, }\textcolor{mycolorpink}{and a budget of \$500,000.00, }\textcolor{mycolororange}{determine if implementing an architecture based microservices for our e-commerce platform is feasible and can deliver the required scalability and performance within these constraints.}
 }
 
 \MyPara{Consequences:} 
 \newline
-\textcolor{red}{(-)} May inhibit the adoption of innovative architectural practices due to practical limitations.\newline
-\textcolor{red}{(-)} Could lead to conservative choices that might overlook more cutting-edge solutions.\newline
-\textcolor{red}{(-)} May foster a risk-averse culture, deterring teams from pursuing ambitious architectural strategies.\newline
-\textcolor{blue}{(+)} Encourages efficient resource management, optimizing the use of time, team capabilities, and budget.\newline
-\textcolor{blue}{(+)} Promotes pragmatic decision-making, ensuring designs are achievable and sustainable given the context.\newline
-\textcolor{blue}{(+)} Leads to the development of realistic, feasible architectural solutions tailored to the specific needs of the company.
+\textcolor{mycolorred}{(-)} May inhibit the adoption of innovative architectural practices due to practical limitations.\newline
+\textcolor{mycolorred}{(-)} Could lead to conservative choices that might overlook more cutting-edge solutions.\newline
+\textcolor{mycolorred}{(-)} May foster a risk-averse culture, deterring teams from pursuing ambitious architectural strategies.\newline
+\textcolor{mycolorblue}{(+)} Encourages efficient resource management, optimizing the use of time, team capabilities, and budget.\newline
+\textcolor{mycolorblue}{(+)} Promotes pragmatic decision-making, ensuring designs are achievable and sustainable given the context.\newline
+\textcolor{mycolorblue}{(+)} Leads to the development of realistic, feasible architectural solutions tailored to the specific needs of the company.
 
 \MyPara{Related Patterns:} The Architectural Company Context is unrelated to any Prompt Pattern.
 
@@ -332,9 +330,9 @@ After analyzing the factors above, ChatGPT responded by listing the variables Ti
 
 \begin{chatout}{botbubble}{\chatgptout[chatgpt-out-company-1]}
 \begin{itemize}
-    \item \textbf{Timeline:} 6 months is a relatively short time for building a microservices-based e-commerce platform from scratch, especially considering the complexity of both the architecture and the business domain.    
+    \item \textbf{Timeline:} 6 months is a relatively short time for building a microservices-based e-commerce platform from scratch, especially considering the complexity of the architecture and the business domain.    
     \item \textbf{Team:} 10 developers could be sufficient if they are experienced in microservices, but it might be tight considering the need for specialized roles (e.g., DevOps, backend/frontend developers, QA engineers).    
-    \item \textbf{Budget:} \$500,000 might be adequate for the development phase, but consider additional costs for infrastructure, tools, and post-launch maintenance and support.
+    \item \textbf{Budget:} \$500,000 might be adequate for the development phase, but consider additional infrastructure, tools, and post-launch maintenance and support costs.
 \end{itemize}
 \end{chatout}
     
@@ -356,11 +354,11 @@ After analyzing the factors above, ChatGPT responded by listing the variables Ti
 \newline
 - Integration of different quality attributes based on the system’s functional and non-functional requirements.
 \newline
-- Clarification of the feasibility of implementing requested functional and non-functional requirements, balancing these with technical difficulties and project conditions.
+- Clarify the feasibility of implementing requested functional and non-functional requirements, balancing these with technical difficulties and project conditions.
 \newline
 - Reduction of unpredictability by identifying quality attributes that might otherwise be overlooked.
 \newline
-- Personalization of responses to fit the specific context of the architectural question.
+- Personalize responses to fit the specific context of the architectural question.
 
 \MyPara{Solution:} This pattern introduces generative AI as a strategic tool for balancing quality attributes in architectural designs. AI-generative assists architects by asking questions about system requirements and project quality attributes. This interactive questioning process gathers insights into the system's functional and non-functional demands.
 
@@ -368,11 +366,11 @@ After this information collection, AI uses the collected data to propose archite
 
 \MyPara{Rationale:} The logic behind the Quality Attribute Question Pattern is to help with architectural decision-making through quality attributes so that generative AI can ask the architect questions about the software context to give more precise guidance on the architectural decision.
 
-\MyPara{Statement Template:} You are \textcolor{mycolorgreen}{\textbf{[Role]}} responsible for \textcolor{blue}{\textbf{[Description Project]}}. Your primary focus is to design an architecture that excels in \textcolor{mycolorpink}{\textbf{[List Of The Quality Attribute]}}. Your task is  \textcolor{mycolororange}{\textbf{[Decision-making Process]}}. You should ask  \textcolor{mycolorlilas}{\textbf{[Clarify Doubts]}}. \textcolor{mycolorblue}{\textbf{[Recommendations]}}. Additionally, provide a \textcolor{mycolorred}{\textbf{[Comprehensive Prompt].}}
+\MyPara{Statement Template:} You are \textcolor{mycolorgreen}{\textbf{[Role]}} responsible for \textcolor{mycolorblue}{\textbf{[Description Project]}}. Your primary focus is to design an architecture that excels in \textcolor{mycolorpink}{\textbf{[List Of The Quality Attribute]}}. Your task is  \textcolor{mycolororange}{\textbf{[Decision-making Process]}}. You should ask  \textcolor{mycolorlilas}{\textbf{[Clarify Doubts]}}. \textcolor{mycolorblue}{\textbf{[Recommendations]}}. Additionally, provide a \textcolor{mycolorred}{\textbf{[Comprehensive Prompt].}}
 
 \MyParaBold{\textcolor{mycolorgreen}{[Role]:}} Define the role and responsibilities of the software architect.
 
-\MyParaBold{\textcolor{blue}{[Description Project]:}} Explain the project requirements, essential considerations, and client/user preferences.
+\MyParaBold{\textcolor{mycolorblue}{[Description Project]:}} Explain the project requirements, essential considerations, and client/user preferences.
 
 \MyParaBold{\textcolor{mycolorpink}{[List Of The Quality Attribute]:}} Specify the expectations for each quality attribute.
 
@@ -384,25 +382,24 @@ After this information collection, AI uses the collected data to propose archite
 
 \MyParaBold{\textcolor{mycolorred}{[Comprehensive Prompt]:}} Provide a prompt that includes the outcome of architectural decision-making information and the rationale for the choices.
 
-\MyPara{Concrete Statement Example:} \textbf{\textcolor{mycolorgreen}{You are an experienced software architect responsible for}  \textcolor{blue}{creating a credit card processing system for a medium-sized financial institution.} \textcolor{mycolorpink}{Your primary focus is to design an architecture that excels in scalability, security, and performance.} \textcolor{mycolororange}{Your task is to carefully navigate through the decision-making process of the credit card processing system architecture, step by step.}  \textcolor{mycolorlilas}{You should ask any necessary questions to clarify doubts about the quality attributes of the new system.} \textcolor{mycolorblue}{Avoid making any architectural decisions until all questions are answered.} \textcolor{mycolorred}{Additionally, provide a comprehensive prompt that includes all the data collected in the previous steps, along with an explanation of the rationale behind each architectural decision-making.}}
+\MyPara{Concrete Statement Example:} \textbf{\textcolor{mycolorgreen}{You are an experienced software architect responsible for}  \textcolor{mycolorblue}{creating a credit card processing system for a medium-sized financial institution.} \textcolor{mycolorpink}{Your primary focus is to design an architecture that excels in scalability, security, and performance.} \textcolor{mycolororange}{Your task is to carefully navigate the decision-making process of the credit card processing system architecture step by step.}  \textcolor{mycolorlilas}{You should ask any necessary questions to clarify doubts about the quality attributes of the new system.} \textcolor{mycolorblue}{Avoid making architectural decisions until all questions are answered.} \textcolor{mycolorred}{Additionally, provide a comprehensive prompt that includes all the data collected in the previous steps, along with an explanation of the rationale behind each architectural decision-making.}}
 
 \MyPara{Consequences:}
 \newline
-\textcolor{blue}{(+)} Promotes a deeper understanding of each quality attribute, leading to well-informed architectural decisions. \newline
-\textcolor{blue}{(+)} Enhanced Architectural Robustness: Leads to more resilient and adaptable architecture. \newline
-\textcolor{blue}{(+)} Increased Stakeholder Confidence: Builds trust and assurance among project stakeholders. \newline
-\textcolor{blue}{(+)} Improved Risk Management: Early identification and mitigation of potential issues. \newline
-\textcolor{blue}{(+)} Better Alignment with Business Goals: Ensures the architecture effectively meets business and user needs. \newline
-\textcolor{blue}{(+)} Enhanced Documentation Quality: Results in more detailed and informative architectural documentation. \newline
-\textcolor{red}{(-)} Potentially prolong the decision-making process due to the extensive nature of the questioning. \newline
-\textcolor{red}{(-)} Extended Planning Phase: Prolongs the initial planning and decision-making process. \newline
-\textcolor{red}{(-)} Possible Delays in Decision-Making: Slows down the overall progress, especially in time-sensitive projects. \newline
-\textcolor{red}{(-)} Increased Need for Expertise: Requires a high level of knowledge and experience to implement effectively. \newline
-\textcolor{red}{(-)} Risk of Scope Creep: Focusing on multiple attributes might lead to expanding the project beyond its original scope. \newline
+\textcolor{mycolorblue}{(+)} Promotes a deeper understanding of each quality attribute, leading to well-informed architectural decisions. \newline
+\textcolor{mycolorblue}{(+)} Enhanced Architectural Robustness: Leads to more resilient and adaptable architecture. \newline
+\textcolor{mycolorblue}{(+)} Increased Stakeholder Confidence: Builds trust and assurance among project stakeholders. \newline
+\textcolor{mycolorblue}{(+)} Improved Risk Management: Early identification and mitigation of potential issues. \newline
+\textcolor{mycolorblue}{(+)} Better Alignment with Business Goals: Ensures the architecture effectively meets business and user needs. \newline
+\textcolor{mycolorblue}{(+)} Enhanced Documentation Quality: Results in more detailed and informative architectural documentation. \newline
+\textcolor{mycolorred}{(-)} Potentially prolong the decision-making process due to the extensive nature of the questioning. \newline
+\textcolor{mycolorred}{(-)} Extended Planning Phase: Prolongs the initial planning and decision-making process. \newline
+\textcolor{mycolorred}{(-)} Possible Delays in Decision-Making: Slows down the overall progress, especially in time-sensitive projects. \newline
+\textcolor{mycolorred}{(-)} Increased Need for Expertise: Requires a high level of knowledge and experience to implement effectively. \newline
+\textcolor{mycolorred}{(-)} Risk of Scope Creep: Focusing on multiple attributes might lead to expanding the project beyond its original scope. \newline
 
 
 \MyPara{Related Patterns:} This pattern is closely linked to Question Refinement. In software architecture, this refers to sharpening and focusing questions to extract more precise and valuable information. The Quality Attribute Question Pattern refines this approach by systematically tailoring questions to address each relevant quality attribute of the software, ensuring a comprehensive evaluation that leads to informed architectural decisions.
-
 
 \MyPara{Usage example:} Used ChatGPT and created an example prompt that uses the Quality Attribute Questions pattern to validate the interaction with generative AI to help make decisions related to the software's quality attributes. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. The Prompt \ref{chatgpt-in-quality-attribute-question-1} shows the pattern is applied in ChatGPT.For more information, full prompt at the following link: \href{https://chat.openai.com/share/82a67e08-53b6-4b53-b69e-7881954721f2}{Quality Attribute Question}.
 
@@ -412,14 +409,14 @@ After this information collection, AI uses the collected data to propose archite
 
 You are an experienced software architect responsible for creating a credit card processing system for a medium-sized financial institution. Your primary focus is to design an architecture that excels in scalability, security, and performance. 
 
-Your task is to carefully navigate through the decision-making process of the credit card processing system architecture, step by step. You should ask any necessary questions to clarify doubts about the quality attributes of the new system. Avoid making any architectural decisions until all questions are answered. 
+Your task is to carefully navigate the step-by-step decision-making process of the credit card processing system architecture. You should ask any necessary questions to clarify doubts about the new system's quality attributes. Avoid making any architectural decisions until all questions are answered. 
 
-Additionally, provide a comprehensive prompt that includes all the data collected in the previous steps, along with an explanation of the rationale behind each architectural decision-making.
+Additionally, provide a comprehensive prompt that includes all the data collected in the previous steps and explains the rationale behind each architectural decision.
 \end{chatin}
 
 After running the Prompt \ref{chatgpt-in-quality-attribute-question-1} Quality Attribute Questions Prompt Pattern, ChatGPT reported that designing a credit card processing system for a mid-sized financial institution is a complex task that requires careful consideration of several vital factors. 
 
-To ensure that the architecture excels in scalability, security, and performance, several issues need to be addressed, and several questions need to be asked.
+Several issues and questions need to be addressed to ensure that the architecture excels in scalability, security, and performance.
 
 \MyParaBold{Iteration 2:} Questions requested by ChatGPT 
 \begin{table}[ht]
@@ -430,18 +427,18 @@ To ensure that the architecture excels in scalability, security, and performance
     \label{board:quality-attribute-questions}
     \begin{tabularx}{\textwidth}{|c|X|X|}  \hline    
         \rowcolor{gray!19} \textbf{Nº} & \textbf{Questions ChatGPT} & \textbf{ Our Answers} \\ \hline
-        1 & What is the current transaction volume and what growth do you foresee for the next 5 years? & 100 thousand transactions per day. \\
+        1 & What is the current transaction volume, and what growth do you foresee for the next 5 years? & 100 thousand transactions per day. \\
         \rowcolor{gray!19}
-        2 & Are there any specific scalability concerns, such as peak times with exceptionally high transaction volumes? & Yes, peak times and shopping seasons such as Christmas, Children's Day and Black Friday. \\        
+        2 & Are there any specific scalability concerns, such as peak times with exceptionally high transaction volumes? & Yes, peak times and shopping seasons include Christmas, Children's Day, and Black Friday. \\        
         3 & What are the compliance requirements that the system must comply with? & Must comply with PCI DSS and LGPD. \\
         \rowcolor{gray!19}
         4 & Are there specific data security measures that you want to implement? & Encryption and tokenization. \\        
-        5 & How should the system handle security updates and vulnerability management? & Security updates must be made according to the degree of vulnerability of the system, the more critical the faster the action must be. \\
+        5 & How should the system handle security updates and vulnerability management? & Security updates must be made according to the degree of vulnerability of the system; the more critical, the faster the action must be. \\
         \rowcolor{gray!19}
         6 & What are the expected response times for processing transactions? & Maximum 10 seconds per transaction. \\        
-        7 & Are there high availability or disaster recovery requirements? & The system must be recovered within a maximum of 30 minutes after the disaster. \\
+        7 & Are there high availability or disaster recovery requirements? & The system must be recovered within 30 minutes after the disaster. \\
         \rowcolor{gray!19}
-        8 & Are there existing systems or infrastructures with which the new system needs to integrate? & BACEN and other credit operators. \\        
+        8 & Are there existing systems or infrastructures the new system needs to integrate? & BACEN and other credit operators. \\        
         9 & What are the preferred technologies or platforms (if any)? & High performance and easy development technologies. \\
         \rowcolor{gray!19}
         10 & What is the budget for both initial development and ongoing maintenance? & 20 million dollars. \\        
@@ -451,7 +448,7 @@ To ensure that the architecture excels in scalability, security, and performance
         13 & Are there specific legal or regulatory considerations in the regions where the system will be used? & Initially Brazilian financial system \\
         \rowcolor{gray!19}
         14 & What are the expectations for system maintenance and support? & 24 by 7 \\        
-        15 & Are there any anticipated future developments for which the system should be prepared (e.g. new technologies, changes in market trends)? & Initially not, but the system should be designed for constant change \\
+        15 & Are there any anticipated future developments for which the system should be prepared (e.g., new technologies, changes in market trends)? & Initially not, but the system should be designed for constant change \\
         \hline
     \end{tabularx}
     \objectsource{\objectsourceauthor}
@@ -459,11 +456,11 @@ To ensure that the architecture excels in scalability, security, and performance
   
 
 \MyParaBold{Iteration 3:} Summary of ChatGPT's response
-The proposed digital transaction system is designed for high scalability, capable of handling double the current transaction volume, especially during peak times like Christmas, Children's Day, and Black Friday. It prioritizes security, adhering to PCI DSS and LGPD standards, and employs encryption and tokenization for data protection. Performance is optimized to ensure transaction response times within 10 seconds, supported by a redundant architecture for high availability and disaster recovery.
+The proposed digital transaction system is designed for high scalability, handling double the current transaction volume, especially during peak times like Christmas, Children's Day, and Black Friday. It prioritizes security, adhering to PCI DSS and LGPD standards, and employs encryption and tokenization for data protection. Performance is optimized to ensure transaction response times within 10 seconds, supported by a redundant architecture for high availability and disaster recovery.
 
-The system will seamlessly integrate with BACEN and other credit operators, focusing on high-performance, easy-to-develop technologies. It has a budget of \$20 million for development and maintenance, with a recommendation for a cloud-based solution. User-friendly interfaces are designed for both e-commerce and point-of-sale transactions, along with a customizable administrative dashboard.
+The system seamlessly integrates with BACEN and other credit operators, focusing on high-performance, easy-to-develop technologies. It has a budget of \$20 million for development and maintenance, with a recommendation for a cloud-based solution. User-friendly interfaces are designed for both e-commerce and point-of-sale transactions, along with a customizable administrative dashboard.
 
-Compliance with Brazilian financial regulations is a key legal consideration. The system offers robust 24/7 support and maintenance, with a dedicated team for updates and troubleshooting. Future-proofing is addressed through a modular and flexible architecture, allowing for easy updates and scalability to adapt to technological advancements and market changes.
+Compliance with Brazilian financial regulations is a key legal consideration. The system offers robust 24/7 support and maintenance, with a dedicated team for updates and troubleshooting. A modular and flexible architecture addresses future-proofing, allowing easy updates and scalability to adapt to technological advancements and market changes.
 
 To create a secure credit card processing system that aligns with your financial institution's objectives and requirements, ChatGPT designed the architectural framework outlined below and presented in Output \ref{chatgpt-out-quality-attribute-question-2}, which is robust and scalable.
 
@@ -478,7 +475,7 @@ To create a secure credit card processing system that aligns with your financial
     \item \textbf{Continuous Integration/Continuous Deployment (CI/CD):} For rapid and reliable software delivery.
     \item \textbf{Monitoring and Logging:} For real-time monitoring and troubleshooting.
 \end{enumerate}
-This architecture aims to create a robust, scalable, and secure credit card processing system, aligning with your financial institution's objectives and requirements.
+This architecture aims to create a robust, scalable, secure credit card processing system that aligns with your financial institution's objectives and requirements.
 \end{chatout}
 
 \begin{center}
@@ -491,7 +488,7 @@ This architecture aims to create a robust, scalable, and secure credit card proc
 
 \MyPara{Specializes:}\texttt{Fact Check List}
 
-\MyPara{Context:} The use of generative AI can lead to issues of hallucinations, which LLMs can sometimes address.In the complex software architecture world, validating information provided by Large Language Models (LLMs) is crucial. Ensuring the accuracy and reliability of the data used in architectural decisions is essential for the success of any project.
+\MyPara{Context:} The use of generative AI can lead to issues of hallucinations, which LLMs can sometimes address. In the complex software architecture world, validating information provided by Large Language Models (LLMs) is crucial. Ensuring the accuracy and reliability of the data used in architectural decisions is essential for the success of any project.
 
 \MyPara{Problem:} How can a Software Architect validate the technical premises provided by LLMs to ensure that the information used in necessary architectural decisions is accurate and reliable?
 
@@ -507,26 +504,26 @@ This architecture aims to create a robust, scalable, and secure credit card proc
 
 \MyPara{Rationale:} This pattern is designed to bridge the gap between AI-generated suggestions and practical architectural requirements, enabling architects to make informed decisions based on verified information.
 
-\MyPara{Statement Template:} \textbf{\textcolor{mycolorgreen}{[Context]}} and \textbf{\textcolor{blue}{[List of Technical Premises]}}.From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts should be verified and listed at the end of the output.
+\MyPara{Statement Template:} \textbf{\textcolor{mycolorgreen}{[Context]}} and \textbf{\textcolor{mycolorblue}{[List of Technical Premises]}}.From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts should be verified and listed at the end of the output.
 
 \MyParaBold{\textcolor{mycolorgreen}{[Context]:}} Insert the specific context of the project.
 
-\MyParaBold{\textcolor{blue}{[List of Technical Premises]:}} [List out the key technical premises provided by the LLM.
+\MyParaBold{\textcolor{mycolorblue}{[List of Technical Premises]:}} [List out the key technical premises provided by the LLM.
 
-\MyPara{Concrete Statement Example:}\textbf{\textcolor{mycolorgreen}{Project: Development of a Smart Home Automation System. Objective: Design a comprehensive system that integrates various home automation devices (like thermostats, lighting, security cameras, and smart appliances) to provide a seamless, efficient, and user-friendly experience for homeowners.} \textcolor{blue}{List of Technical Premises: Interoperability, User Privacy, Energy Efficiency, User Interface Design, and Scalability.}}\textbf{From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts should be verified and listed at the end of the output(Facts, Rational, Architectural Decision-making) informative but succinct in a dissertation format.}
+\MyPara{Concrete Statement Example:}\textbf{\textcolor{mycolorgreen}{Project: Development of a Smart Home Automation System. Objective: Design a comprehensive system that integrates various home automation devices (like thermostats, lighting, security cameras, and smart appliances) to provide a seamless, efficient, and user-friendly experience for homeowners.} \textcolor{mycolorblue}{List of Technical Premises: Interoperability, User Privacy, Energy Efficiency, User Interface Design, and Scalability.}}\textbf{From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts should be verified and listed at the end of the output(Facts, Rational, Architectural Decision-making) and informative but succinct in a dissertation format.}
 
 \MyPara{Consequences:}
 \newline
-\textcolor{blue}{(+)} \textit{Improved Accuracy of Architectural Decisions:} By validating the technical premises of LLM outputs, architects can ensure that the decisions are based on accurate and reliable information. \newline
-\textcolor{blue}{(+)} \textit{Increased Understanding of LLM Rationale:} This pattern provides insights into the LLM's thought process, helping architects understand why certain recommendations were made. \newline
-\textcolor{blue}{(+)} \textit{Enhanced Trust in LLM Outputs:} Through thorough validation, architects can build greater trust in the reliability and relevance of the LLM's suggestions. \newline
-\textcolor{blue}{(+)} \textit{Better Alignment with Project Goals:} By scrutinizing the LLM's reasoning, architects can ensure that the proposed solutions align more closely with the project's specific technical requirements and constraints. \newline
-\textcolor{red}{(-)} \textit{Potential Delay in Decision-Making:} The process of validating each technical premise can be time-consuming, potentially slowing down the overall architectural planning and decision-making process. \newline
-\textcolor{red}{(-)} \textit{Increased Cognitive Load on Architects:} Architects may face an additional cognitive burden in critically analyzing and validating the LLM's technical premises.\newline
-\textcolor{red}{(-)} \textit{Possibility of Over-Reliance on LLM Justifications:} There is a risk of architects becoming too reliant on the LLM’s explanations, which might not always cover all aspects of a complex architectural scenario. \newline
-\textcolor{red}{(-)} \textit{Challenges in Interpreting Complex Explanations:} In some cases, the explanations provided by the LLM might be too technical or complex, making it difficult for architects to derive clear insights. \newline
+\textcolor{mycolorblue}{(+)} \textit{Improved Accuracy of Architectural Decisions:} By validating the technical premises of LLM outputs, architects can ensure that the decisions are based on accurate and reliable information. \newline
+\textcolor{mycolorblue}{(+)} \textit{Increased Understanding of LLM Rationale:} This pattern provides insights into the LLM's thought process, helping architects understand why certain recommendations were made. \newline
+\textcolor{mycolorblue}{(+)} \textit{Enhanced Trust in LLM Outputs:} Through thorough validation, architects can build greater trust in the reliability and relevance of the LLM's suggestions. \newline
+\textcolor{mycolorblue}{(+)} \textit{Better Alignment with Project Goals:} By scrutinizing the LLM's reasoning, architects can ensure that the proposed solutions align more closely with the project's specific technical requirements and constraints. \newline
+\textcolor{mycolorred}{(-)} \textit{Potential Delay in Decision-Making:} The process of validating each technical premise can be time-consuming, potentially slowing down the overall architectural planning and decision-making process. \newline
+\textcolor{mycolorred}{(-)} \textit{Increased Cognitive Load on Architects:} Architects may face an additional cognitive burden in critically analyzing and validating the LLM's technical premises.\newline
+\textcolor{mycolorred}{(-)} \textit{Possibility of Over-Reliance on LLM Justifications:} There is a risk of architects becoming too reliant on the LLM’s explanations, which might not always cover all aspects of a complex architectural scenario. \newline
+\textcolor{mycolorred}{(-)} \textit{Challenges in Interpreting Complex Explanations:} In some cases, the explanations provided by the LLM might be too technical or complex, making it difficult for architects to derive clear insights. \newline
 
-\MyPara{Related Patterns:}  The \texttt{Technical Premises} complements and enhances the \texttt{Quality Attribute Question} by providing a method for validating the technical premises behind each quality attribute question. While the \texttt{Quality Attribute Question} focuses on systematically querying each relevant quality attribute to ensure their thorough assessment, the \texttt{Technical Premises} aids in substantiating the responses and premises made by Large Language Models (LLMs) regarding these attributes. This relationship ensures that the architectural decisions are not only based on a comprehensive evaluation of quality attributes but also on validated and reliable information. Therefore, using these patterns in conjunction enables architects to make more informed and accurate decisions by combining a deep understanding of quality attributes with a critical evaluation of the technical underpinnings provided by LLMs.
+\MyPara{Related Patterns:}  The \texttt{Technical Premises} complements and enhances the \texttt{Quality Attribute Question} by providing a method for validating the technical premises behind each quality attribute question. While the \texttt{Quality Attribute Question} focuses on systematically querying each relevant quality attribute to ensure their thorough assessment, the \texttt{Technical Premises} aids in substantiating the responses and premises made by Large Language Models (LLMs) regarding these attributes. This relationship ensures that the architectural decisions are based on a comprehensive evaluation of quality attributes and validated and reliable information. Therefore, using these patterns in conjunction enables architects to make more informed and accurate decisions by combining a deep understanding of quality attributes with a critical evaluation of the technical underpinnings provided by LLMs.
 
 \MyPara{Usage Example:} Used ChatGPT and created an example prompt that uses the Technical Premises Pattern to validate the interaction with generative AI to help make decisions. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. Prompt \ref{chatgpt-in-premises-1} shows the pattern applied in ChatGPT. For more information, full prompt at the following link: \href{https://chat.openai.com/share/b0a0651d-2e1f-4be3-9995-1d4babdd1da4}{Technical Premises}.
 
@@ -535,7 +532,7 @@ This architecture aims to create a robust, scalable, and secure credit card proc
 \textbf{Project:} Development of a Smart Home Automation System
 
 \noindent
-\textbf{Objective:} Design a comprehensive system that integrates various home automation devices (like thermostats, lighting, security cameras, and smart appliances) to provide a seamless, efficient, and user-friendly experience for homeowners.
+\textbf{Objective:} Design a comprehensive system that integrates various home automation devices (like thermostats, lighting, security cameras, and smart appliances) to provide homeowners with a seamless, efficient, and user-friendly experience.
 
 \noindent \textbf{List of Technical Premises:}
 \begin{enumerate}
@@ -543,14 +540,14 @@ This architecture aims to create a robust, scalable, and secure credit card proc
     \item \textbf{User Privacy:}  Recommends implementing end-to-end encryption and regular data audits to enhance user privacy and data security in the smart home system.    
     \item \textbf{Energy Efficiency:}  integration of AI-driven algorithms to optimize energy usage across various devices, potentially reducing overall energy consumption in the smart home.    
 \end{enumerate}
-From now on, make sure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts must be verified and written in a condensed and succinct manner, so as to take up less screen space, at the end of the result as: (Facts, Rationale, Architectural decision making).
+From now on, ensure that when generating a response, the AI language model creates a set of specific facts for each technical premise and justification for each architectural decision-making. These facts must be verified and written in a condensed and succinct manner to take up less screen space at the end of the result (Facts, Rationale, Architectural decision-making).
 \end{chatin}
 
-The proposed smart home automation system is designed with a focus on three fundamental architectural pillars: interoperability, user privacy, and energy efficiency, each addressing crucial aspects of a modern smart home environment.
+The proposed smart home automation system is designed to focus on three fundamental architectural pillars: interoperability, user privacy, and energy efficiency. Each addresses crucial aspects of a modern smart home environment.
 
 The architecture of the smart home automation system is strategically developed
-around these core principles. Each decision is taken with an eye towards creating a
-seamless, secure, and sustainable smart home experience. By melding these technological considerations, the system is poised to deliver an intuitive, eﬀicient, and user-friendly environment for homeowners.
+around these core principles. Each decision creates a
+seamless, secure, and sustainable smart home experience. By melding these technological considerations, the system is poised to deliver an intuitive, efficient, and user-friendly environment for homeowners.
 
 \begin{chatout}{botbubble}{\chatgptout[chatgpt-out-premises-1]}
 
@@ -567,8 +564,8 @@ For the development of a Smart Home Automation System with the given objectives 
 \noindent
 \textbf{Technical Premise 2: User Privacy}
 \begin{itemize}
-    \item \textbf{Facts:} Implementing end-to-end encryption protects data transmission. Regular data audits help in identifying and mitigating privacy risks.
-    \item \textbf{Rationale:} In a smart home environment, sensitive personal data is often transmitted. Encryption ensures that this data remains confidential, while audits maintain ongoing security.
+    \item \textbf{Facts:} Implementing end-to-end encryption protects data transmission. Regular data audits help identify and mitigate privacy risks.
+    \item \textbf{Rationale:} In a smart home environment, sensitive personal data is often transmitted. Encryption ensures that this data remains confidential while audits maintain ongoing security.
     \item \textbf{Architectural Decision Making:} Include robust encryption mechanisms in the system's design and establish a protocol for frequent security and privacy audits.
 \end{itemize}
 
@@ -582,7 +579,7 @@ For the development of a Smart Home Automation System with the given objectives 
 \end{chatout}
 
 According to recommendations given by ChatGPT, see Output \ref{chatgpt-out-premises-1}, the system must support several communication protocols, such as Zigbee, Wi-Fi, and Bluetooth. This ensures smooth device interaction without compatibility issues, creating a simplified smart home ecosystem.
-Prioritize end-to-end encryption and routine data audits to protect user data from breaches and hacking attempts, ensuring data remains secure and private.
+Prioritize end-to-end encryption and routine data audits to protect user data from breaches and hacking attempts and ensure it remains secure and private.
 
 Use advanced AI algorithms to optimize energy consumption in smart homes. By analyzing usage patterns and environmental data, devices such as thermostats and lighting systems are dynamically adjusted for maximum efficiency. This decision to incorporate AI into energy management provides numerous benefits, including environmental conservation and cost-effectiveness. The goal is to reduce the overall energy footprint of the smart home significantly.
 
@@ -600,7 +597,7 @@ Use advanced AI algorithms to optimize energy consumption in smart homes. By ana
 
 \MyPara{Problem:} How can a software architect effectively manage uncertain or undefined requirements while minimizing the impact on the software architecture and project?
 
-\MyPara{Forces:} The following are forces in using Uncertain Requirement Statement: 
+\MyPara{Forces:} The following are forces in using the Uncertain Requirement Statement: 
 \newline
 - Reducing risks associated with uncertain project requirements.
 \newline
@@ -612,39 +609,39 @@ Use advanced AI algorithms to optimize energy consumption in smart homes. By ana
 
 \MyPara{Rationale:} This pattern helps manage uncertainty in a structured way, reducing risks, enabling informed decision-making, and fostering proactive adaptation to changes, ensuring the long-term sustainability and relevance of the project.
 
-\MyPara{Statement Template:}  In \textbf{\textcolor{mycolorgreen}{[Project Context]}}, and \textbf{\textcolor{blue}{[Uncertain Aspect]}}.Examine the potential repercussions of not adequately addressing these uncertainties in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced, but also flexible and responsive to regulatory and technological changes.
+\MyPara{Statement Template:}  In \textbf{\textcolor{mycolorgreen}{[Project Context]}}, and \textbf{\textcolor{mycolorblue}{[Uncertain Aspect]}}.Examine the potential repercussions of not adequately addressing these uncertainties in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
 
 \MyParaBold{\textcolor{mycolorgreen}{[Project Context:]}} This defines the environment or the specific conditions under which the project is being executed. It includes the nature of the project, its goals, the stakeholder landscape, the market it operates in, and any other relevant environmental factors.
 
-\MyParaBold{\textcolor{blue}{[Uncertain Aspect:]}} This refers to the specific element or feature of the project that is uncertain. It could be a technology, a requirement, a stakeholder need, a regulatory environment, or any other aspect that is not clearly defined or is subject to change. The identification of this uncertain aspect is crucial as it sets the focus for the management of uncertainty.
+\MyParaBold{\textcolor{mycolorblue}{[Uncertain Aspect:]}} This refers to the specific element or feature of the project that is uncertain. It could be a technology, a requirement, a stakeholder need, a regulatory environment, or any other aspect that is not clearly defined or is subject to change. The identification of this uncertain aspect is crucial as it sets the focus for the management of uncertainty.
 
-\MyPara{Concrete Statement Example:} \textbf{\textcolor{mycolorgreen}{When developing a smart city traffic management system,} \textcolor{blue}{the project team faces uncertainties related to evolving regulatory compliance standards and the integration of emerging autonomous vehicle technologies.}  Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced, but also flexible and responsive to regulatory and technological changes.}
+\MyPara{Concrete Statement Example:} \textbf{\textcolor{mycolorgreen}{When developing a smart city traffic management system,} \textcolor{mycolorblue}{the project team faces uncertainties related to evolving regulatory compliance standards and the integration of emerging autonomous vehicle technologies.}  Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.}
 
 \MyPara{Consequences:}\newline
-\textcolor{blue}{(+)} \textbf{Enhanced Adaptability:} Allows for more flexible and resilient architectural designs that can accommodate changes in requirements or circumstances. \newline
-\textcolor{blue}{(+)} \textbf{Improved Risk Management:} By anticipating uncertainties, architects can devise strategies to mitigate potential risks, reducing the likelihood of project setbacks. \newline
-\textcolor{blue}{(+)} \textbf{Informed Decision-Making:} Architects gain a deeper understanding of the potential impacts of uncertainties, leading to more informed and strategic choices. \newline
-\textcolor{blue}{(+)}\textbf{Proactive Planning:} Encourages forward-thinking and proactive planning, helping to avoid last-minute changes and disruptions. \newline
-\textcolor{blue}{(+)} \textbf{Better Stakeholder Alignment: }Clear documentation and communication of uncertainties can lead to more realistic expectations among stakeholders, improving alignment and satisfaction. \newline
-\textcolor{red}{(-)} \textbf{Potential for Over-Planning:} Focusing extensively on uncertainties can lead to over-preparation for scenarios that may never materialize, potentially wasting time and resources. \newline
-\textcolor{red}{(-)} \textbf{Decision Paralysis:} An overemphasis on every possible uncertainty can lead to indecision or delay in decision-making, hindering project progress. \newline
-\textcolor{red}{(-)} \textbf{Increased Complexity:} Managing a wide range of potential scenarios and their implications can add complexity to the architectural planning process. \newline
-\textcolor{red}{(-)} \textbf{Resource Allocation Challenges:} Allocating resources effectively becomes more challenging, as it may be unclear where to focus efforts and investment in the face of uncertainties. \newline
-\textcolor{red}{(-)} \textbf{Possible Caution Over Innovation:} A strong focus on mitigating risks might lead to overly conservative decisions, potentially stifling innovation and creative solutions. \newline
+\textcolor{mycolorblue}{(+)} \textbf{Enhanced Adaptability:} Allows for more flexible and resilient architectural designs that can accommodate changes in requirements or circumstances. \newline
+\textcolor{mycolorblue}{(+)} \textbf{Improved Risk Management:} By anticipating uncertainties, architects can devise strategies to mitigate potential risks, reducing the likelihood of project setbacks. \newline
+\textcolor{mycolorblue}{(+)} \textbf{Informed Decision-Making:} Architects gain a deeper understanding of the potential impacts of uncertainties, leading to more informed and strategic choices. \newline
+\textcolor{mycolorblue}{(+)}\textbf{Proactive Planning:} Encourages forward-thinking and proactive planning, helping to avoid last-minute changes and disruptions. \newline
+\textcolor{mycolorblue}{(+)} \textbf{Better Stakeholder Alignment: }Clear documentation and communication of uncertainties can lead to more realistic expectations among stakeholders, improving alignment and satisfaction. \newline
+\textcolor{mycolorred}{(-)} \textbf{Potential for Over-Planning:} Focusing extensively on uncertainties can lead to over-preparation for scenarios that may never materialize, potentially wasting time and resources. \newline
+\textcolor{mycolorred}{(-)} \textbf{Decision Paralysis:} An overemphasis on every possible uncertainty can lead to indecision or delay in decision-making, hindering project progress. \newline
+\textcolor{mycolorred}{(-)} \textbf{Increased Complexity:} Managing a wide range of potential scenarios and their implications can add complexity to the architectural planning process. \newline
+\textcolor{mycolorred}{(-)} \textbf{Resource Allocation Challenges:} Allocating resources effectively becomes more challenging, as it may be unclear where to focus efforts and investment in the face of uncertainties. \newline
+\textcolor{mycolorred}{(-)} \textbf{Possible Caution Over Innovation:} A strong focus on mitigating risks might lead to overly conservative decisions, potentially stifling innovation and creative solutions. \newline
 
 \MyPara{Related Patterns:}The Uncertain Requirement Statement interacts significantly with two other prominent patterns: \texttt{Fact Check List} and \texttt{Quality Attribute Question}.
 
-The interplay between the \texttt{Uncertain Requirement Statement} and the \texttt{Fact Check List} is primarily complementary. While the \texttt{Fact Check List} is instrumental in confirming verifiable facts and concrete data, the \texttt{Uncertain Requirement Statement} addresses the ambiguities and uncertainties in project requirements. This combination ensures a holistic approach to requirements analysis, balancing the certainty of verified facts with the flexibility to adapt to evolving or unclear project needs.
+The interplay between the \texttt{ Uncertain Requirement Statement} and the \texttt{Fact Check List} is primarily complementary. While the \texttt{Fact  Check List} is instrumental in confirming verifiable facts and concrete data, the \texttt{Uncertain Requirement Statement} addresses the ambiguities and uncertainties in project requirements. This combination ensures a holistic approach to requirements analysis, balancing the certainty of verified facts with the flexibility to adapt to evolving or unclear project needs.
 
-Similarly, the relationship with the \texttt{Quality Attribute Question} is synergistic. The \texttt{Quality Attribute Question} examines the impact of specific quality attributes on a project. However, uncertain requirements can often obscure the clarity needed in assessing these attributes. The \texttt{Uncertain Requirement Statement} assists here by providing a method to manage and explore these uncertainties, allowing for a more informed and comprehensive evaluation of quality attributes in the context of variable project requirements.
+Similarly, the relationship with the \texttt{Quality Attribute Question} is synergistic. The \texttt{Quality Attribute Question} examines the impact of specific quality attributes on a project. However, uncertain requirements often obscure the clarity needed to assess these attributes. The \texttt{Uncertain Requirement Statement} provides a method to manage and explore these uncertainties, allowing for a more informed and comprehensive evaluation of quality attributes in the context of variable project requirements.
 
 Together, these patterns form a robust framework for decision-making in software architecture, ensuring that a project's known and unknown elements are adequately addressed.
 
-\MyPara{Usage Example:} Used ChatGPT and created an example prompt that uses the Uncertain Requirement Statement Pattern to validate the interaction with generative AI to help make decisions. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. Prompt~\ref{chatgpt-in-uncertain-requirement-1} shows the pattern applied.For more information, full prompt at the following link: \href{https://chat.openai.com/share/4155325e-0d73-4e69-816a-b38df4588660}{Uncertain Requirement Statement}.
+\MyPara{Usage Example:} Used ChatGPT and created an example prompt that uses the Uncertain Requirement Statement Pattern to validate the interaction with generative AI to help make decisions. The prompt involves the same variables described in the State Template part and the same prompt as the Concrete Statement Template. Prompt~\ref{chatgpt-in-uncertain-requirement-1} shows the pattern applied. For more information, full prompt at the following link: \href{https://chat.openai.com/share/4155325e-0d73-4e69-816a-b38df4588660}{Uncertain Requirement Statement}.
 
 \begin{chatin}{usercolor}{\chatgptin[chatgpt-in-uncertain-requirement-1]}
 
-When developing a smart city traffic management system, the project team faces uncertainties related to evolving regulatory compliance standards and the integration of emerging autonomous vehicle technologies. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced, but also flexible and responsive to regulatory and technological changes. Output format, Problem, Impact of not adopting the requirement and architectural decision making.
+When developing a smart city traffic management system, the project team faces uncertainties related to evolving regulatory compliance standards and integrating emerging autonomous vehicle technologies. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes. Output format, Problem, Impact of not adopting the requirement, and architectural decision-making.
 \end{chatin}
 
 
@@ -665,7 +662,7 @@ Concentrating on strategic planning elements such as managing risks for regulato
 \textbf{Impact: }If the system architecture doesn't account for evolving regulations, it might become non-compliant with new laws, leading to legal penalties, system downtime, and costly modifications.
 
 \noindent
-\textbf{Architectural Decision-Making:} Implement a modular architecture that allows easy updates and adaptations to new regulations. This approach should include the ability to quickly integrate new compliance modules or update existing ones without disrupting the overall system.
+\textbf{Architectural Decision-Making:} Implement a modular architecture that allows easy updates and adaptations to new regulations. This approach should include quickly integrating new compliance modules or updating existing ones without disrupting the overall system.
 
 \noindent
 \textbf{Problem: Integration of Emerging Autonomous Vehicle Technologies}
@@ -680,7 +677,7 @@ Concentrating on strategic planning elements such as managing risks for regulato
 \textbf{General Architectural Strategy for Mitigation}
 
 \noindent
-\textbf{Adaptive and Scalable Architecture:} Develop an architecture that is inherently flexible, allowing for scalability and adaptability to technological advancements and regulatory changes. This could involve using cloud-based solutions, microservices, and APIs that support integration and scalability.
+\textbf{Adaptive and Scalable Architecture:} Develop an inherently flexible architecture, allowing for scalability and adaptability to technological advancements and regulatory changes. This could involve using cloud-based solutions, microservices, and APIs that support integration and scalability.
 
 \noindent        
 \textbf{Continuous Monitoring and Feedback Loops:} Establish mechanisms for ongoing monitoring of regulatory and technological trends. Implement feedback loops in the development process to ensure the architecture can adapt and evolve as required.
@@ -699,7 +696,7 @@ Concentrating on strategic planning elements such as managing risks for regulato
 
 \section{Fictional Scenario to Demonstrate the Prompt Patterns Sequence} \label{sec:fictional-scenario-prompt-pattern-sequence}
 
-In sections \ref{sec:software-architect-persona}, \ref{sec:architectural-company-context}, \ref{sec:quality-attribute-question}, \ref{sec:technical-premises}, and \ref{sec:uncertain-requirement-statement} of our work, introduces five different prompt patterns to help users gain insights into their software architecture. These patterns are as follows: \texttt{Software Architect Persona}, \texttt{Architectural Company Context}, \texttt{Quality Attribute Question}, \texttt{Technical Premises}, and \texttt{Uncertain Requirement Statement} respectively. Each pattern can be used independently or combined, allowing bypassing, as illustrated in the Prompt Pattern Sequence Decision Flow in Figure~\ref{flowchart-pattern}. 
+In Subsections \ref{sec:software-architect-persona}, \ref{sec:architectural-company-context}, \ref{sec:quality-attribute-question}, \ref{sec:technical-premises}, and \ref{sec:uncertain-requirement-statement} of our work, introduces five different prompt patterns to help users gain insights into their software architecture. These patterns are as follows: \texttt{Software Architect Persona}, \texttt{Architectural Company Context}, \texttt{Quality Attribute Question}, \texttt{Technical Premises}, and \texttt{ Uncertain } ~\texttt{Requirement} \texttt{Statement} respectively. Each pattern can be used independently or combined, allowing bypassing, as illustrated in the Prompt Pattern Sequence Decision Flow in Figure~\ref{flowchart-pattern}. 
 
 However, combining them in a specific sequence can yield more valuable insights. To test this hypothesis, we conducted experiments with software architects in companies and identified an ideal sequence of prompts.
 
@@ -728,7 +725,7 @@ As CloudConnect CRM embarks on its technological journey, it faces an important 
 
 \MyParaBold{Robust and Scalable Infrastructure:}{The system requires a resilient infrastructure capable of adapting to varied workloads and escalating customer numbers, ensuring reliability and performance under diverse operational demands.}
 
-\MyParaBold{Cloud-Native Development:}{While the system is designed following cloud-native principles for agility and scalability, it faces the challenge of balancing this with the need for adequate infrastructure management, especially in scenarios where direct control over the environment becomes crucial.}
+\MyParaBold{Cloud-Native Development:}{While the system is designed following cloud-native principles for agility and scalability, it faces the challenge of balancing this with adequate infrastructure management, especially in scenarios where direct control over the environment becomes crucial.}
 
 \MyParaBold{Scalability:}{Essential to the system's success is its ability to scale seamlessly, supporting an ever-growing user base without degradation in performance, ensuring that customer experience remains consistent.}
 
@@ -747,13 +744,13 @@ The decision on which model to choose depends on a strategic assessment aligning
 
 \begin{chatin}{usercolor}{\chatgptin[fictional-scenario-1]}
 
-From now on, you will be Trinity in the role of an experienced software architect at a startup called CloudConnect CRM.Its main objective is to ensure that the important architectural decision regarding the ideal cloud service model to choose between Infrastructure as a Service (IaaS) and PlatformPlatform as a Service (PaaS) is the best choice for the company. This decision is critical because it is influenced by factors such as a limited budget, the need for scalable solutions to serve a diverse customer base, and the need to improve development workflows. You have experience designing scalable and secure systems. You cannot under any circumstances resolve doubts and questions that involve other topics or subjects that are not Software Architecture, such as code implementation, so answer that it is not your persona's responsibility. Wait for further guidance.
+From now on, you will be Trinity in the role of an experienced software architect at a startup called CloudConnect CRM. Its main objective is to ensure that the important architectural decision regarding the ideal cloud service model is to choose between Infrastructure as a Service (IaaS) and Platform as a Service (PaaS), which is the best choice for the company. This decision is critical because it is influenced by factors such as a limited budget, the need for scalable solutions to serve a diverse customer base, and the need to improve development workflows. You have experience designing scalable and secure systems. Under no circumstances can you resolve doubts and questions involving other topics or subjects, not Software Architecture, such as code implementation, so answer that it is not your persona's responsibility. Wait for further guidance.
 
 \end{chatin}
 
 \begin{chatout}{botbubble}{\chatgptout[fictional-scenario-2]}
 
-Understood, I'm now Trinity, an experienced software architect focusing exclusively on software architecture questions, particularly related to the ideal cloud service model for CloudConnect CRM. Let's tackle the decision between IaaS and PaaS, considering the company's needs for budget efficiency, scalability, and improved development workflows. If there are questions outside my defined role, I'll defer as mentioned. Ready to assist with your architectural inquiries!
+Understood, I'm now Trinity, an experienced software architect focusing exclusively on software architecture questions, particularly related to the ideal cloud service model for CloudConnect CRM. Let's tackle the decision between IaaS and PaaS, considering the company's needs for budget efficiency, scalability, and improved development workflows. If questions are outside my defined role, I'll defer as mentioned. Ready to assist with your architectural inquiries?
 \end{chatout}
 
 \MyParaText{\texttt{\nth{2} Technical Premises:}} Once a persona has been established, additional information will be provided about the project, specifically focusing on the technical requirements and constraints. This will involve analyzing the technical limitations and the architecture to ensure feasibility and efficiency.
@@ -762,7 +759,9 @@ Understood, I'm now Trinity, an experienced software architect focusing exclusiv
 
 CloudConnect CRM is a cloud-based solution for SMBs aiming to transform sales, marketing, and customer engagement with a scalable and evolving platform. Funded by angel investors operating leanly for maximum efficiency, it faces a critical choice between using IaaS or PaaS. This decision is pivotal due to budget constraints, the necessity for scalability, and the goal of optimizing development processes.
 
-Acting as Trinity, in the project context, I will ensure the implementation of all necessary measures to ensure Robust and Scalable Infrastructure. The system requires a resilient infrastructure capable of adapting to varied workloads and escalating customer numbers, ensuring reliability and performance under diverse operational demands. While the system is designed following cloud-native principles for agility and scalability, it faces the challenge of balancing this with adequate infrastructure management, especially in scenarios where direct control over the environment becomes crucial. Please provide a comprehensive list of technical premises, including specific facts, justifications, and architectural decision-making for each premise. These facts should be verified and listed. At the end of the output(Facts, Rational, Architectural Decision-making), it is informative but succinct in a dissertation format.
+Acting as Trinity, in the project context, I will implement all necessary measures to ensure Robust and Scalable Infrastructure. The system requires a resilient infrastructure capable of adapting to varied workloads and escalating customer numbers, ensuring reliability and performance under diverse operational demands. While the system is designed following cloud-native principles for agility and scalability, it faces the challenge of balancing this with adequate infrastructure management, especially in scenarios where direct control over the environment becomes crucial.
+
+Please provide a comprehensive list of technical premises, including specific facts, justifications, and architectural decision-making for each premise. These facts should be verified and listed. At the end of the output(Facts, Rational, Architectural Decision-making), it is informative but succinct in a dissertation format.
 
 \end{chatin}
 
@@ -770,26 +769,26 @@ Acting as Trinity, in the project context, I will ensure the implementation of a
 \MyParaBold{Technical Premises}
 
 \MyParaBold{1. Budget Constraints}\newline
-\MyParaBold{Fact:}{Both IaaS and PaaS models offer a pay-as-you-go pricing structure, but they differ in their cost components. IaaS typically incurs costs for raw compute, storage, and networking resources. In contrast, PaaS includes not only the infrastructure costs but also the platform services that automate and manage many aspects of the application lifecycle.}\newline
-\MyParaBold{Rationale:}{For a startup like CloudConnect CRM, with limited initial capital, it is crucial to minimize operational expenses and upfront costs. PaaS, by abstracting away much of the infrastructure management, can reduce the need for a large in-house IT team, which aligns with operating leanly.}\newline
+\MyParaBold{Fact:}{Both IaaS and PaaS models offer a pay-as-you-go pricing structure but differ in cost components. IaaS typically incurs costs for raw computing, storage, and networking resources. In contrast, PaaS includes not only the infrastructure costs but also the platform services that automate and manage many aspects of the application lifecycle.}\newline
+\MyParaBold{Rationale:}{For a startup like CloudConnect CRM, with limited initial capital, it is crucial to minimize operational expenses and upfront costs. By abstracting much infrastructure management, PaaS can reduce the need for a large in-house IT team that aligns with operating leanly.}\newline
 \MyParaBold{Architectural Decision-Making:}{Opt for PaaS if the estimated cost of managed services offsets the expense of additional personnel and the overhead of managing infrastructure directly.}
 
 \MyParaBold{2. Scalability Requirements}\newline
-\MyParaBold{Fact:}{ Scalability is paramount for CloudConnect CRM to handle varying workloads and an expanding customer base. IaaS offers granular control over scaling the infrastructure but requires manual intervention or custom automation. PaaS provides automatic scaling features that can adjust resources based on demand without manual oversight.}\newline
+\MyParaBold{Fact:}{ Scalability is paramount for CloudConnect CRM to handle varying workloads and an expanding customer base. IaaS offers granular control over infrastructure scaling but requires manual intervention or custom automation. PaaS provides automatic scaling features that can adjust resources based on demand without manual oversight.}\newline
 \MyParaBold{Rationale:}{ Given the necessity for CloudConnect CRM to adapt quickly to changes in demand, the ability to scale automatically without significant manual effort is crucial. This ensures that the system remains responsive and cost-efficient under diverse operational demands.}\newline
 \MyParaBold{Architectural Decision-Making:}{Choose PaaS for its superior scalability features, which support cloud-native principles and allow CloudConnect CRM to focus on product development rather than infrastructure management.}
 
 \MyParaBold{3. Optimization of Development Processes}\newline
-\MyParaBold{Fact:}{ PaaS offers a range of built-in services such as database management, application monitoring, and continuous integration/continuous deployment (CI/CD) pipelines, which can significantly accelerate development cycles. IaaS provides a blank canvas that offers more flexibility but requires more time to set up and maintain these services.}\newline
+\MyParaBold{Fact:}{ PaaS offers a range of built-in services such as database management, application monitoring, and continuous integration/continuous deployment (CI/CD), which can significantly accelerate development cycles. IaaS provides a blank canvas that offers more flexibility but requires more time to set up and maintain these services.}\newline
 \MyParaBold{Rationale:}{ Accelerating development cycles is critical for CloudConnect CRM to iterate quickly on its product and meet the evolving needs of its customers. Leveraging PaaS services can streamline development workflows, allowing developers to focus on writing code rather than managing backend services.}\newline
 \MyParaBold{Architectural Decision-Making:}{ Select PaaS to leverage its extensive suite of developer tools and services, enhancing productivity and enabling CloudConnect CRM to bring new features to market more quickly.}
 \end{chatout}
 
-\MyParaText{\texttt{\nth{3} Uncertain Requirement Statement:}} Act as Trinity, in the project context CloudConnect CRM, the project team faces uncertainties related to evolving User Base and Data Volume Growth: Anticipated expansion in both the number of users and the volume of data is a significant variable, with projections suggesting substantial increases that could strain resources if not adequately planned for. Third-Party Integrations: The nature and complexity of integrating with third-party services remain fluid, posing potential challenges in ensuring seamless interoperability and maintaining system integrity. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
+\MyParaText{\texttt{\nth{3} Uncertain Requirement Statement:}} Act as Trinity, in the project context CloudConnect CRM, the project team faces uncertainties related to evolving User Base and Data Volume Growth: Anticipated expansion in both the number of users and the volume of data is a significant variable, with projections suggesting substantial increases that could strain resources if not adequately planned for. Third-Party Integrations: The nature and complexity of integrating with third-party services remain fluid, posing potential challenges in ensuring seamless interoperability and maintaining system integrity. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
 
 \begin{chatin}{usercolor}{\chatgptin[fictional-scenario-9]}
 
-Act as Trinity, in the project context CloudConnect CRM, the project team faces uncertainties related to evolving User Base and Data Volume Growth: Anticipated expansion in both the number of users and the volume of data is a significant variable, with projections suggesting substantial increases that could strain resources if not adequately planned for. Third-Party Integrations: The nature and complexity of integrating with third-party services remain fluid, posing potential challenges in ensuring seamless interoperability and maintaining system integrity. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing the creation of a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
+Act as Trinity, in the project context of CloudConnect CRM, the project team faces uncertainties related to the evolving User Base and Data Volume Growth: Anticipated expansion in both the number of users and the volume of data is a significant variable, with projections suggesting substantial increases that could strain resources if not adequately planned for. Third-Party Integrations: The nature and complexity of integrating with third-party services remain fluid, posing potential challenges in ensuring seamless interoperability and maintaining system integrity. Examine the potential repercussions of not adequately addressing these uncertain requirements in the system architecture. This assessment will inform our strategic planning and decision-making in software architecture for mitigation, emphasizing creating a system that is not only technologically advanced but also flexible and responsive to regulatory and technological changes.
 \end{chatin}
 
 \begin{chatout}{botbubble}{\chatgptout[fictional-scenario-10]}
@@ -797,13 +796,13 @@ Act as Trinity, in the project context CloudConnect CRM, the project team faces 
 
 \MyParaBold{1. Performance Degradation:}{Without scalable architecture, an increasing number of users and the associated data volume can lead to system slowdowns, increased load times, and a deteriorating user experience. This can result in user churn and negative feedback, impacting the reputation and growth of CloudConnect CRM.}
 
-\MyParaBold{2. Increased Operational Costs:}{Inadequate planning for scalability can cause operational costs to spike unexpectedly as the user base grows. Costs associated with data storage, processing power, and bandwidth may escalate, requiring unplanned financial resources to maintain service quality.}
+\MyParaBold{2. Increased Operational Costs:}{Inadequate planning for scalability can cause operational costs to spike unexpectedly as the user base grows. Data storage, processing power, and bandwidth costs may escalate, requiring unplanned financial resources to maintain service quality.}
 
 \MyParaBold{3. System Downtime:}{The system might experience unexpected downtime due to overloaded servers or failure in handling concurrent operations, directly affecting customer trust and potentially leading to financial losses.}
 
 \MyParaBold{Third-Party Integrations}
 
-\MyParaBold{Integration Failures:}{ Without a flexible architecture, integrating with a variety of third-party services could become complex and prone to failures. This can limit the system's ability to offer comprehensive features, negatively affecting the competitive edge of CloudConnect CRM.}
+\MyParaBold{Integration Failures:}{ Without a flexible architecture, integrating with various third-party services could become complex and prone to failures. This can limit the system's ability to offer comprehensive features, negatively affecting the competitive edge of CloudConnect CRM.}
 
 \MyParaBold{Security Vulnerabilities:}{ Dependence on third-party services without proper vetting and integration strategies may introduce security vulnerabilities, exposing sensitive data to risks and potentially leading to compliance violations.}
 
@@ -811,7 +810,7 @@ Act as Trinity, in the project context CloudConnect CRM, the project team faces 
 
 \MyParaBold{Mitigation Strategies}
 
-\MyParaBold{1. Implement Microservices Architecture:}{ This approach allows different components of the application to scale independently, enhancing the system's ability to handle growing numbers of users and data volumes efficiently.}
+\MyParaBold{1. Implement Microservices Architecture:}{ This approach allows different application components to scale independently, enhancing the system's ability to handle growing numbers of users and data volumes efficiently.}
 
 \MyParaBold{2. Utilize API Gateways for Third-Party Integrations:}{ An API gateway serves as a single entry point for all third-party service requests, simplifying integration and enabling better control and security.}
 
@@ -826,11 +825,11 @@ Act as Trinity, in the project context CloudConnect CRM, the project team faces 
 
 
 \begin{chatin}{usercolor}{\chatgptin[fictional-scenario-5]}
-Act as Trinity, in the context of the CloudConnect CRM project your task is to carefully navigate through the decision-making process of CloudConnect CRM project only quality attribute,  step by step. You should ask any necessary questions to clarify doubts about the quality attributes:
+Act as Trinity, in the context of the CloudConnect CRM project, your task is to carefully navigate through the decision-making process of CloudConnect CRM project only quality attribute,  step by step. You should ask any necessary questions to clarify doubts about the quality attributes:
 
 \MyParaBold{Scalability:}{Essential to the system’s success is its ability to scale seamlessly, supporting an ever-growing user base without degradation in performance, ensuring that customer
 experience remains consistent.}\newline
-\MyParaBold{Cost Eﬀiciency:}{The architecture must minimize operational expenses, judiciously using resources to stay within budget while delivering high-quality service.}\newline
+\MyParaBold{Cost Efficiency:}{The architecture must minimize operational expenses, judiciously using resources to stay within budget while delivering high-quality service.}\newline
 \MyParaBold{Developer Productivity:}{The system architecture should promote rapid development and deployment, reducing time to market and enabling quick iteration based on user feedback and evolving requirements.}
 
 \MyParaText{Avoid making any architectural decisions until all questions are answered. After the answers are given, provide a comprehensive prompt that includes all the data collected in the previous steps and an explanation of the rationale behind each architectural decision-making.}
@@ -841,7 +840,7 @@ experience remains consistent.}\newline
 
 \MyParaBold{What are the projected growth rates for the user base and data volume over the next 1, 3, and 5 years?}{[Expected to double the number of customers for 5 consecutive years.]}
 
-\MyParaBold{Are there specific periods of peak usage anticipated, based on the business model or customer behavior?}[ Scalable system to handle sudden traffic increases.]
+\MyParaBold{Are there specific periods of peak usage anticipated based on the business model or customer behavior?}[ Scalable system to handle sudden traffic increases.]
 
 \MyParaBold{Cost Efficiency}
 
@@ -864,7 +863,7 @@ experience remains consistent.}\newline
 
 \MyParaBold{Projected Growth:}{With customer numbers expected to double for five consecutive years, the system must support exponential growth in user base and data volume. This requires an architecture that can scale horizontally to accommodate increasing loads seamlessly.}
 
-\MyParaBold{Peak Usage:}{The system must be capable of handling sudden traffic spikes without degradation in performance. This calls for elastic scalability, where resources can be automatically scaled up during peak times and scaled down during off-peak times to optimize costs.}
+\MyParaBold{Peak Usage:}{The system must handle sudden traffic spikes without degradation in performance. This calls for elastic scalability, where resources can be automatically scaled up during peak times and down during off-peak times to optimize costs.}
 
 \MyParaBold{Architectural Decision:}{Implement a microservices architecture hosted on a scalable cloud platform (PaaS or container orchestration platforms like Kubernetes) that offers auto-scaling capabilities and dynamic resource allocation to handle varying loads and growth.}
 
@@ -935,7 +934,7 @@ Acting as Trinity, in the project context of CloudConnect CRM, outline an optima
 
 \MyParaBold{Evolving User Base and Data Volume:}{Regularly review and adjust cloud resource allocations based on actual growth and usage patterns to prevent over-provisioning or under-provisioning.}
 
-\MyParaBold{Third-Party Integrations:}{Establish a robust API gateway for integrating with third-party services, ensuring scalability and security. Adopt flexible integration patterns to accommodate changes in third-party APIs.}
+\MyParaBold{Third-Party Integrations:}{Establish a robust API gateway for integrating third-party services, ensuring scalability and security. Adopt flexible integration patterns to accommodate changes in third-party APIs.}
 
 \MyParaBold{Technological Changes:}{Stay informed on emerging cloud technologies and practices. Allocate time for periodic reassessment and adoption of new technologies that could enhance system performance, reduce costs, or improve productivity.}
 
@@ -943,7 +942,28 @@ Acting as Trinity, in the project context of CloudConnect CRM, outline an optima
 
 \MyParaBold{Phased Rollout:}{Adopt a phased approach to deployment, starting with a minimum viable product (MVP) to gather user feedback early and iterate quickly.}
 
-\MyParaBold{Performance Monitoring and Optimization:}{Implement comprehensive monitoring to track system performance, user engagement, and cost metrics. Use these insights to continuously optimize the system for performance, cost-efficiency, and user satisfaction.}
+\MyParaBold{Performance Monitoring and Optimization:}{Implement comprehensive monitoring to track system performance, user engagement, and cost metrics. Use these insights to optimize the system for performance, cost-efficiency, and user satisfaction.}
 
 \MyParaBold{Feedback Loops:}{Establish clear channels for user feedback and metrics-driven decision-making to guide continuous improvement and ensure the product evolves in alignment with user needs and market trends.}
 \end{chatout}
+
+\subsection{Section Summary}
+Section 4 of this research details the proposed approach for generative AI to assist in software architecture decisions through a sequence of prompt patterns. The section begins with a general description of the approach, emphasizing developing and applying new prompt patterns designed to address common architectural decision-making scenarios.
+
+\MyParaBold{Approach General Description}
+
+This subsection introduces the concept of using generative AI, specifically GPT models, to provide architectural decision support. It outlines the rationale behind creating specialized prompt patterns and the intended benefits of this approach, such as improving decision accuracy and efficiency.
+
+\MyParaBold{Design Process}
+
+The process of designing prompt patterns is explained in detail. This includes identifying typical architectural scenarios, creating prompts that effectively capture their complexities, and refining them through rigorous and iterative testing and feedback. Five specific prompt patterns are developed, each tailored to different aspects of architectural decision-making, such as understanding the architectural context, assessing quality attributes, and addressing uncertain requirements.
+
+\MyParaBold{Application of Pattern-Based Prompt Sequence}
+
+This subsection presents a fictional scenario demonstrating the practical application of the prompt patterns. It illustrates how an architect can use the sequence of prompts to guide the AI in generating valuable suggestions and insights for a specific architectural problem. The process involves selecting appropriate prompts from a catalog, feeding them into the AI tool, and interpreting the AI's responses to inform architectural decisions.
+
+The section concludes that the proposed approach shows promise in enhancing the architectural decision-making process by leveraging the capabilities of generative AI. The initial application of the prompt patterns in the fictional scenario demonstrates the potential for AI to provide relevant and valuable guidance. 
+
+However, it also underscores the importance of validating and refining the prompt patterns through real-world industry studies. This emphasis on the need for validation and refinement invites your audience to contribute to the effectiveness and utility of the approach in diverse architectural contexts.
+
+Section 4 thus provides a comprehensive overview of the proposed approach, detailing its development, application, and preliminary evaluation. It sets the stage for further exploration and validation in subsequent sections.
